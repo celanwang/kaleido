@@ -1,0 +1,39 @@
+{
+  "config": {
+    "batch_size": 64,
+    "epochs": 12,
+    "memory_updates": 150,
+    "rl_episodes": 12,
+    "rl_updates": 60,
+    "seeds": [
+      42,
+      7,
+      2026
+    ],
+    "vae_epochs": 20
+  },
+  "environment": {
+    "command": [
+      "/Users/wangchen/Developer/kaleido/src/kaleido/demos/deep_learning.py",
+      "--output",
+      "runs/p2-reference-final"
+    ],
+    "git_dirty": false,
+    "git_revision": "73599db97a2faa86fd9ecad158e98ba07ebeb1d9",
+    "git_status": "",
+    "numpy": "2.5.4",
+    "packages": {
+      "numpy": "2.5.4",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "torch": "2.14.1"
+    },
+    "platform": "macOS-15.8-arm64-arm-64bit",
+    "python": "3.12.15 (main, Oct  3 2026, 00:54:33) [Clang 22.1.3 ]",
+    "source_sha256": "66269e907c57f742752aa6f37f6fbd175dcc5f03e3f9486b22251a1ec4fb6810"
+  },
+  "finished_at": "2026-10-18T14:42:55.067459+00:00",
+  "schema_version": 1,
+  "started_at": "2026-10-18T14:42:51.116912+00:00",
+  "status": "completed"
+}
