@@ -1,0 +1,13 @@
+{
+  "seeds": [42, 7, 2026],
+  "l2_candidates": [0.001, 0.01, 0.1],
+  "tree_depths": [1, 2, 3, 5, 8],
+  "tree_min_samples_leaf": 2,
+  "pca_components": 2,
+  "n_clusters": 3,
+  "mixture_components": [1, 2, 3, 4],
+  "n_init": 5,
+  "max_iter": 1000,
+  "tol": 0.0000000001,
+  "failure_seed": 123
+}

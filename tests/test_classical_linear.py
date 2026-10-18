@@ -52,6 +52,11 @@ def test_scaler_training_only_constants_and_inverse():
     np.testing.assert_array_equal(scaler.scale_, [1, 1])
 
 
+def test_scaler_reports_variance_overflow():
+    with pytest.raises(FloatingPointError):
+        StandardScaler().fit([[-1e200], [1e200]])
+
+
 def test_linear_rank_deficiency_and_refit():
     x = np.array([[0, 0], [1, 1], [2, 2]])
     estimator = LinearRegression().fit(x, [1, 5, 9])

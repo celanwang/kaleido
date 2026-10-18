@@ -8,7 +8,9 @@ class StandardScaler(FittedFeatures):
 
     def fit(self, x):
         x = features(x)
-        self.mean_, self.var_ = x.mean(axis=0), x.var(axis=0)
+        with np.errstate(over="raise", invalid="raise"):
+            center, variance = x.mean(axis=0), x.var(axis=0)
+        self.mean_, self.var_ = center, variance
         self.scale_ = np.where(self.var_ == 0, 1, np.sqrt(self.var_))
         self.n_features_in_ = x.shape[1]
         return self

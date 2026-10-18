@@ -9,7 +9,8 @@ jobs:
         with:
           version: "0.12.23"
       - run: uv sync --locked --all-extras --python 3.12
-      - run: uv run --locked ruff check .
-      - run: uv run --locked ruff format --check .
+      - run: uv run --locked --all-extras ruff check .
+      - run: uv run --locked --all-extras ruff format --check .
       - run: uv run --locked --all-extras pytest
-      - run: uv run --locked python -m kaleido.demos.linear_regression
+      - run: uv run --locked --all-extras python -m kaleido.demos.linear_regression
+      - run: uv run --locked --all-extras python -m kaleido.demos.classical_ml

@@ -14,7 +14,8 @@ from kaleido.classical._validation import (
 
 def _squared_distances(x, centers):
     # Direct differences avoid cancellation for nearby points with large offsets.
-    return np.sum((x[:, None, :] - centers[None, :, :]) ** 2, axis=2)
+    with np.errstate(over="raise", invalid="raise"):
+        return np.sum((x[:, None, :] - centers[None, :, :]) ** 2, axis=2)
 
 
 class KMeans(FittedFeatures):

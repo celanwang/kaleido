@@ -82,6 +82,11 @@ def test_all_collapsed_restarts_are_rejected():
         GaussianMixture(2, n_init=1, means_init=[[0], [1e8]]).fit([[0], [1], [2]])
 
 
+def test_distance_overflow_is_a_failure_not_a_fitted_model():
+    with pytest.raises(FloatingPointError):
+        KMeans(2, n_init=1, init=[[0], [1]]).fit([[-1e200], [1e200]])
+
+
 @pytest.mark.parametrize("model", [KMeans, GaussianMixture])
 def test_unfitted_impossible_clusters_shapes_and_iterations(model):
     with pytest.raises(RuntimeError):
