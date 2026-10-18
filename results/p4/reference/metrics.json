@@ -1,0 +1,566 @@
+{
+  "2026": {
+    "grpo": {
+      "test": {
+        "by_family": {
+          "scaled_sum_shift": {
+            "samples": 16,
+            "strict_accuracy": 0.3125
+          },
+          "sum_products": {
+            "samples": 16,
+            "strict_accuracy": 0.125
+          }
+        },
+        "format_rate": 1.0,
+        "generated_tokens": 256,
+        "numerical_accuracy": 0.21875,
+        "prompt_tokens": 2178,
+        "response_nll": 0.5048171058297157,
+        "samples": 32,
+        "strict_accuracy": 0.21875,
+        "teacher_target_tokens": 256,
+        "truncation_rate": 0.0,
+        "wall_seconds": 1.0419063750014175,
+        "wilson_95": [
+          0.11023696931531854,
+          0.3875533079044484
+        ]
+      },
+      "training": {
+        "generated_completion_tokens": 1535,
+        "selected_iteration": 20,
+        "selected_validation": {
+          "by_family": {
+            "product_difference": {
+              "samples": 16,
+              "strict_accuracy": 0.3125
+            },
+            "sum_product": {
+              "samples": 16,
+              "strict_accuracy": 0.3125
+            }
+          },
+          "format_rate": 1.0,
+          "generated_tokens": 256,
+          "numerical_accuracy": 0.3125,
+          "prompt_tokens": 2160,
+          "response_nll": 0.3650737777352333,
+          "samples": 32,
+          "strict_accuracy": 0.3125,
+          "teacher_target_tokens": 256,
+          "truncation_rate": 0.0,
+          "wall_seconds": 1.010827583995706,
+          "wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ]
+        },
+        "update_completion_tokens": 3070,
+        "updates": 48,
+        "wall_seconds": 23.082821915995737,
+        "zero_variance_group_fraction": 0.5
+      }
+    },
+    "rejection_sft": {
+      "test": {
+        "by_family": {
+          "scaled_sum_shift": {
+            "samples": 16,
+            "strict_accuracy": 0.25
+          },
+          "sum_products": {
+            "samples": 16,
+            "strict_accuracy": 0.125
+          }
+        },
+        "format_rate": 1.0,
+        "generated_tokens": 256,
+        "numerical_accuracy": 0.1875,
+        "prompt_tokens": 2178,
+        "response_nll": 0.6320267394185066,
+        "samples": 32,
+        "strict_accuracy": 0.1875,
+        "teacher_target_tokens": 256,
+        "truncation_rate": 0.0,
+        "wall_seconds": 1.0335342920006951,
+        "wilson_95": [
+          0.08889423936162782,
+          0.3530949575492244
+        ]
+      },
+      "training": {
+        "accepted_raw": 58,
+        "accepted_unique": 26,
+        "generated_completion_tokens": 1540,
+        "selected_step": 24,
+        "selected_validation": {
+          "by_family": {
+            "product_difference": {
+              "samples": 16,
+              "strict_accuracy": 0.3125
+            },
+            "sum_product": {
+              "samples": 16,
+              "strict_accuracy": 0.3125
+            }
+          },
+          "format_rate": 1.0,
+          "generated_tokens": 256,
+          "numerical_accuracy": 0.3125,
+          "prompt_tokens": 2160,
+          "response_nll": 0.44339514523744583,
+          "samples": 32,
+          "strict_accuracy": 0.3125,
+          "teacher_target_tokens": 256,
+          "truncation_rate": 0.0,
+          "wall_seconds": 1.0134099170027184,
+          "wilson_95": [
+            0.17952352116618736,
+            0.4856699969803239
+          ]
+        },
+        "status": "completed",
+        "update_completion_tokens": 3072,
+        "updates": 48,
+        "wall_seconds": 19.276092042004166
+      }
+    },
+    "sft": {
+      "test": {
+        "by_family": {
+          "scaled_sum_shift": {
+            "samples": 16,
+            "strict_accuracy": 0.125
+          },
+          "sum_products": {
+            "samples": 16,
+            "strict_accuracy": 0.0625
+          }
+        },
+        "format_rate": 1.0,
+        "generated_tokens": 256,
+        "numerical_accuracy": 0.09375,
+        "prompt_tokens": 2178,
+        "response_nll": 0.33629532158374786,
+        "samples": 32,
+        "strict_accuracy": 0.09375,
+        "teacher_target_tokens": 256,
+        "truncation_rate": 0.0,
+        "wall_seconds": 1.025267791999795,
+        "wilson_95": [
+          0.032400962626319516,
+          0.24218499335778831
+        ]
+      },
+      "training": {
+        "selected_step": 48,
+        "selected_validation": {
+          "by_family": {
+            "product_difference": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            },
+            "sum_product": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            }
+          },
+          "format_rate": 1.0,
+          "generated_tokens": 256,
+          "numerical_accuracy": 0.25,
+          "prompt_tokens": 2160,
+          "response_nll": 0.26270218193531036,
+          "samples": 32,
+          "strict_accuracy": 0.25,
+          "teacher_target_tokens": 256,
+          "truncation_rate": 0.0,
+          "wall_seconds": 1.019496708002407,
+          "wilson_95": [
+            0.1325224398262155,
+            0.42106891770246624
+          ]
+        },
+        "update_completion_tokens": 2048,
+        "updates": 64,
+        "wall_seconds": 9.41677341600007
+      }
+    }
+  },
+  "42": {
+    "grpo": {
+      "test": {
+        "by_family": {
+          "scaled_sum_shift": {
+            "samples": 16,
+            "strict_accuracy": 0.125
+          },
+          "sum_products": {
+            "samples": 16,
+            "strict_accuracy": 0.1875
+          }
+        },
+        "format_rate": 1.0,
+        "generated_tokens": 256,
+        "numerical_accuracy": 0.15625,
+        "prompt_tokens": 2178,
+        "response_nll": 0.28397031873464584,
+        "samples": 32,
+        "strict_accuracy": 0.15625,
+        "teacher_target_tokens": 256,
+        "truncation_rate": 0.0,
+        "wall_seconds": 1.0071614170010434,
+        "wilson_95": [
+          0.06864319106627216,
+          0.31754492553566527
+        ]
+      },
+      "training": {
+        "generated_completion_tokens": 1538,
+        "selected_iteration": 0,
+        "selected_validation": {
+          "by_family": {
+            "product_difference": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            },
+            "sum_product": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            }
+          },
+          "format_rate": 1.0,
+          "generated_tokens": 256,
+          "numerical_accuracy": 0.25,
+          "prompt_tokens": 2160,
+          "response_nll": 0.2686203196644783,
+          "samples": 32,
+          "strict_accuracy": 0.25,
+          "teacher_target_tokens": 256,
+          "truncation_rate": 0.0,
+          "wall_seconds": 0.9906865829980234,
+          "wilson_95": [
+            0.1325224398262155,
+            0.42106891770246624
+          ]
+        },
+        "update_completion_tokens": 3076,
+        "updates": 48,
+        "wall_seconds": 23.99915916700411,
+        "zero_variance_group_fraction": 0.7083333333333334
+      }
+    },
+    "rejection_sft": {
+      "test": {
+        "by_family": {
+          "scaled_sum_shift": {
+            "samples": 16,
+            "strict_accuracy": 0.0
+          },
+          "sum_products": {
+            "samples": 16,
+            "strict_accuracy": 0.1875
+          }
+        },
+        "format_rate": 1.0,
+        "generated_tokens": 256,
+        "numerical_accuracy": 0.09375,
+        "prompt_tokens": 2178,
+        "response_nll": 0.4982544779777527,
+        "samples": 32,
+        "strict_accuracy": 0.09375,
+        "teacher_target_tokens": 256,
+        "truncation_rate": 0.0,
+        "wall_seconds": 0.9999450830000569,
+        "wilson_95": [
+          0.032400962626319516,
+          0.24218499335778831
+        ]
+      },
+      "training": {
+        "accepted_raw": 32,
+        "accepted_unique": 19,
+        "generated_completion_tokens": 1538,
+        "selected_step": 40,
+        "selected_validation": {
+          "by_family": {
+            "product_difference": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            },
+            "sum_product": {
+              "samples": 16,
+              "strict_accuracy": 0.3125
+            }
+          },
+          "format_rate": 1.0,
+          "generated_tokens": 256,
+          "numerical_accuracy": 0.28125,
+          "prompt_tokens": 2160,
+          "response_nll": 0.4545726105570793,
+          "samples": 32,
+          "strict_accuracy": 0.28125,
+          "teacher_target_tokens": 256,
+          "truncation_rate": 0.0,
+          "wall_seconds": 1.0152257920053671,
+          "wilson_95": [
+            0.15564406845647866,
+            0.4537483693811179
+          ]
+        },
+        "status": "completed",
+        "update_completion_tokens": 3072,
+        "updates": 48,
+        "wall_seconds": 19.12607291599852
+      }
+    },
+    "sft": {
+      "test": {
+        "by_family": {
+          "scaled_sum_shift": {
+            "samples": 16,
+            "strict_accuracy": 0.125
+          },
+          "sum_products": {
+            "samples": 16,
+            "strict_accuracy": 0.1875
+          }
+        },
+        "format_rate": 1.0,
+        "generated_tokens": 256,
+        "numerical_accuracy": 0.15625,
+        "prompt_tokens": 2178,
+        "response_nll": 0.28397031873464584,
+        "samples": 32,
+        "strict_accuracy": 0.15625,
+        "teacher_target_tokens": 256,
+        "truncation_rate": 0.0,
+        "wall_seconds": 1.0058038749994012,
+        "wilson_95": [
+          0.06864319106627216,
+          0.31754492553566527
+        ]
+      },
+      "training": {
+        "selected_step": 48,
+        "selected_validation": {
+          "by_family": {
+            "product_difference": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            },
+            "sum_product": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            }
+          },
+          "format_rate": 1.0,
+          "generated_tokens": 256,
+          "numerical_accuracy": 0.25,
+          "prompt_tokens": 2160,
+          "response_nll": 0.2686203196644783,
+          "samples": 32,
+          "strict_accuracy": 0.25,
+          "teacher_target_tokens": 256,
+          "truncation_rate": 0.0,
+          "wall_seconds": 0.9906865829980234,
+          "wilson_95": [
+            0.1325224398262155,
+            0.42106891770246624
+          ]
+        },
+        "update_completion_tokens": 2048,
+        "updates": 64,
+        "wall_seconds": 9.45421612499922
+      }
+    }
+  },
+  "7": {
+    "grpo": {
+      "test": {
+        "by_family": {
+          "scaled_sum_shift": {
+            "samples": 16,
+            "strict_accuracy": 0.125
+          },
+          "sum_products": {
+            "samples": 16,
+            "strict_accuracy": 0.1875
+          }
+        },
+        "format_rate": 1.0,
+        "generated_tokens": 256,
+        "numerical_accuracy": 0.15625,
+        "prompt_tokens": 2178,
+        "response_nll": 0.284128338098526,
+        "samples": 32,
+        "strict_accuracy": 0.15625,
+        "teacher_target_tokens": 256,
+        "truncation_rate": 0.0,
+        "wall_seconds": 1.0304287079998176,
+        "wilson_95": [
+          0.06864319106627216,
+          0.31754492553566527
+        ]
+      },
+      "training": {
+        "generated_completion_tokens": 1536,
+        "selected_iteration": 0,
+        "selected_validation": {
+          "by_family": {
+            "product_difference": {
+              "samples": 16,
+              "strict_accuracy": 0.1875
+            },
+            "sum_product": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            }
+          },
+          "format_rate": 1.0,
+          "generated_tokens": 256,
+          "numerical_accuracy": 0.21875,
+          "prompt_tokens": 2160,
+          "response_nll": 0.2829640582203865,
+          "samples": 32,
+          "strict_accuracy": 0.21875,
+          "teacher_target_tokens": 256,
+          "truncation_rate": 0.0,
+          "wall_seconds": 1.019393458002014,
+          "wilson_95": [
+            0.11023696931531854,
+            0.3875533079044484
+          ]
+        },
+        "update_completion_tokens": 3072,
+        "updates": 48,
+        "wall_seconds": 23.090463207998255,
+        "zero_variance_group_fraction": 0.7708333333333334
+      }
+    },
+    "rejection_sft": {
+      "test": {
+        "by_family": {
+          "scaled_sum_shift": {
+            "samples": 16,
+            "strict_accuracy": 0.125
+          },
+          "sum_products": {
+            "samples": 16,
+            "strict_accuracy": 0.1875
+          }
+        },
+        "format_rate": 1.0,
+        "generated_tokens": 256,
+        "numerical_accuracy": 0.15625,
+        "prompt_tokens": 2178,
+        "response_nll": 0.284128338098526,
+        "samples": 32,
+        "strict_accuracy": 0.15625,
+        "teacher_target_tokens": 256,
+        "truncation_rate": 0.0,
+        "wall_seconds": 1.046350666001672,
+        "wilson_95": [
+          0.06864319106627216,
+          0.31754492553566527
+        ]
+      },
+      "training": {
+        "accepted_raw": 26,
+        "accepted_unique": 15,
+        "generated_completion_tokens": 1536,
+        "selected_step": 0,
+        "selected_validation": {
+          "by_family": {
+            "product_difference": {
+              "samples": 16,
+              "strict_accuracy": 0.1875
+            },
+            "sum_product": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            }
+          },
+          "format_rate": 1.0,
+          "generated_tokens": 256,
+          "numerical_accuracy": 0.21875,
+          "prompt_tokens": 2160,
+          "response_nll": 0.2829640582203865,
+          "samples": 32,
+          "strict_accuracy": 0.21875,
+          "teacher_target_tokens": 256,
+          "truncation_rate": 0.0,
+          "wall_seconds": 1.019393458002014,
+          "wilson_95": [
+            0.11023696931531854,
+            0.3875533079044484
+          ]
+        },
+        "status": "completed",
+        "update_completion_tokens": 3072,
+        "updates": 48,
+        "wall_seconds": 19.17525562499941
+      }
+    },
+    "sft": {
+      "test": {
+        "by_family": {
+          "scaled_sum_shift": {
+            "samples": 16,
+            "strict_accuracy": 0.125
+          },
+          "sum_products": {
+            "samples": 16,
+            "strict_accuracy": 0.1875
+          }
+        },
+        "format_rate": 1.0,
+        "generated_tokens": 256,
+        "numerical_accuracy": 0.15625,
+        "prompt_tokens": 2178,
+        "response_nll": 0.284128338098526,
+        "samples": 32,
+        "strict_accuracy": 0.15625,
+        "teacher_target_tokens": 256,
+        "truncation_rate": 0.0,
+        "wall_seconds": 1.0330178750009509,
+        "wilson_95": [
+          0.06864319106627216,
+          0.31754492553566527
+        ]
+      },
+      "training": {
+        "selected_step": 48,
+        "selected_validation": {
+          "by_family": {
+            "product_difference": {
+              "samples": 16,
+              "strict_accuracy": 0.1875
+            },
+            "sum_product": {
+              "samples": 16,
+              "strict_accuracy": 0.25
+            }
+          },
+          "format_rate": 1.0,
+          "generated_tokens": 256,
+          "numerical_accuracy": 0.21875,
+          "prompt_tokens": 2160,
+          "response_nll": 0.2829640582203865,
+          "samples": 32,
+          "strict_accuracy": 0.21875,
+          "teacher_target_tokens": 256,
+          "truncation_rate": 0.0,
+          "wall_seconds": 1.019393458002014,
+          "wilson_95": [
+            0.11023696931531854,
+            0.3875533079044484
+          ]
+        },
+        "update_completion_tokens": 2048,
+        "updates": 64,
+        "wall_seconds": 9.414305040998443
+      }
+    }
+  }
+}

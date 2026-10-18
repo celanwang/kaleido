@@ -1,0 +1,1254 @@
+{
+  "test": {
+    "metrics": {
+      "by_family": {
+        "scaled_sum_shift": {
+          "samples": 16,
+          "strict_accuracy": 0.0
+        },
+        "sum_products": {
+          "samples": 16,
+          "strict_accuracy": 0.0
+        }
+      },
+      "format_rate": 0.0,
+      "generated_tokens": 90,
+      "numerical_accuracy": 0.03125,
+      "prompt_tokens": 2178,
+      "response_nll": 1.0921441912651062,
+      "samples": 32,
+      "strict_accuracy": 0.0,
+      "teacher_target_tokens": 256,
+      "truncation_rate": 0.0,
+      "wall_seconds": 0.7896293750018231,
+      "wilson_95": [
+        0.0,
+        0.1071827150573635
+      ]
+    },
+    "samples": [
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 0,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "c4a9fd731aefc8d64570",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 70,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 1,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "2b3481001e376b9b6f9c",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          151645
+        ],
+        "expected": 2,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "3917516872587a932301",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 70,
+        "response": "1",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 3,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "926316fc7458b4583ad0",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          17,
+          151645
+        ],
+        "expected": 4,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "efcd9fdebe6990081ee9",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "12",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          17,
+          151645
+        ],
+        "expected": 5,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "a4352ba59a414021d0bd",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "12",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 6,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "185648c8d6f6b8b75d3f",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 7,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "b95d7fb18cff1581ee51",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 0,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "2efbea13f0eddb677291",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 1,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "a12b0817d9cd3694fe96",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 2,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "c82991447ba8bb0c5f9e",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 3,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "60ad0bcda0479b897ed0",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 4,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "e14a00246dc42acb31f2",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 5,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "e739a82c00822d3ec2e1",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 70,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 6,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "fcf5bf2b6791d65a9dbc",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          22,
+          151645
+        ],
+        "expected": 7,
+        "family": "scaled_sum_shift",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "4aa33c6ce081971f968c",
+        "numerical_correct": true,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "7",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          21,
+          151645
+        ],
+        "expected": 0,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "c4d98ff052858f20735c",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "6",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 1,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "1cf954bd2d1a57856b8d",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          19,
+          151645
+        ],
+        "expected": 2,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "5944c98efd938d181d05",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "14",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 3,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "f23425bfa1f8e90b1275",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          22,
+          151645
+        ],
+        "expected": 4,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "9674b076be8285334a6a",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "7",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 5,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "50b3bfbfcbf42c1ef72f",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 6,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "99be3ed1de4763cccf3f",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          18,
+          151645
+        ],
+        "expected": 7,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "dc673bdedea4d466441e",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 66,
+        "response": "13",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 0,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "0ae8cd39ff62f0be52a5",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 1,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "3fef801ddfad9bd764c3",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 2,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "891fefb1682ece670def",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 3,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "6fd7b90575f4684e5d0b",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 4,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "59e2ff18596dd4841ba9",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 5,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "15bb05ba97f6a3f3e9d1",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          24,
+          151645
+        ],
+        "expected": 6,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "9c89349631fde2f561b6",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "9",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          18,
+          151645
+        ],
+        "expected": 7,
+        "family": "sum_products",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "42d084698ad59ebc50cd",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "13",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      }
+    ]
+  },
+  "valid": {
+    "metrics": {
+      "by_family": {
+        "product_difference": {
+          "samples": 16,
+          "strict_accuracy": 0.0
+        },
+        "sum_product": {
+          "samples": 16,
+          "strict_accuracy": 0.0
+        }
+      },
+      "format_rate": 0.0,
+      "generated_tokens": 78,
+      "numerical_accuracy": 0.0,
+      "prompt_tokens": 2160,
+      "response_nll": 1.0413731187582016,
+      "samples": 32,
+      "strict_accuracy": 0.0,
+      "teacher_target_tokens": 256,
+      "truncation_rate": 0.0,
+      "wall_seconds": 1.3100602499980596,
+      "wilson_95": [
+        0.0,
+        0.1071827150573635
+      ]
+    },
+    "samples": [
+      {
+        "completion_ids": [
+          16,
+          18,
+          151645
+        ],
+        "expected": 0,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "d0f3ac74a791a15a2d88",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "13",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 1,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "7802bc7aefd97900502c",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 2,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "4954c79441b4ec92bdc4",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 3,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "e5d24db1bbda0cf61792",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 4,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "c930ead82664defd34dc",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 5,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "138b795ca8116fe2f2a4",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 6,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "7b7674509dceb932e261",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          18,
+          151645
+        ],
+        "expected": 7,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "8dc15d2a9532eb8159cc",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "13",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 0,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "9ced5b8df2148b9583c3",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 66,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 1,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "df21fd81324f919bec13",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 66,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          24,
+          151645
+        ],
+        "expected": 2,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "5a3716a4e4ff21f05044",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "9",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          17,
+          151645
+        ],
+        "expected": 3,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "06f6e24f3b09cc2cf5c9",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "12",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 4,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "8821f944d83419591743",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 5,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "92922f57a749d63641bd",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 6,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "ca0ac32bedfe5557510a",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 7,
+        "family": "sum_product",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "99163837a94f2fd12788",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 66,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 0,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "11dcf4252b1335651371",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 1,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "13aa10e2688403c29b37",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          22,
+          151645
+        ],
+        "expected": 2,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "e1b967b3d2db69fd9945",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "7",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          151645
+        ],
+        "expected": 3,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "f094c499b11b210b68e1",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "1",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 4,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "2827e117b7b1ae2ce818",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 5,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "def7f32ced08881fdb8a",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          15,
+          151645
+        ],
+        "expected": 6,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "227f0d140f960fd6e7f7",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "10",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 7,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "6e1db5efbcf01d81f488",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 0,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "e0cffdf477d5dee2aa50",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          22,
+          151645
+        ],
+        "expected": 1,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "5b3cb3a528a9608a5231",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "7",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 2,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "82a963463de9590a986f",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          151645
+        ],
+        "expected": 3,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "68ec912c12f2ea5fb623",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "1",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          151645
+        ],
+        "expected": 4,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "73c4146efbac0997f13b",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 69,
+        "response": "1",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          18,
+          151645
+        ],
+        "expected": 5,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "437162c731838a149a1d",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 68,
+        "response": "3",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          23,
+          151645
+        ],
+        "expected": 6,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 2,
+        "id": "2401cebe357c1c3601ff",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "8",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      },
+      {
+        "completion_ids": [
+          16,
+          16,
+          151645
+        ],
+        "expected": 7,
+        "family": "product_difference",
+        "format_valid": false,
+        "generated_tokens": 3,
+        "id": "b5ba10a982771dab31bb",
+        "numerical_correct": false,
+        "parsed": null,
+        "prompt_tokens": 67,
+        "response": "11",
+        "reward": 0.0,
+        "strict_correct": false,
+        "truncated": false
+      }
+    ]
+  }
+}
