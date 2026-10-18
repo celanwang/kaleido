@@ -3,7 +3,7 @@
 万花筒：以机器学习全域为结构，以可复现实验理解设计、取舍与失效边界。
 
 原始方向见 [DESIGN](DESIGN.md)，阶段与验收见 [ROADMAP](docs/ROADMAP.md)。
-当前已实现 P0–P3；P4–P6 尚未实现。
+当前已实现 P0–P3；P4后训练正在验收，P5–P6尚未实现。
 自研核心用于理解，后续规模训练使用成熟框架。
 P0 的 [验收报告与完整参考产物](results/p0/REPORT.md)保留原始阶段证据。
 P1 的 [验收报告与完整参考产物](results/p1/REPORT.md)包含三组划分与六类算法对照。
@@ -61,6 +61,18 @@ uv run --locked --all-extras python -m kaleido.demos.language_model --config con
 输出含词表、章节划分/指纹、计数基线、每token NLL、模型、生成、cache数值检查及重复计时。
 smoke仅验证接线，不代表完成正式训练。所有示例均从仓库根目录运行，可通过 `--output` 指定产物目录。
 
+P4固定Qwen后训练与离线fixture：
+
+```sh
+uv run --locked --all-extras python -m kaleido.demos.post_training
+uv run --locked --all-extras python -m kaleido.demos.post_training --fixture --config configs/p4_smoke.json
+```
+
+正式配置在 `configs/p4_posttrain.json`，模型revision/SHA在 `configs/p4_model.json`。
+首次正式运行需下载约1GB官方权重到HF缓存，随后校验并使用固定原生tokenizer/template。
+默认MPS/float32、q/v LoRA，依次完成基座评测、SFT、GRPO和固定SFT采样筛选监督对照。
+仓库不存完整基座；adapter重放仍需原revision。显式fixture是随机tiny模型，无效果结论。
+
 默认读取 `configs/p0_linear.json`；可用 `--config <path>` 和 `--output <directory>` 指定。
 从仓库根目录运行。每次生成独立 `runs/p0-linear/<id>/`，不覆盖历史，运行产物默认不入 Git。
 
@@ -91,6 +103,9 @@ smoke仅验证接线，不代表完成正式训练。所有示例均从仓库根
 - `src/kaleido/demos/deep_learning.py`：[P2 实验协议](docs/notes/deep-experiments.md)。
 - `src/kaleido/lm/`：[BPE与语料](docs/notes/bpe-corpus.md)、[Decoder与cache](docs/notes/decoder-cache.md)、
   [预训练实验协议](docs/notes/pretraining-experiment.md)。
+- `src/kaleido/posttrain/`：[任务与独立判定](docs/notes/verifiable-tasks.md)、
+  [原生Qwen/LoRA](docs/notes/qwen-lora.md)、[GRPO公式](docs/notes/grpo-objective.md)、
+  [后训练实验协议](docs/notes/posttrain-experiment.md)。
 
 监督模型 `fit(X,y)` 返回自身，提供 `predict(X)`；分类器另提供 `predict_proba(X)`。
 Scaler/PCA 使用 `fit/transform/inverse_transform`，聚类提供 `fit/predict`。

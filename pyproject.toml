@@ -18,6 +18,7 @@ torch-reference = [
 posttrain = [
     "huggingface-hub==2.2.0",
     "safetensors==0.8.0",
+    "torch==2.14.1",
     "transformers==5.20.1",
 ]
 

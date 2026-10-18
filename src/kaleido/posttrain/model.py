@@ -108,19 +108,35 @@ def read_adapter(path):
 
 def load_pinned(spec_path, *, device="mps", download=True):
     from huggingface_hub import snapshot_download
+    from huggingface_hub.errors import LocalEntryNotFoundError
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
     spec = json.loads(Path(spec_path).read_text())
     if spec.get("trust_remote_code") is not False or len(spec["revision"]) != 40:
         raise ValueError("model must use a fixed commit and no remote code")
-    directory = Path(
-        snapshot_download(
-            spec["repo_id"],
-            revision=spec["revision"],
-            allow_patterns=["*.json", "*.txt", "*.safetensors", "LICENSE"],
-            local_files_only=not download,
-        )
+    options = {
+        "repo_id": spec["repo_id"],
+        "revision": spec["revision"],
+        "allow_patterns": ["*.json", "*.txt", "*.safetensors", "LICENSE"],
+    }
+    try:
+        directory = Path(snapshot_download(**options, local_files_only=True))
+    except LocalEntryNotFoundError:
+        if not download:
+            raise
+        directory = None
+    required = (
+        spec["weights_file"],
+        "config.json",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "LICENSE",
     )
+    if directory is None or any(not (directory / name).is_file() for name in required):
+        if not download:
+            raise FileNotFoundError("pinned snapshot is incomplete in local cache")
+        directory = Path(snapshot_download(**options, local_files_only=False))
     if file_sha256(directory / spec["weights_file"]) != spec["weights_sha256"]:
         raise ValueError("pinned base weight checksum mismatch")
     tokenizer = AutoTokenizer.from_pretrained(
