@@ -54,7 +54,7 @@ def provenance(root: Path) -> dict:
             digest.update(path.read_bytes() + b"\0")
     status = git("status", "--porcelain")
     packages = {}
-    for package in ("numpy", "scikit-learn", "scipy"):
+    for package in ("numpy", "scikit-learn", "scipy", "torch"):
         try:
             packages[package] = version(package)
         except PackageNotFoundError:

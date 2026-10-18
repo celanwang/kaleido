@@ -26,3 +26,6 @@
 
 参考：[micrograd](https://github.com/karpathy/micrograd) 的标量反向图、
 [NumPy 广播规则](https://numpy.org/doc/stable/user/basics.broadcasting.html)。
+
+上述边界记录 P0 原始出口；P2 增加索引、稳定 softmax/logsumexp、模块与优化器，
+最新接口和验证见 [神经网络核心](neural-core.md)。

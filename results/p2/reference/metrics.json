@@ -1,0 +1,254 @@
+{
+  "2026": {
+    "baselines": {
+      "majority_accuracy": 0.10277777777777777,
+      "mean_pixel_mse": 0.07421775772751646,
+      "mean_pixel_nll": 27.17210435332171
+    },
+    "cnn": {
+      "initial_valid_nll": 2.34622904862838,
+      "selected_epoch": 12,
+      "test_accuracy": 0.9611111111111111,
+      "test_nll": 0.1270346511572879,
+      "valid_nll": 0.17528658525923843
+    },
+    "memory": {
+      "initial_valid_nll": 0.712103707280118,
+      "last_bit_baseline_accuracy": 0.4921875,
+      "long_sequence_accuracy": 1.0,
+      "long_sequence_nll": 0.00039661151450957194,
+      "selected_update": 150,
+      "test_accuracy": 1.0,
+      "test_nll": 0.00020719993144436427,
+      "valid_nll": 0.00022589342972422627
+    },
+    "mlp_adam": {
+      "initial_valid_nll": 2.3140659729425477,
+      "selected_epoch": 12,
+      "test_accuracy": 0.9638888888888889,
+      "test_nll": 0.12926299974631209,
+      "valid_nll": 0.15815563491206883
+    },
+    "mlp_sgd": {
+      "initial_valid_nll": 2.3140659729425477,
+      "selected_epoch": 7,
+      "test_accuracy": 0.9555555555555556,
+      "test_nll": 0.13654353947345016,
+      "valid_nll": 0.16436305236461266
+    },
+    "rl": {
+      "ppo": {
+        "greedy_mean_return": 0.9399999999999997,
+        "greedy_success_rate": 1.0,
+        "mean_return": 0.9399999999999997,
+        "success_rate": 1.0
+      },
+      "q_learning": {
+        "greedy_mean_return": 0.9399999999999997,
+        "greedy_success_rate": 1.0,
+        "mean_return": 0.9399999999999997,
+        "success_rate": 1.0
+      },
+      "random": {
+        "mean_return": 0.17150000000000007,
+        "success_rate": 0.375
+      },
+      "reinforce": {
+        "greedy_mean_return": 0.9399999999999997,
+        "greedy_success_rate": 1.0,
+        "mean_return": 0.9294999999999998,
+        "success_rate": 1.0
+      }
+    },
+    "vae": {
+      "final_budget_kl": 2.4069579057003634,
+      "final_budget_reconstruction_nll": 22.866403673172453,
+      "initial_valid_negative_elbo": 46.133290047817354,
+      "kl": 2.4069579057003634,
+      "mean_latent_reconstruction_mse": 0.03777593252738811,
+      "negative_elbo": 25.273361578872812,
+      "reconstruction_nll": 22.866403673172453,
+      "selected_epoch": 20,
+      "valid_negative_elbo": 25.297406845584177
+    },
+    "vae_no_kl": {
+      "final_budget_kl": 29.340657032094374,
+      "final_budget_reconstruction_nll": 20.604269738654555,
+      "initial_valid_negative_elbo": 46.133290047817354,
+      "kl": 8.011103598178341,
+      "mean_latent_reconstruction_mse": 0.07608535980004244,
+      "negative_elbo": 36.436607910523534,
+      "reconstruction_nll": 28.425504312345193,
+      "selected_epoch": 2,
+      "valid_negative_elbo": 36.3747846769623
+    }
+  },
+  "42": {
+    "baselines": {
+      "majority_accuracy": 0.10277777777777777,
+      "mean_pixel_mse": 0.07321251698168732,
+      "mean_pixel_nll": 27.175929655193425
+    },
+    "cnn": {
+      "initial_valid_nll": 2.3916410496511062,
+      "selected_epoch": 12,
+      "test_accuracy": 0.9583333333333334,
+      "test_nll": 0.14863057387369832,
+      "valid_nll": 0.13418541679522572
+    },
+    "memory": {
+      "initial_valid_nll": 0.6895189526861444,
+      "last_bit_baseline_accuracy": 0.5859375,
+      "long_sequence_accuracy": 0.8828125,
+      "long_sequence_nll": 0.36910107998556874,
+      "selected_update": 150,
+      "test_accuracy": 1.0,
+      "test_nll": 0.00012330260149819028,
+      "valid_nll": 0.00011086986634600837
+    },
+    "mlp_adam": {
+      "initial_valid_nll": 2.360826165443359,
+      "selected_epoch": 11,
+      "test_accuracy": 0.9666666666666667,
+      "test_nll": 0.14375007317260297,
+      "valid_nll": 0.1410592198412443
+    },
+    "mlp_sgd": {
+      "initial_valid_nll": 2.360826165443359,
+      "selected_epoch": 11,
+      "test_accuracy": 0.9555555555555556,
+      "test_nll": 0.1621921058605148,
+      "valid_nll": 0.14521749769316497
+    },
+    "rl": {
+      "ppo": {
+        "greedy_mean_return": 0.9399999999999997,
+        "greedy_success_rate": 1.0,
+        "mean_return": 0.9399999999999997,
+        "success_rate": 1.0
+      },
+      "q_learning": {
+        "greedy_mean_return": 0.9399999999999997,
+        "greedy_success_rate": 1.0,
+        "mean_return": 0.9399999999999997,
+        "success_rate": 1.0
+      },
+      "random": {
+        "mean_return": 0.25020000000000003,
+        "success_rate": 0.45
+      },
+      "reinforce": {
+        "greedy_mean_return": 0.9399999999999997,
+        "greedy_success_rate": 1.0,
+        "mean_return": 0.9282999999999998,
+        "success_rate": 1.0
+      }
+    },
+    "vae": {
+      "final_budget_kl": 1.2352577423376379,
+      "final_budget_reconstruction_nll": 24.975517009814855,
+      "initial_valid_negative_elbo": 46.35875403200015,
+      "kl": 1.2352577423376379,
+      "mean_latent_reconstruction_mse": 0.05449960199138937,
+      "negative_elbo": 26.210774752152492,
+      "reconstruction_nll": 24.975517009814855,
+      "selected_epoch": 20,
+      "valid_negative_elbo": 26.024661939865684
+    },
+    "vae_no_kl": {
+      "final_budget_kl": 51.279957290094195,
+      "final_budget_reconstruction_nll": 21.734344329602152,
+      "initial_valid_negative_elbo": 46.35875403200015,
+      "kl": 3.0238474746022086,
+      "mean_latent_reconstruction_mse": 0.11634284998288896,
+      "negative_elbo": 39.33846112715273,
+      "reconstruction_nll": 36.31461365255053,
+      "selected_epoch": 1,
+      "valid_negative_elbo": 39.295733656956024
+    }
+  },
+  "7": {
+    "baselines": {
+      "majority_accuracy": 0.10277777777777777,
+      "mean_pixel_mse": 0.07261805555606912,
+      "mean_pixel_nll": 27.060792034311376
+    },
+    "cnn": {
+      "initial_valid_nll": 2.3094969965903505,
+      "selected_epoch": 12,
+      "test_accuracy": 0.975,
+      "test_nll": 0.1289413837546432,
+      "valid_nll": 0.07910846135968339
+    },
+    "memory": {
+      "initial_valid_nll": 0.6971416929346602,
+      "last_bit_baseline_accuracy": 0.5234375,
+      "long_sequence_accuracy": 1.0,
+      "long_sequence_nll": 0.00010411265291966273,
+      "selected_update": 150,
+      "test_accuracy": 1.0,
+      "test_nll": 0.00010132898456299833,
+      "valid_nll": 9.875277022848572e-05
+    },
+    "mlp_adam": {
+      "initial_valid_nll": 2.297708096580473,
+      "selected_epoch": 12,
+      "test_accuracy": 0.9527777777777777,
+      "test_nll": 0.1429506972472729,
+      "valid_nll": 0.09603756571203413
+    },
+    "mlp_sgd": {
+      "initial_valid_nll": 2.297708096580473,
+      "selected_epoch": 12,
+      "test_accuracy": 0.9583333333333334,
+      "test_nll": 0.14121794471507024,
+      "valid_nll": 0.0813447908634347
+    },
+    "rl": {
+      "ppo": {
+        "greedy_mean_return": 0.9399999999999997,
+        "greedy_success_rate": 1.0,
+        "mean_return": 0.9397999999999996,
+        "success_rate": 1.0
+      },
+      "q_learning": {
+        "greedy_mean_return": 0.9399999999999997,
+        "greedy_success_rate": 1.0,
+        "mean_return": 0.9399999999999997,
+        "success_rate": 1.0
+      },
+      "random": {
+        "mean_return": 0.18830000000000002,
+        "success_rate": 0.39
+      },
+      "reinforce": {
+        "greedy_mean_return": 0.9399999999999997,
+        "greedy_success_rate": 1.0,
+        "mean_return": 0.9312999999999998,
+        "success_rate": 1.0
+      }
+    },
+    "vae": {
+      "final_budget_kl": 1.291300371534016,
+      "final_budget_reconstruction_nll": 24.91635407146678,
+      "initial_valid_negative_elbo": 50.148980838268784,
+      "kl": 1.291300371534016,
+      "mean_latent_reconstruction_mse": 0.05229613703775594,
+      "negative_elbo": 26.207654443000795,
+      "reconstruction_nll": 24.91635407146678,
+      "selected_epoch": 20,
+      "valid_negative_elbo": 26.447577329972262
+    },
+    "vae_no_kl": {
+      "final_budget_kl": 37.435141969522554,
+      "final_budget_reconstruction_nll": 22.04248717096274,
+      "initial_valid_negative_elbo": 50.148980838268784,
+      "kl": 2.491321782151905,
+      "mean_latent_reconstruction_mse": 0.12526930242429327,
+      "negative_elbo": 39.7758078913753,
+      "reconstruction_nll": 37.2844861092234,
+      "selected_epoch": 1,
+      "valid_negative_elbo": 39.859537481177775
+    }
+  }
+}
