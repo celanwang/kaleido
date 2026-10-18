@@ -3,11 +3,12 @@
 万花筒：以机器学习全域为结构，以可复现实验理解设计、取舍与失效边界。
 
 原始方向见 [DESIGN](DESIGN.md)，阶段与验收见 [ROADMAP](docs/ROADMAP.md)。
-当前已实现 P0 地基、P1 经典机器学习与 P2 深度学习代表案例。P3–P6 尚未实现。
+当前已实现 P0–P3；P4–P6 尚未实现。
 自研核心用于理解，后续规模训练使用成熟框架。
 P0 的 [验收报告与完整参考产物](results/p0/REPORT.md)保留原始阶段证据。
 P1 的 [验收报告与完整参考产物](results/p1/REPORT.md)包含三组划分与六类算法对照。
 P2 的 [验收报告与完整参考产物](results/p2/REPORT.md)覆盖神经模型、生成与强化学习；全仓 185 项测试通过。
+P3 的 [验收报告与训练权重](results/p3/REPORT.md)覆盖真实三种子预训练、逐token评测与cache实测；全仓209项测试通过。
 
 ## 运行
 
@@ -47,6 +48,19 @@ MLP/CNN 按验证 NLL 选检查点，VAE 用固定噪声的验证负 ELBO。PyTo
 `data.npz`、`models.npz`、`outputs.npz` 保存完整输入、模型参数、预测与 prior 样本，读取时用
 `np.load(path, allow_pickle=False)`。这些是推理模型快照，不含恢复训练所需的优化器/RNG 状态。
 
+P3 正式预训练与快速接线检查：
+
+```sh
+uv run --locked --all-extras python -m kaleido.demos.language_model
+uv run --locked --all-extras python -m kaleido.demos.language_model --config configs/p3_smoke.json
+```
+
+正式预算在 `configs/p3_pretrain.json`，三种子各1000步；先实测CPU/MPS再选设备，
+原文已随仓库固定，无需运行时下载。原始声明与使用说明在 [data/p3](data/p3/README.md)。
+模型使用PyTorch从随机初始化训练，BPE与Decoder关键逻辑显式实现。
+输出含词表、章节划分/指纹、计数基线、每token NLL、模型、生成、cache数值检查及重复计时。
+smoke仅验证接线，不代表完成正式训练。所有示例均从仓库根目录运行，可通过 `--output` 指定产物目录。
+
 默认读取 `configs/p0_linear.json`；可用 `--config <path>` 和 `--output <directory>` 指定。
 从仓库根目录运行。每次生成独立 `runs/p0-linear/<id>/`，不覆盖历史，运行产物默认不入 Git。
 
@@ -75,6 +89,8 @@ MLP/CNN 按验证 NLL 选检查点，VAE 用固定噪声的验证负 ELBO。PyTo
 - `src/kaleido/core/models.py`：[CNN、RNN、VAE 代表案例](docs/notes/cnn-rnn-vae.md)。
 - `src/kaleido/rl.py`：[Q-learning、REINFORCE、GAE 与 PPO](docs/notes/policy-gradients.md)。
 - `src/kaleido/demos/deep_learning.py`：[P2 实验协议](docs/notes/deep-experiments.md)。
+- `src/kaleido/lm/`：[BPE与语料](docs/notes/bpe-corpus.md)、[Decoder与cache](docs/notes/decoder-cache.md)、
+  [预训练实验协议](docs/notes/pretraining-experiment.md)。
 
 监督模型 `fit(X,y)` 返回自身，提供 `predict(X)`；分类器另提供 `predict_proba(X)`。
 Scaler/PCA 使用 `fit/transform/inverse_transform`，聚类提供 `fit/predict`。

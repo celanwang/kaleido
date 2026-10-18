@@ -15,3 +15,4 @@ jobs:
       - run: uv run --locked --all-extras python -m kaleido.demos.linear_regression
       - run: uv run --locked --all-extras python -m kaleido.demos.classical_ml
       - run: uv run --locked --all-extras python -m kaleido.demos.deep_learning
+      - run: uv run --locked --all-extras python -m kaleido.demos.language_model --config configs/p3_smoke.json

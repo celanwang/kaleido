@@ -1,0 +1,480 @@
+{
+  "audit": {
+    "duplicate_documents_removed": 0,
+    "duplicate_long_paragraphs_removed": 2,
+    "long_paragraph_min_chars": 80,
+    "near_duplicate_threshold": 0.8,
+    "near_overlap": {
+      "document_ids": [
+        "pg55-chapter-12",
+        "pg55-chapter-14"
+      ],
+      "jaccard": 0.0032537960954446853
+    },
+    "source_sha256": "ee333bcf82f9503dc7c805f8fc5bae2dde4ecaebd9f48d03817cd6627de9398c",
+    "split_seed": 17,
+    "splits": {
+      "test": {
+        "documents": [
+          "pg11-chapter-03",
+          "pg12-chapter-01",
+          "pg55-chapter-18",
+          "pg55-chapter-23"
+        ],
+        "utf8_bytes": 40227
+      },
+      "train": {
+        "documents": [
+          "pg11-chapter-01",
+          "pg11-chapter-04",
+          "pg11-chapter-05",
+          "pg11-chapter-06",
+          "pg11-chapter-07",
+          "pg11-chapter-08",
+          "pg11-chapter-09",
+          "pg11-chapter-10",
+          "pg11-chapter-11",
+          "pg11-chapter-12",
+          "pg12-chapter-02",
+          "pg12-chapter-03",
+          "pg12-chapter-04",
+          "pg12-chapter-05",
+          "pg12-chapter-06",
+          "pg12-chapter-07",
+          "pg12-chapter-09",
+          "pg12-chapter-10",
+          "pg12-chapter-11",
+          "pg12-chapter-12",
+          "pg55-chapter-01",
+          "pg55-chapter-02",
+          "pg55-chapter-03",
+          "pg55-chapter-04",
+          "pg55-chapter-05",
+          "pg55-chapter-06",
+          "pg55-chapter-07",
+          "pg55-chapter-08",
+          "pg55-chapter-09",
+          "pg55-chapter-10",
+          "pg55-chapter-11",
+          "pg55-chapter-13",
+          "pg55-chapter-14",
+          "pg55-chapter-15",
+          "pg55-chapter-16",
+          "pg55-chapter-19",
+          "pg55-chapter-20",
+          "pg55-chapter-21",
+          "pg55-chapter-22",
+          "pg55-chapter-24"
+        ],
+        "utf8_bytes": 427379
+      },
+      "valid": {
+        "documents": [
+          "pg11-chapter-02",
+          "pg12-chapter-08",
+          "pg55-chapter-12",
+          "pg55-chapter-17"
+        ],
+        "utf8_bytes": 58683
+      }
+    }
+  },
+  "bytes_per_non_eos_token": {
+    "test": 1.7446762371514073,
+    "train": 1.7712768823331937,
+    "valid": 1.7484953220904595
+  },
+  "documents": [
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-01",
+      "sha256": "fcafed51ef4e8192bf067643ee19a07f13e762741b88943bcb19c48cd8e9c507",
+      "split": "train",
+      "title": "Down the Rabbit-Hole"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-02",
+      "sha256": "fea2e748a2cd86bce599a5f16ecbcfc74466dd9ee602c161bcc6730cdab3dfbb",
+      "split": "valid",
+      "title": "The Pool of Tears"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-03",
+      "sha256": "0246d352b446259c0ed62465404c44c2cc1810fd32a9030e6969a0cc4ecc74e2",
+      "split": "test",
+      "title": "A Caucus-Race and a Long Tale"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-04",
+      "sha256": "d0a75738a63de7fe3867705a52bab63b421dd6605d7d0cc5d910a957587da054",
+      "split": "train",
+      "title": "The Rabbit Sends in a Little Bill"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-05",
+      "sha256": "526008b92711af04361c574a14c524adcac3264c6e554e27bd813b3111fb3c4a",
+      "split": "train",
+      "title": "Advice from a Caterpillar"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-06",
+      "sha256": "7d88f9ba9c53beb1c782b6a714009b77a00df10678617fce2e8ccbbbc59d3562",
+      "split": "train",
+      "title": "Pig and Pepper"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-07",
+      "sha256": "0883ef7dc6799530ef6217c03440dbfc8b4e5b2cb2079ca21f810251c8c1e63b",
+      "split": "train",
+      "title": "A Mad Tea-Party"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-08",
+      "sha256": "b2d4255573eb3197f8f584b6849c86f93322fb7016e36d2c11c494e7cce14686",
+      "split": "train",
+      "title": "The Queen’s Croquet-Ground"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-09",
+      "sha256": "51b877e9a35456e14a0db8e8ae5110caf7e48423dd31e322f6669770b0a5ad1d",
+      "split": "train",
+      "title": "The Mock Turtle’s Story"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-10",
+      "sha256": "6ca940f57f79acb93de276d14024772b6b3f2f6a833cf391ce0e88213f2b00f0",
+      "split": "train",
+      "title": "The Lobster Quadrille"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-11",
+      "sha256": "7dc2455a29486386291899bce0530174fe96c8093a52e0add3ad07cca3db615f",
+      "split": "train",
+      "title": "Who Stole the Tarts?"
+    },
+    {
+      "book": "pg11",
+      "id": "pg11-chapter-12",
+      "sha256": "3de6bde1328dfca4b4f2056b239038db290401a95debb36696e144266a44645e",
+      "split": "train",
+      "title": "Alice’s Evidence"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-01",
+      "sha256": "367998c3490cabe7404af7b3e4b34eecc8ee996d7d35987cfa7acf37d3714cb3",
+      "split": "test",
+      "title": "Looking-Glass house"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-02",
+      "sha256": "3eebb363471b48bf79e920cf291002084e134293ff7506e128658d9c07d75f76",
+      "split": "train",
+      "title": "The Garden of Live Flowers"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-03",
+      "sha256": "e2faab3378dd18df65a6aa09bc3454e908ca4c3ba471ecfece787440e077846a",
+      "split": "train",
+      "title": "Looking-Glass Insects"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-04",
+      "sha256": "5fa1af7850ab23f3cb1bf8100a4f37d888f697cef977fac49a2bd079dc1b53fb",
+      "split": "train",
+      "title": "Tweedledum And Tweedledee"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-05",
+      "sha256": "5a9db2ea5bbfab70d680b1d506cc3cc4c305b2fb7072188fc6df7768e2df6fd5",
+      "split": "train",
+      "title": "Wool and Water"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-06",
+      "sha256": "0a1e61eb41b56e0ec25a5da941b0cd813e0724fc689abd1d32a86adc8482cd1d",
+      "split": "train",
+      "title": "Humpty Dumpty"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-07",
+      "sha256": "f9c6509a9a3b17c9a0143aa7dcfe3a40aff32a6c31ae948950fa554edac4bdc2",
+      "split": "train",
+      "title": "The Lion and the Unicorn"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-08",
+      "sha256": "c03cd140b057551d4a6af212fefd757946fe038a1eb11263e9060f5b6d18d443",
+      "split": "valid",
+      "title": "“It’s my own Invention”"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-09",
+      "sha256": "25a56a7737ed52e2c36e760c533545796428153d7481382a1a88ffe20e7a8076",
+      "split": "train",
+      "title": "Queen Alice"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-10",
+      "sha256": "eedf73b204de9140c99da92bea9c131e83769b654932eb18e46539b74d8d1b7d",
+      "split": "train",
+      "title": "Shaking"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-11",
+      "sha256": "ceb8057064145391a74eb7501e60e856e30e8ab3cd0afdcce8f1e82be9a61aec",
+      "split": "train",
+      "title": "Waking"
+    },
+    {
+      "book": "pg12",
+      "id": "pg12-chapter-12",
+      "sha256": "45835a78d8957845197e5ad7559376dc256cdfe2585281491d454eb897a078d1",
+      "split": "train",
+      "title": "Which Dreamed it?"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-01",
+      "sha256": "1d8c591969dd338fd8f251e3b83d991a76b5a7e5c715b503953c5ce4775ec320",
+      "split": "train",
+      "title": "The Cyclone"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-02",
+      "sha256": "e2cbfaed9ccf34503f56eba6e4f67b2b579f6c74e52fcc591ca5167d546751d1",
+      "split": "train",
+      "title": "The Council with the Munchkins"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-03",
+      "sha256": "1e2e1a8da786c01ce9ac93f3af5cd1135160176fd60e12bc6dd626a18feca40c",
+      "split": "train",
+      "title": "How Dorothy Saved the Scarecrow"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-04",
+      "sha256": "ffea9d9a0ff93a50ee61e13c17717ecbd6f6d86b865b8301cc6c296f5569785b",
+      "split": "train",
+      "title": "The Road Through the Forest"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-05",
+      "sha256": "68f7ad4fa50c6ffc1f4d06b70e7d9fa3b4ffa2463d4c7959909d534529b21e08",
+      "split": "train",
+      "title": "The Rescue of the Tin Woodman"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-06",
+      "sha256": "1536c6b458ef67c203f9ba1ec8cceb39564478f6c09cd7295caf664f362d1e03",
+      "split": "train",
+      "title": "The Cowardly Lion"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-07",
+      "sha256": "bb2abede13f49413af9308a435a236dbab18fa6708f343fc1f28aca903b7d22a",
+      "split": "train",
+      "title": "The Journey to the Great Oz"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-08",
+      "sha256": "856d48baacd1210d64061ac0d9a76ffc70322cf33381b1a2fc450e34b62a4c22",
+      "split": "train",
+      "title": "The Deadly Poppy Field"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-09",
+      "sha256": "126e0c6ed87a85e44d8fba63f85be0bc1de3561149fd5df13e6a90af1e7c6461",
+      "split": "train",
+      "title": "The Queen of the Field Mice"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-10",
+      "sha256": "567ede33ba3f0ad601388a0cef93c590436cfe7aa6d2997bb1aacfcb19c7ee8e",
+      "split": "train",
+      "title": "The Guardian of the Gate"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-11",
+      "sha256": "5710a2887418ad8140d28df264fb309f172ab4b951cf842cbe99a217505f6d9c",
+      "split": "train",
+      "title": "The Wonderful City of Oz"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-12",
+      "sha256": "4bce9fe34fd122013ca41c0fa36c23d089d19150f46833719ceea3c4076b0e7e",
+      "split": "valid",
+      "title": "The Search for the Wicked Witch"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-13",
+      "sha256": "ee21dd6d6d09abedba10e078b594f3bc3bb2acd0c9e42153e0738c3dc3945d05",
+      "split": "train",
+      "title": "The Rescue"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-14",
+      "sha256": "e3b0f17e464d809a280e6f262fe7906b5cefca4b205d4dbca70e472cfa44bdd9",
+      "split": "train",
+      "title": "The Winged Monkeys"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-15",
+      "sha256": "612d3de7a832b4434f3df9d84cda97e2e7e76fd0aa3787d7b075856dd12eae77",
+      "split": "train",
+      "title": "The Discovery of Oz, the Terrible"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-16",
+      "sha256": "cdcb0b4ddfad95fe24892eeb96797ee76e22ab66277f0b0952c14fd46e17a280",
+      "split": "train",
+      "title": "The Magic Art of the Great Humbug"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-17",
+      "sha256": "9cb6b48e6cdcedc3ff862ec41a59dc5a1c1b4a4e345b4a6734ecdcbd17b3f0ec",
+      "split": "valid",
+      "title": "How the Balloon Was Launched"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-18",
+      "sha256": "24489e3e82f12fbadf4f68012380f72edb7af2009a698f2327a046714fc56210",
+      "split": "test",
+      "title": "Away to the South"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-19",
+      "sha256": "a19158d1e30ee7781f9244fe8e7fafd25ca4fa57259750f809ef95c1fbd3826a",
+      "split": "train",
+      "title": "Attacked by the Fighting Trees"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-20",
+      "sha256": "cd59ffdcaec7a1cb50969c7686466f4a5d4a424836b4112328e493320e46a2fa",
+      "split": "train",
+      "title": "The Dainty China Country"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-21",
+      "sha256": "5c64743d9d1ee1f02f4fc9f986aee8d6744a37fea7951bfde4e1511307283a8e",
+      "split": "train",
+      "title": "The Lion Becomes the King of Beasts"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-22",
+      "sha256": "f32f7264b64b25e79fac94afb730a32dcadcb31a61de5affb38823f4a6743061",
+      "split": "train",
+      "title": "The Country of the Quadlings"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-23",
+      "sha256": "95239f3354a99865ac420b4f3cebbab799834ef296421821c2fa4504771e6c29",
+      "split": "test",
+      "title": "Glinda The Good Witch Grants Dorothy’s Wish"
+    },
+    {
+      "book": "pg55",
+      "id": "pg55-chapter-24",
+      "sha256": "c1214e2379c09e58805f431f9ccb5431055ffe018e0b461c3f87c052b880a43d",
+      "split": "train",
+      "title": "Home Again"
+    }
+  ],
+  "model_config": {
+    "context_length": 128,
+    "dropout": 0.0,
+    "heads": 4,
+    "layers": 2,
+    "vocab_size": 512,
+    "width": 128
+  },
+  "token_counts": {
+    "test": 23061,
+    "train": 241323,
+    "valid": 33566
+  },
+  "tokenizer_fit_document_ids": [
+    "pg11-chapter-01",
+    "pg11-chapter-04",
+    "pg11-chapter-05",
+    "pg11-chapter-06",
+    "pg11-chapter-07",
+    "pg11-chapter-08",
+    "pg11-chapter-09",
+    "pg11-chapter-10",
+    "pg11-chapter-11",
+    "pg11-chapter-12",
+    "pg12-chapter-02",
+    "pg12-chapter-03",
+    "pg12-chapter-04",
+    "pg12-chapter-05",
+    "pg12-chapter-06",
+    "pg12-chapter-07",
+    "pg12-chapter-09",
+    "pg12-chapter-10",
+    "pg12-chapter-11",
+    "pg12-chapter-12",
+    "pg55-chapter-01",
+    "pg55-chapter-02",
+    "pg55-chapter-03",
+    "pg55-chapter-04",
+    "pg55-chapter-05",
+    "pg55-chapter-06",
+    "pg55-chapter-07",
+    "pg55-chapter-08",
+    "pg55-chapter-09",
+    "pg55-chapter-10",
+    "pg55-chapter-11",
+    "pg55-chapter-13",
+    "pg55-chapter-14",
+    "pg55-chapter-15",
+    "pg55-chapter-16",
+    "pg55-chapter-19",
+    "pg55-chapter-20",
+    "pg55-chapter-21",
+    "pg55-chapter-22",
+    "pg55-chapter-24"
+  ]
+}

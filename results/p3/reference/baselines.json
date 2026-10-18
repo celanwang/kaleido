@@ -1,0 +1,34 @@
+{
+  "test": {
+    "bigram": {
+      "bits_per_utf8_byte_including_eos_cost": 2.468308156437228,
+      "nll": 2.9844502868932055,
+      "nll_sum": 68824.40806604421,
+      "perplexity": 19.775628325792795,
+      "target_tokens": 23061
+    },
+    "unigram": {
+      "bits_per_utf8_byte_including_eos_cost": 3.476472877810596,
+      "nll": 4.203429969025482,
+      "nll_sum": 96935.29851569663,
+      "perplexity": 66.91545581162005,
+      "target_tokens": 23061
+    }
+  },
+  "valid": {
+    "bigram": {
+      "bits_per_utf8_byte_including_eos_cost": 2.439345372364833,
+      "nll": 2.9560479362243903,
+      "nll_sum": 99222.70502730788,
+      "perplexity": 19.221855447706957,
+      "target_tokens": 33566
+    },
+    "unigram": {
+      "bits_per_utf8_byte_including_eos_cost": 3.4416127951846587,
+      "nll": 4.1706158200248025,
+      "nll_sum": 139990.8906149525,
+      "perplexity": 64.75531745240394,
+      "target_tokens": 33566
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "config": {
+    "batch_size": 16,
+    "benchmark_repeats": 5,
+    "context_length": 128,
+    "device": "auto",
+    "eval_interval": 100,
+    "generation_tokens": 48,
+    "heads": 4,
+    "layers": 2,
+    "learning_rate": 0.0008,
+    "probe_repeats": 5,
+    "seeds": [
+      42,
+      7,
+      2026
+    ],
+    "split_seed": 17,
+    "steps": 1000,
+    "vocab_size": 512,
+    "warmup_steps": 50,
+    "width": 128
+  },
+  "environment": {
+    "command": [
+      "/Users/wangchen/Developer/kaleido/src/kaleido/demos/language_model.py",
+      "--output",
+      "runs/p3-reference"
+    ],
+    "git_dirty": false,
+    "git_revision": "cee0ef8f2e3f64b9d9504da864a088f767dfe02d",
+    "git_status": "",
+    "numpy": "2.5.4",
+    "packages": {
+      "numpy": "2.5.4",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "torch": "2.14.1"
+    },
+    "platform": "macOS-15.8-arm64-arm-64bit",
+    "python": "3.12.15 (main, Oct  3 2026, 00:54:33) [Clang 22.1.3 ]",
+    "source_sha256": "612e2fc7d6a563fd7cda29b5b5c9ccae1aab892536713c747807a6dac9f6647d"
+  },
+  "finished_at": "2026-10-18T16:27:21.687665+00:00",
+  "schema_version": 1,
+  "started_at": "2026-10-18T16:26:41.136881+00:00",
+  "status": "completed"
+}

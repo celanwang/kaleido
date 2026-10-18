@@ -1,0 +1,14 @@
+{
+  "cpu_threads": 1,
+  "dtype": "float32",
+  "model_config": {
+    "context_length": 128,
+    "dropout": 0.0,
+    "heads": 4,
+    "layers": 2,
+    "vocab_size": 512,
+    "width": 128
+  },
+  "training_device": "mps",
+  "wall_seconds": 40.505498833001184
+}

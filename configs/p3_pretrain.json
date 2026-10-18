@@ -1,0 +1,18 @@
+{
+  "seeds": [42, 7, 2026],
+  "vocab_size": 512,
+  "context_length": 128,
+  "width": 128,
+  "layers": 2,
+  "heads": 4,
+  "batch_size": 16,
+  "steps": 1000,
+  "learning_rate": 0.0008,
+  "warmup_steps": 50,
+  "eval_interval": 100,
+  "split_seed": 17,
+  "device": "auto",
+  "probe_repeats": 5,
+  "benchmark_repeats": 5,
+  "generation_tokens": 48
+}

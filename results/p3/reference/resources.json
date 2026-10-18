@@ -1,0 +1,69 @@
+{
+  "candidates": [
+    {
+      "actual_target_tokens": 2048,
+      "cpu_threads": 1,
+      "device": "cpu",
+      "median_step_seconds": 0.03998754100030055,
+      "parameter_bytes": 1914880,
+      "parameters": 478720,
+      "seconds": [
+        0.042813082996872254,
+        0.03998754100030055,
+        0.03804304199729813,
+        0.03827237500081537,
+        0.041677290995721705
+      ],
+      "status": "ok",
+      "target_tokens_per_second": 51215.9524884165
+    },
+    {
+      "actual_target_tokens": 2048,
+      "cpu_threads": 4,
+      "device": "cpu",
+      "median_step_seconds": 0.024043541998253204,
+      "parameter_bytes": 1914880,
+      "parameters": 478720,
+      "seconds": [
+        0.024639750001369976,
+        0.024043541998253204,
+        0.02377087499917252,
+        0.023282915994059294,
+        0.024607624996860977
+      ],
+      "status": "ok",
+      "target_tokens_per_second": 85178.79770579518
+    },
+    {
+      "actual_target_tokens": 2048,
+      "cpu_threads": 1,
+      "device": "mps",
+      "median_step_seconds": 0.007400874994345941,
+      "mps_current_allocated_bytes": 7692288,
+      "mps_driver_allocated_bytes": 116195328,
+      "parameter_bytes": 1914880,
+      "parameters": 478720,
+      "seconds": [
+        0.009058458002982661,
+        0.008671041003253777,
+        0.007400874994345941,
+        0.007315166003536433,
+        0.007238207996124402
+      ],
+      "status": "ok",
+      "target_tokens_per_second": 276724.03622066503
+    }
+  ],
+  "measured_steps": 5,
+  "process_peak_rss_bytes": 715276288,
+  "rss_scope": "process high-water mark including imports/probes; not model-only peak",
+  "selected": {
+    "cpu_threads": 1,
+    "device": "mps"
+  },
+  "used": {
+    "cpu_threads": 1,
+    "device": "mps"
+  },
+  "warmup_steps": 2
+}

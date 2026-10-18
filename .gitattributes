@@ -1,0 +1,2 @@
+# Preserve exact source snapshot bytes across clients with autocrlf enabled.
+data/p3/raw/*.txt -text
