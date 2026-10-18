@@ -153,6 +153,72 @@ class Tensor:
     def reshape(self, *shape):
         return self._result(self._data.reshape(*shape), (self, lambda g: g.reshape(self.shape)))
 
+    def __getitem__(self, index):
+        # Freeze array indices as well as values: changing an index cannot rewrite a graph.
+        def freeze(item):
+            if isinstance(item, (np.ndarray, list)):
+                return np.array(item, copy=True)
+            return item
+
+        index = tuple(freeze(i) for i in index) if isinstance(index, tuple) else freeze(index)
+
+        def vjp(g):
+            gradient = np.zeros_like(self._data)
+            np.add.at(gradient, index, g)
+            return gradient
+
+        return self._result(self._data[index], (self, vjp))
+
+    def tanh(self):
+        data = np.tanh(self._data)
+        return self._result(data, (self, lambda g: g * (1 - data * data)))
+
+    def clip(self, low, high):
+        if not np.isfinite([low, high]).all() or low >= high:
+            raise ValueError("clip requires finite low < high")
+        mask = (self._data >= low) & (self._data <= high)
+        return self._result(np.clip(self._data, low, high), (self, lambda g: g * mask))
+
+    def minimum(self, other):
+        other = self._as_tensor(other)
+        left = self._data < other._data
+        equal = self._data == other._data
+        return self._result(
+            np.minimum(self._data, other._data),
+            (self, lambda g: _unbroadcast(g * (left + 0.5 * equal), self.shape)),
+            (
+                other,
+                lambda g: _unbroadcast(g * ((self._data > other._data) + 0.5 * equal), other.shape),
+            ),
+        )
+
+    def logsumexp(self, axis=-1, keepdims=False):
+        maximum = self._data.max(axis=axis, keepdims=True)
+        shifted = np.exp(self._data - maximum)
+        total = shifted.sum(axis=axis, keepdims=True)
+        data = maximum + np.log(total)
+
+        def vjp(g):
+            if not keepdims:
+                g = np.expand_dims(g, axis=axis)
+            return g * shifted / total
+
+        return self._result(data if keepdims else np.squeeze(data, axis=axis), (self, vjp))
+
+    def softmax(self, axis=-1, *, mask=None):
+        allowed = np.ones(self.shape, dtype=bool) if mask is None else np.asarray(mask)
+        if allowed.dtype != bool:
+            raise ValueError("softmax mask must be boolean (True means allowed)")
+        allowed = np.broadcast_to(allowed, self.shape).copy()
+        if not allowed.any(axis=axis).all():
+            raise ValueError("softmax requires an allowed element in every row")
+        masked = np.where(allowed, self._data, -np.inf)
+        exp = np.exp(masked - masked.max(axis=axis, keepdims=True))
+        data = exp / exp.sum(axis=axis, keepdims=True)
+        return self._result(
+            data, (self, lambda g: data * (g - (g * data).sum(axis=axis, keepdims=True)))
+        )
+
     @property
     def T(self):
         return self._result(self._data.T, (self, lambda g: g.T))

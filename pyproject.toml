@@ -12,10 +12,21 @@ dependencies = [
 reference = [
     "scikit-learn==1.9.1",
 ]
+torch-reference = [
+    "torch==2.14.1",
+]
 
 [build-system]
 requires = ["hatchling==1.30.0"]
 build-backend = "hatchling.build"
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/kaleido"]
