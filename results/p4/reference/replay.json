@@ -1,0 +1,81 @@
+{
+  "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "device": "mps",
+  "items": [
+    {
+      "method": "sft",
+      "response_nll": 0.28397031873464584,
+      "score_matches": true,
+      "seed": 42,
+      "strict_accuracy": 0.15625,
+      "token_ids_match": true
+    },
+    {
+      "method": "grpo",
+      "response_nll": 0.28397031873464584,
+      "score_matches": true,
+      "seed": 42,
+      "strict_accuracy": 0.15625,
+      "token_ids_match": true
+    },
+    {
+      "method": "rejection_sft",
+      "response_nll": 0.4982544779777527,
+      "score_matches": true,
+      "seed": 42,
+      "strict_accuracy": 0.09375,
+      "token_ids_match": true
+    },
+    {
+      "method": "sft",
+      "response_nll": 0.284128338098526,
+      "score_matches": true,
+      "seed": 7,
+      "strict_accuracy": 0.15625,
+      "token_ids_match": true
+    },
+    {
+      "method": "grpo",
+      "response_nll": 0.284128338098526,
+      "score_matches": true,
+      "seed": 7,
+      "strict_accuracy": 0.15625,
+      "token_ids_match": true
+    },
+    {
+      "method": "rejection_sft",
+      "response_nll": 0.284128338098526,
+      "score_matches": true,
+      "seed": 7,
+      "strict_accuracy": 0.15625,
+      "token_ids_match": true
+    },
+    {
+      "method": "sft",
+      "response_nll": 0.33629532158374786,
+      "score_matches": true,
+      "seed": 2026,
+      "strict_accuracy": 0.09375,
+      "token_ids_match": true
+    },
+    {
+      "method": "grpo",
+      "response_nll": 0.5048171058297157,
+      "score_matches": true,
+      "seed": 2026,
+      "strict_accuracy": 0.21875,
+      "token_ids_match": true
+    },
+    {
+      "method": "rejection_sft",
+      "response_nll": 0.6320267394185066,
+      "score_matches": true,
+      "seed": 2026,
+      "strict_accuracy": 0.1875,
+      "token_ids_match": true
+    }
+  ],
+  "kind": "post_run_published_adapter_and_tokenizer_replay",
+  "source_sha256": "535f181f1070870fb7dedf12f9054cbb10f38e5ff4be2be422525565dfbf1e23",
+  "wall_seconds": 10.781903458999295
+}

@@ -1,0 +1,3109 @@
+{
+  "answer_counts": {
+    "test": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4,
+      "7": 4
+    },
+    "train": {
+      "0": 16,
+      "1": 16,
+      "2": 16,
+      "3": 16,
+      "4": 16,
+      "5": 16,
+      "6": 16,
+      "7": 16
+    },
+    "valid": {
+      "0": 4,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 4,
+      "5": 4,
+      "6": 4,
+      "7": 4
+    }
+  },
+  "dataset_sha256": "0a9f2b66885a089673e14a2eaecfea337e74d76e6839509e7c34e06c09cf1c05",
+  "rows": [
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((11 + 11) * 30) % 11)",
+      "family": "sum_scale",
+      "id": "a400ade4af1dd5d3662a",
+      "operands": {
+        "a": 11,
+        "b": 11,
+        "c": 30,
+        "d": 27,
+        "m": 11
+      },
+      "prompt": "Compute (((11 + 11) * 30) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((22 + 5) * 13) % 10)",
+      "family": "sum_scale",
+      "id": "16296328241176823012",
+      "operands": {
+        "a": 22,
+        "b": 5,
+        "c": 13,
+        "d": 9,
+        "m": 10
+      },
+      "prompt": "Compute (((22 + 5) * 13) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((21 + 21) * 5) % 13)",
+      "family": "sum_scale",
+      "id": "33093e3f49ea5bae068d",
+      "operands": {
+        "a": 21,
+        "b": 21,
+        "c": 5,
+        "d": 15,
+        "m": 13
+      },
+      "prompt": "Compute (((21 + 21) * 5) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((9 + 18) * 24) % 15)",
+      "family": "sum_scale",
+      "id": "bf81b54752e5b9aadb4a",
+      "operands": {
+        "a": 9,
+        "b": 18,
+        "c": 24,
+        "d": 6,
+        "m": 15
+      },
+      "prompt": "Compute (((9 + 18) * 24) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((10 + 21) * 4) % 8)",
+      "family": "sum_scale",
+      "id": "0d12a7602ceffd49c30b",
+      "operands": {
+        "a": 10,
+        "b": 21,
+        "c": 4,
+        "d": 23,
+        "m": 8
+      },
+      "prompt": "Compute (((10 + 21) * 4) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((11 + 14) * 7) % 10)",
+      "family": "sum_scale",
+      "id": "4cf15194a4664ce2d81e",
+      "operands": {
+        "a": 11,
+        "b": 14,
+        "c": 7,
+        "d": 9,
+        "m": 10
+      },
+      "prompt": "Compute (((11 + 14) * 7) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((7 + 9) * 15) % 9)",
+      "family": "sum_scale",
+      "id": "af29a4d916220852a294",
+      "operands": {
+        "a": 7,
+        "b": 9,
+        "c": 15,
+        "d": 23,
+        "m": 9
+      },
+      "prompt": "Compute (((7 + 9) * 15) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((30 + 13) * 29) % 10)",
+      "family": "sum_scale",
+      "id": "155ee8baa6345bd12bfd",
+      "operands": {
+        "a": 30,
+        "b": 13,
+        "c": 29,
+        "d": 2,
+        "m": 10
+      },
+      "prompt": "Compute (((30 + 13) * 29) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((25 + 5) * 20) % 15)",
+      "family": "sum_scale",
+      "id": "a3080153d7f50cd177e9",
+      "operands": {
+        "a": 25,
+        "b": 5,
+        "c": 20,
+        "d": 30,
+        "m": 15
+      },
+      "prompt": "Compute (((25 + 5) * 20) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((7 + 6) * 7) % 15)",
+      "family": "sum_scale",
+      "id": "0b32a3afdd566ea37915",
+      "operands": {
+        "a": 7,
+        "b": 6,
+        "c": 7,
+        "d": 26,
+        "m": 15
+      },
+      "prompt": "Compute (((7 + 6) * 7) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((8 + 29) * 6) % 10)",
+      "family": "sum_scale",
+      "id": "6076713ce4b87f36e16f",
+      "operands": {
+        "a": 8,
+        "b": 29,
+        "c": 6,
+        "d": 17,
+        "m": 10
+      },
+      "prompt": "Compute (((8 + 29) * 6) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((15 + 16) * 3) % 9)",
+      "family": "sum_scale",
+      "id": "cc0350f8d80a2a2c95f0",
+      "operands": {
+        "a": 15,
+        "b": 16,
+        "c": 3,
+        "d": 1,
+        "m": 9
+      },
+      "prompt": "Compute (((15 + 16) * 3) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((14 + 8) * 19) % 9)",
+      "family": "sum_scale",
+      "id": "70dfc9bba6a41b5095f3",
+      "operands": {
+        "a": 14,
+        "b": 8,
+        "c": 19,
+        "d": 27,
+        "m": 9
+      },
+      "prompt": "Compute (((14 + 8) * 19) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((19 + 10) * 18) % 11)",
+      "family": "sum_scale",
+      "id": "17bdb242acd4488e67c2",
+      "operands": {
+        "a": 19,
+        "b": 10,
+        "c": 18,
+        "d": 6,
+        "m": 11
+      },
+      "prompt": "Compute (((19 + 10) * 18) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((7 + 26) * 14) % 12)",
+      "family": "sum_scale",
+      "id": "82ed01e302ce98430b0a",
+      "operands": {
+        "a": 7,
+        "b": 26,
+        "c": 14,
+        "d": 14,
+        "m": 12
+      },
+      "prompt": "Compute (((7 + 26) * 14) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((28 + 29) * 11) % 10)",
+      "family": "sum_scale",
+      "id": "e5af0da6755faf0fb8d3",
+      "operands": {
+        "a": 28,
+        "b": 29,
+        "c": 11,
+        "d": 26,
+        "m": 10
+      },
+      "prompt": "Compute (((28 + 29) * 11) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((15 + 20) * 4) % 10)",
+      "family": "sum_scale",
+      "id": "11a135d56bfa4e391200",
+      "operands": {
+        "a": 15,
+        "b": 20,
+        "c": 4,
+        "d": 18,
+        "m": 10
+      },
+      "prompt": "Compute (((15 + 20) * 4) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((1 + 6) * 19) % 11)",
+      "family": "sum_scale",
+      "id": "b2d1a04444c74bc8290c",
+      "operands": {
+        "a": 1,
+        "b": 6,
+        "c": 19,
+        "d": 9,
+        "m": 11
+      },
+      "prompt": "Compute (((1 + 6) * 19) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((10 + 2) * 13) % 14)",
+      "family": "sum_scale",
+      "id": "82e4713168908b222da2",
+      "operands": {
+        "a": 10,
+        "b": 2,
+        "c": 13,
+        "d": 8,
+        "m": 14
+      },
+      "prompt": "Compute (((10 + 2) * 13) % 14). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((6 + 21) * 9) % 16)",
+      "family": "sum_scale",
+      "id": "6a94f6d21b68a67f9bf2",
+      "operands": {
+        "a": 6,
+        "b": 21,
+        "c": 9,
+        "d": 26,
+        "m": 16
+      },
+      "prompt": "Compute (((6 + 21) * 9) % 16). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((16 + 28) * 19) % 8)",
+      "family": "sum_scale",
+      "id": "8a993ba9122e298f8bbf",
+      "operands": {
+        "a": 16,
+        "b": 28,
+        "c": 19,
+        "d": 2,
+        "m": 8
+      },
+      "prompt": "Compute (((16 + 28) * 19) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((3 + 14) * 25) % 12)",
+      "family": "sum_scale",
+      "id": "7c5e03ba0b5d74048221",
+      "operands": {
+        "a": 3,
+        "b": 14,
+        "c": 25,
+        "d": 24,
+        "m": 12
+      },
+      "prompt": "Compute (((3 + 14) * 25) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((29 + 4) * 14) % 12)",
+      "family": "sum_scale",
+      "id": "d1b64b298cf2b964efba",
+      "operands": {
+        "a": 29,
+        "b": 4,
+        "c": 14,
+        "d": 23,
+        "m": 12
+      },
+      "prompt": "Compute (((29 + 4) * 14) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((23 + 23) * 7) % 9)",
+      "family": "sum_scale",
+      "id": "52526d2f0b72fb9f8a4f",
+      "operands": {
+        "a": 23,
+        "b": 23,
+        "c": 7,
+        "d": 15,
+        "m": 9
+      },
+      "prompt": "Compute (((23 + 23) * 7) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((18 + 22) * 12) % 16)",
+      "family": "sum_scale",
+      "id": "a54240fa655374281d8d",
+      "operands": {
+        "a": 18,
+        "b": 22,
+        "c": 12,
+        "d": 29,
+        "m": 16
+      },
+      "prompt": "Compute (((18 + 22) * 12) % 16). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((24 + 13) * 13) % 10)",
+      "family": "sum_scale",
+      "id": "e85edad4664dccad6658",
+      "operands": {
+        "a": 24,
+        "b": 13,
+        "c": 13,
+        "d": 17,
+        "m": 10
+      },
+      "prompt": "Compute (((24 + 13) * 13) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((13 + 25) * 27) % 8)",
+      "family": "sum_scale",
+      "id": "a14bb36853f6371e0586",
+      "operands": {
+        "a": 13,
+        "b": 25,
+        "c": 27,
+        "d": 1,
+        "m": 8
+      },
+      "prompt": "Compute (((13 + 25) * 27) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((23 + 10) * 21) % 15)",
+      "family": "sum_scale",
+      "id": "8051e73dc467a838fe25",
+      "operands": {
+        "a": 23,
+        "b": 10,
+        "c": 21,
+        "d": 18,
+        "m": 15
+      },
+      "prompt": "Compute (((23 + 10) * 21) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((18 + 22) * 28) % 9)",
+      "family": "sum_scale",
+      "id": "b0d5a97843c962ce51cb",
+      "operands": {
+        "a": 18,
+        "b": 22,
+        "c": 28,
+        "d": 18,
+        "m": 9
+      },
+      "prompt": "Compute (((18 + 22) * 28) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((28 + 16) * 26) % 17)",
+      "family": "sum_scale",
+      "id": "00fa4fff1592658d3fd7",
+      "operands": {
+        "a": 28,
+        "b": 16,
+        "c": 26,
+        "d": 9,
+        "m": 17
+      },
+      "prompt": "Compute (((28 + 16) * 26) % 17). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((26 + 30) * 1) % 10)",
+      "family": "sum_scale",
+      "id": "392181c70e3af60da565",
+      "operands": {
+        "a": 26,
+        "b": 30,
+        "c": 1,
+        "d": 5,
+        "m": 10
+      },
+      "prompt": "Compute (((26 + 30) * 1) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((1 + 15) * 19) % 11)",
+      "family": "sum_scale",
+      "id": "05385379c4b61b9bac77",
+      "operands": {
+        "a": 1,
+        "b": 15,
+        "c": 19,
+        "d": 25,
+        "m": 11
+      },
+      "prompt": "Compute (((1 + 15) * 19) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((22 * 30) + 15) % 9)",
+      "family": "product_shift",
+      "id": "79c1dfd19cda7b814b8e",
+      "operands": {
+        "a": 22,
+        "b": 30,
+        "c": 15,
+        "d": 22,
+        "m": 9
+      },
+      "prompt": "Compute (((22 * 30) + 15) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((2 * 19) + 27) % 16)",
+      "family": "product_shift",
+      "id": "f7dee81bb21346c5e06d",
+      "operands": {
+        "a": 2,
+        "b": 19,
+        "c": 27,
+        "d": 16,
+        "m": 16
+      },
+      "prompt": "Compute (((2 * 19) + 27) % 16). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((26 * 15) + 22) % 10)",
+      "family": "product_shift",
+      "id": "1a2ec7729d055891107b",
+      "operands": {
+        "a": 26,
+        "b": 15,
+        "c": 22,
+        "d": 16,
+        "m": 10
+      },
+      "prompt": "Compute (((26 * 15) + 22) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((8 * 1) + 21) % 13)",
+      "family": "product_shift",
+      "id": "7cd3aed3a1162cc5cc63",
+      "operands": {
+        "a": 8,
+        "b": 1,
+        "c": 21,
+        "d": 9,
+        "m": 13
+      },
+      "prompt": "Compute (((8 * 1) + 21) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((17 * 20) + 8) % 8)",
+      "family": "product_shift",
+      "id": "15fd2988474df3669885",
+      "operands": {
+        "a": 17,
+        "b": 20,
+        "c": 8,
+        "d": 16,
+        "m": 8
+      },
+      "prompt": "Compute (((17 * 20) + 8) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((10 * 18) + 25) % 10)",
+      "family": "product_shift",
+      "id": "768363d1585532ac2090",
+      "operands": {
+        "a": 10,
+        "b": 18,
+        "c": 25,
+        "d": 24,
+        "m": 10
+      },
+      "prompt": "Compute (((10 * 18) + 25) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((5 * 19) + 13) % 17)",
+      "family": "product_shift",
+      "id": "90163597b768c5ac56b5",
+      "operands": {
+        "a": 5,
+        "b": 19,
+        "c": 13,
+        "d": 10,
+        "m": 17
+      },
+      "prompt": "Compute (((5 * 19) + 13) % 17). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((27 * 29) + 30) % 13)",
+      "family": "product_shift",
+      "id": "c2b2993b42cf4cf00b76",
+      "operands": {
+        "a": 27,
+        "b": 29,
+        "c": 30,
+        "d": 1,
+        "m": 13
+      },
+      "prompt": "Compute (((27 * 29) + 30) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((2 * 13) + 19) % 15)",
+      "family": "product_shift",
+      "id": "06d8105e80a22b1f0a3c",
+      "operands": {
+        "a": 2,
+        "b": 13,
+        "c": 19,
+        "d": 25,
+        "m": 15
+      },
+      "prompt": "Compute (((2 * 13) + 19) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((3 * 4) + 5) % 16)",
+      "family": "product_shift",
+      "id": "e95b79e9d3df1f5d6b80",
+      "operands": {
+        "a": 3,
+        "b": 4,
+        "c": 5,
+        "d": 15,
+        "m": 16
+      },
+      "prompt": "Compute (((3 * 4) + 5) % 16). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((12 * 26) + 23) % 9)",
+      "family": "product_shift",
+      "id": "4b4ca8f48c7a13f44d13",
+      "operands": {
+        "a": 12,
+        "b": 26,
+        "c": 23,
+        "d": 8,
+        "m": 9
+      },
+      "prompt": "Compute (((12 * 26) + 23) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((17 * 13) + 16) % 13)",
+      "family": "product_shift",
+      "id": "2b9f9da4e4bb1a9590bd",
+      "operands": {
+        "a": 17,
+        "b": 13,
+        "c": 16,
+        "d": 26,
+        "m": 13
+      },
+      "prompt": "Compute (((17 * 13) + 16) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((20 * 17) + 15) % 9)",
+      "family": "product_shift",
+      "id": "27dd77162184fba74920",
+      "operands": {
+        "a": 20,
+        "b": 17,
+        "c": 15,
+        "d": 28,
+        "m": 9
+      },
+      "prompt": "Compute (((20 * 17) + 15) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((14 * 16) + 5) % 16)",
+      "family": "product_shift",
+      "id": "ba8e5c5589b607f9c5db",
+      "operands": {
+        "a": 14,
+        "b": 16,
+        "c": 5,
+        "d": 21,
+        "m": 16
+      },
+      "prompt": "Compute (((14 * 16) + 5) % 16). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((8 * 7) + 22) % 9)",
+      "family": "product_shift",
+      "id": "f46d14ef179fb1cb8c18",
+      "operands": {
+        "a": 8,
+        "b": 7,
+        "c": 22,
+        "d": 29,
+        "m": 9
+      },
+      "prompt": "Compute (((8 * 7) + 22) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((11 * 4) + 2) % 13)",
+      "family": "product_shift",
+      "id": "77c2e9656af33f288a7a",
+      "operands": {
+        "a": 11,
+        "b": 4,
+        "c": 2,
+        "d": 24,
+        "m": 13
+      },
+      "prompt": "Compute (((11 * 4) + 2) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((7 * 14) + 28) % 14)",
+      "family": "product_shift",
+      "id": "95e4c48cacbdd874908d",
+      "operands": {
+        "a": 7,
+        "b": 14,
+        "c": 28,
+        "d": 8,
+        "m": 14
+      },
+      "prompt": "Compute (((7 * 14) + 28) % 14). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((21 * 29) + 4) % 12)",
+      "family": "product_shift",
+      "id": "e859d4e891d947700d6e",
+      "operands": {
+        "a": 21,
+        "b": 29,
+        "c": 4,
+        "d": 17,
+        "m": 12
+      },
+      "prompt": "Compute (((21 * 29) + 4) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((20 * 1) + 18) % 9)",
+      "family": "product_shift",
+      "id": "eeab976800103aca9865",
+      "operands": {
+        "a": 20,
+        "b": 1,
+        "c": 18,
+        "d": 15,
+        "m": 9
+      },
+      "prompt": "Compute (((20 * 1) + 18) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((4 * 27) + 5) % 11)",
+      "family": "product_shift",
+      "id": "8dd6ce55a4d521791b62",
+      "operands": {
+        "a": 4,
+        "b": 27,
+        "c": 5,
+        "d": 30,
+        "m": 11
+      },
+      "prompt": "Compute (((4 * 27) + 5) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((20 * 14) + 10) % 11)",
+      "family": "product_shift",
+      "id": "a0938d13e2c3db5c84d0",
+      "operands": {
+        "a": 20,
+        "b": 14,
+        "c": 10,
+        "d": 9,
+        "m": 11
+      },
+      "prompt": "Compute (((20 * 14) + 10) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((29 * 17) + 28) % 12)",
+      "family": "product_shift",
+      "id": "d28687fd1be6d7b824e5",
+      "operands": {
+        "a": 29,
+        "b": 17,
+        "c": 28,
+        "d": 22,
+        "m": 12
+      },
+      "prompt": "Compute (((29 * 17) + 28) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((2 * 19) + 4) % 12)",
+      "family": "product_shift",
+      "id": "d210cc2ddd02029c6c16",
+      "operands": {
+        "a": 2,
+        "b": 19,
+        "c": 4,
+        "d": 8,
+        "m": 12
+      },
+      "prompt": "Compute (((2 * 19) + 4) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((11 * 23) + 14) % 13)",
+      "family": "product_shift",
+      "id": "925881bb32252fc90b3a",
+      "operands": {
+        "a": 11,
+        "b": 23,
+        "c": 14,
+        "d": 28,
+        "m": 13
+      },
+      "prompt": "Compute (((11 * 23) + 14) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((12 * 17) + 6) % 14)",
+      "family": "product_shift",
+      "id": "6649425ae927e8f802f9",
+      "operands": {
+        "a": 12,
+        "b": 17,
+        "c": 6,
+        "d": 1,
+        "m": 14
+      },
+      "prompt": "Compute (((12 * 17) + 6) % 14). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((10 * 22) + 1) % 10)",
+      "family": "product_shift",
+      "id": "cde69eee1dadd63d45c7",
+      "operands": {
+        "a": 10,
+        "b": 22,
+        "c": 1,
+        "d": 4,
+        "m": 10
+      },
+      "prompt": "Compute (((10 * 22) + 1) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((8 * 14) + 20) % 13)",
+      "family": "product_shift",
+      "id": "bde4fe3ad98265c0d9aa",
+      "operands": {
+        "a": 8,
+        "b": 14,
+        "c": 20,
+        "d": 3,
+        "m": 13
+      },
+      "prompt": "Compute (((8 * 14) + 20) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((24 * 1) + 19) % 10)",
+      "family": "product_shift",
+      "id": "9f47e155ac6121911622",
+      "operands": {
+        "a": 24,
+        "b": 1,
+        "c": 19,
+        "d": 4,
+        "m": 10
+      },
+      "prompt": "Compute (((24 * 1) + 19) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((22 * 16) + 16) % 13)",
+      "family": "product_shift",
+      "id": "772bcc398a03d697423a",
+      "operands": {
+        "a": 22,
+        "b": 16,
+        "c": 16,
+        "d": 26,
+        "m": 13
+      },
+      "prompt": "Compute (((22 * 16) + 16) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((2 * 4) + 7) % 10)",
+      "family": "product_shift",
+      "id": "3e6985e8d0c3e06c0893",
+      "operands": {
+        "a": 2,
+        "b": 4,
+        "c": 7,
+        "d": 30,
+        "m": 10
+      },
+      "prompt": "Compute (((2 * 4) + 7) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((12 * 20) + 27) % 9)",
+      "family": "product_shift",
+      "id": "cd9ca6612030d0000581",
+      "operands": {
+        "a": 12,
+        "b": 20,
+        "c": 27,
+        "d": 12,
+        "m": 9
+      },
+      "prompt": "Compute (((12 * 20) + 27) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((12 * 27) + 11) % 8)",
+      "family": "product_shift",
+      "id": "967ae8144fb18c8a896f",
+      "operands": {
+        "a": 12,
+        "b": 27,
+        "c": 11,
+        "d": 23,
+        "m": 8
+      },
+      "prompt": "Compute (((12 * 27) + 11) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "((28 * (19 + 20)) % 12)",
+      "family": "scale_sum",
+      "id": "96be44a912c4f1054168",
+      "operands": {
+        "a": 28,
+        "b": 19,
+        "c": 20,
+        "d": 22,
+        "m": 12
+      },
+      "prompt": "Compute ((28 * (19 + 20)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "((24 * (12 + 5)) % 11)",
+      "family": "scale_sum",
+      "id": "94bbf07188e646df62bf",
+      "operands": {
+        "a": 24,
+        "b": 12,
+        "c": 5,
+        "d": 4,
+        "m": 11
+      },
+      "prompt": "Compute ((24 * (12 + 5)) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "((29 * (18 + 28)) % 9)",
+      "family": "scale_sum",
+      "id": "3faca25eb5e8575f9529",
+      "operands": {
+        "a": 29,
+        "b": 18,
+        "c": 28,
+        "d": 9,
+        "m": 9
+      },
+      "prompt": "Compute ((29 * (18 + 28)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "((24 * (30 + 23)) % 9)",
+      "family": "scale_sum",
+      "id": "1dea8a1c28936c96e51b",
+      "operands": {
+        "a": 24,
+        "b": 30,
+        "c": 23,
+        "d": 23,
+        "m": 9
+      },
+      "prompt": "Compute ((24 * (30 + 23)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "((17 * (15 + 17)) % 10)",
+      "family": "scale_sum",
+      "id": "a74009e4eed52ee8b98f",
+      "operands": {
+        "a": 17,
+        "b": 15,
+        "c": 17,
+        "d": 18,
+        "m": 10
+      },
+      "prompt": "Compute ((17 * (15 + 17)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "((19 * (13 + 3)) % 13)",
+      "family": "scale_sum",
+      "id": "5ea80b5f7c8add84dcd1",
+      "operands": {
+        "a": 19,
+        "b": 13,
+        "c": 3,
+        "d": 12,
+        "m": 13
+      },
+      "prompt": "Compute ((19 * (13 + 3)) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "((21 * (13 + 9)) % 12)",
+      "family": "scale_sum",
+      "id": "40649c4a2ae837b259f2",
+      "operands": {
+        "a": 21,
+        "b": 13,
+        "c": 9,
+        "d": 14,
+        "m": 12
+      },
+      "prompt": "Compute ((21 * (13 + 9)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "((25 * (22 + 6)) % 11)",
+      "family": "scale_sum",
+      "id": "3aac11623b9daa64b080",
+      "operands": {
+        "a": 25,
+        "b": 22,
+        "c": 6,
+        "d": 21,
+        "m": 11
+      },
+      "prompt": "Compute ((25 * (22 + 6)) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "((17 * (6 + 30)) % 9)",
+      "family": "scale_sum",
+      "id": "1693b4417ce84c2840fb",
+      "operands": {
+        "a": 17,
+        "b": 6,
+        "c": 30,
+        "d": 28,
+        "m": 9
+      },
+      "prompt": "Compute ((17 * (6 + 30)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "((28 * (11 + 3)) % 17)",
+      "family": "scale_sum",
+      "id": "7696dabd4a293d6a0072",
+      "operands": {
+        "a": 28,
+        "b": 11,
+        "c": 3,
+        "d": 14,
+        "m": 17
+      },
+      "prompt": "Compute ((28 * (11 + 3)) % 17). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "((10 * (30 + 22)) % 14)",
+      "family": "scale_sum",
+      "id": "74411878e63a33210cd6",
+      "operands": {
+        "a": 10,
+        "b": 30,
+        "c": 22,
+        "d": 11,
+        "m": 14
+      },
+      "prompt": "Compute ((10 * (30 + 22)) % 14). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "((15 * (1 + 28)) % 16)",
+      "family": "scale_sum",
+      "id": "425bdf170e13e1132b24",
+      "operands": {
+        "a": 15,
+        "b": 1,
+        "c": 28,
+        "d": 20,
+        "m": 16
+      },
+      "prompt": "Compute ((15 * (1 + 28)) % 16). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "((24 * (19 + 2)) % 10)",
+      "family": "scale_sum",
+      "id": "cb24e63b32133643db66",
+      "operands": {
+        "a": 24,
+        "b": 19,
+        "c": 2,
+        "d": 23,
+        "m": 10
+      },
+      "prompt": "Compute ((24 * (19 + 2)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "((4 * (19 + 16)) % 15)",
+      "family": "scale_sum",
+      "id": "0127cf402ae7adc74d0f",
+      "operands": {
+        "a": 4,
+        "b": 19,
+        "c": 16,
+        "d": 6,
+        "m": 15
+      },
+      "prompt": "Compute ((4 * (19 + 16)) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "((6 * (27 + 19)) % 15)",
+      "family": "scale_sum",
+      "id": "d3d101b8925039e16763",
+      "operands": {
+        "a": 6,
+        "b": 27,
+        "c": 19,
+        "d": 23,
+        "m": 15
+      },
+      "prompt": "Compute ((6 * (27 + 19)) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "((17 * (21 + 26)) % 9)",
+      "family": "scale_sum",
+      "id": "b790bcb92fb6a2f16ecf",
+      "operands": {
+        "a": 17,
+        "b": 21,
+        "c": 26,
+        "d": 12,
+        "m": 9
+      },
+      "prompt": "Compute ((17 * (21 + 26)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "((3 * (14 + 16)) % 15)",
+      "family": "scale_sum",
+      "id": "4fc7fe2c35f3f9baf319",
+      "operands": {
+        "a": 3,
+        "b": 14,
+        "c": 16,
+        "d": 3,
+        "m": 15
+      },
+      "prompt": "Compute ((3 * (14 + 16)) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "((7 * (13 + 15)) % 15)",
+      "family": "scale_sum",
+      "id": "cc8c81abf584dbac6775",
+      "operands": {
+        "a": 7,
+        "b": 13,
+        "c": 15,
+        "d": 14,
+        "m": 15
+      },
+      "prompt": "Compute ((7 * (13 + 15)) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "((23 * (14 + 8)) % 8)",
+      "family": "scale_sum",
+      "id": "ac4b13728a8931dd6acc",
+      "operands": {
+        "a": 23,
+        "b": 14,
+        "c": 8,
+        "d": 14,
+        "m": 8
+      },
+      "prompt": "Compute ((23 * (14 + 8)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "((14 * (10 + 24)) % 11)",
+      "family": "scale_sum",
+      "id": "1f401ae671724b29a266",
+      "operands": {
+        "a": 14,
+        "b": 10,
+        "c": 24,
+        "d": 3,
+        "m": 11
+      },
+      "prompt": "Compute ((14 * (10 + 24)) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "((7 * (14 + 29)) % 9)",
+      "family": "scale_sum",
+      "id": "108cdea2f4e3923304e8",
+      "operands": {
+        "a": 7,
+        "b": 14,
+        "c": 29,
+        "d": 19,
+        "m": 9
+      },
+      "prompt": "Compute ((7 * (14 + 29)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "((23 * (2 + 11)) % 14)",
+      "family": "scale_sum",
+      "id": "c0688b62419105181697",
+      "operands": {
+        "a": 23,
+        "b": 2,
+        "c": 11,
+        "d": 19,
+        "m": 14
+      },
+      "prompt": "Compute ((23 * (2 + 11)) % 14). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "((30 * (26 + 1)) % 12)",
+      "family": "scale_sum",
+      "id": "d9fecde2c09c380e0407",
+      "operands": {
+        "a": 30,
+        "b": 26,
+        "c": 1,
+        "d": 14,
+        "m": 12
+      },
+      "prompt": "Compute ((30 * (26 + 1)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "((12 * (21 + 11)) % 13)",
+      "family": "scale_sum",
+      "id": "f59bebb3a1866a96dc04",
+      "operands": {
+        "a": 12,
+        "b": 21,
+        "c": 11,
+        "d": 10,
+        "m": 13
+      },
+      "prompt": "Compute ((12 * (21 + 11)) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "((15 * (12 + 2)) % 10)",
+      "family": "scale_sum",
+      "id": "cc72e7f8f103d2efa39e",
+      "operands": {
+        "a": 15,
+        "b": 12,
+        "c": 2,
+        "d": 2,
+        "m": 10
+      },
+      "prompt": "Compute ((15 * (12 + 2)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "((7 * (5 + 26)) % 8)",
+      "family": "scale_sum",
+      "id": "572baa00fc51c06f4469",
+      "operands": {
+        "a": 7,
+        "b": 5,
+        "c": 26,
+        "d": 17,
+        "m": 8
+      },
+      "prompt": "Compute ((7 * (5 + 26)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "((1 * (26 + 30)) % 9)",
+      "family": "scale_sum",
+      "id": "680b22264baf22dfe750",
+      "operands": {
+        "a": 1,
+        "b": 26,
+        "c": 30,
+        "d": 12,
+        "m": 9
+      },
+      "prompt": "Compute ((1 * (26 + 30)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "((15 * (11 + 21)) % 9)",
+      "family": "scale_sum",
+      "id": "46ca6cf49e65667a734d",
+      "operands": {
+        "a": 15,
+        "b": 11,
+        "c": 21,
+        "d": 13,
+        "m": 9
+      },
+      "prompt": "Compute ((15 * (11 + 21)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "((22 * (28 + 29)) % 10)",
+      "family": "scale_sum",
+      "id": "e327050e1731adee73bb",
+      "operands": {
+        "a": 22,
+        "b": 28,
+        "c": 29,
+        "d": 27,
+        "m": 10
+      },
+      "prompt": "Compute ((22 * (28 + 29)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "((7 * (19 + 10)) % 9)",
+      "family": "scale_sum",
+      "id": "5a4a5bbc59536eaae897",
+      "operands": {
+        "a": 7,
+        "b": 19,
+        "c": 10,
+        "d": 7,
+        "m": 9
+      },
+      "prompt": "Compute ((7 * (19 + 10)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "((6 * (15 + 12)) % 13)",
+      "family": "scale_sum",
+      "id": "dc572c725cde12b5d493",
+      "operands": {
+        "a": 6,
+        "b": 15,
+        "c": 12,
+        "d": 3,
+        "m": 13
+      },
+      "prompt": "Compute ((6 * (15 + 12)) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "((25 * (28 + 9)) % 9)",
+      "family": "scale_sum",
+      "id": "5e52b52fb8a271969111",
+      "operands": {
+        "a": 25,
+        "b": 28,
+        "c": 9,
+        "d": 9,
+        "m": 9
+      },
+      "prompt": "Compute ((25 * (28 + 9)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((12 - 25) * 25) % 13)",
+      "family": "difference_scale",
+      "id": "ea45d7a9f6b68b2199c0",
+      "operands": {
+        "a": 12,
+        "b": 25,
+        "c": 25,
+        "d": 11,
+        "m": 13
+      },
+      "prompt": "Compute (((12 - 25) * 25) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((23 - 3) * 2) % 13)",
+      "family": "difference_scale",
+      "id": "0621c47dea15fdc32d6b",
+      "operands": {
+        "a": 23,
+        "b": 3,
+        "c": 2,
+        "d": 18,
+        "m": 13
+      },
+      "prompt": "Compute (((23 - 3) * 2) % 13). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((3 - 27) * 18) % 14)",
+      "family": "difference_scale",
+      "id": "b8efdecbc06d833359ff",
+      "operands": {
+        "a": 3,
+        "b": 27,
+        "c": 18,
+        "d": 23,
+        "m": 14
+      },
+      "prompt": "Compute (((3 - 27) * 18) % 14). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((27 - 2) * 11) % 16)",
+      "family": "difference_scale",
+      "id": "b6509cd00b7b7c9c62a7",
+      "operands": {
+        "a": 27,
+        "b": 2,
+        "c": 11,
+        "d": 4,
+        "m": 16
+      },
+      "prompt": "Compute (((27 - 2) * 11) % 16). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((23 - 25) * 22) % 12)",
+      "family": "difference_scale",
+      "id": "8e20d426bfc2b06812ef",
+      "operands": {
+        "a": 23,
+        "b": 25,
+        "c": 22,
+        "d": 30,
+        "m": 12
+      },
+      "prompt": "Compute (((23 - 25) * 22) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((18 - 8) * 29) % 15)",
+      "family": "difference_scale",
+      "id": "6b9b5526bef62ff6e53d",
+      "operands": {
+        "a": 18,
+        "b": 8,
+        "c": 29,
+        "d": 18,
+        "m": 15
+      },
+      "prompt": "Compute (((18 - 8) * 29) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((13 - 25) * 22) % 10)",
+      "family": "difference_scale",
+      "id": "08881c45105d1e66005e",
+      "operands": {
+        "a": 13,
+        "b": 25,
+        "c": 22,
+        "d": 17,
+        "m": 10
+      },
+      "prompt": "Compute (((13 - 25) * 22) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((5 - 20) * 23) % 8)",
+      "family": "difference_scale",
+      "id": "a5b2732bfbc9c49b66de",
+      "operands": {
+        "a": 5,
+        "b": 20,
+        "c": 23,
+        "d": 12,
+        "m": 8
+      },
+      "prompt": "Compute (((5 - 20) * 23) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((6 - 26) * 24) % 16)",
+      "family": "difference_scale",
+      "id": "8ba10b5d26eca09d50f2",
+      "operands": {
+        "a": 6,
+        "b": 26,
+        "c": 24,
+        "d": 25,
+        "m": 16
+      },
+      "prompt": "Compute (((6 - 26) * 24) % 16). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((23 - 30) * 29) % 17)",
+      "family": "difference_scale",
+      "id": "38dde25498bf799b425e",
+      "operands": {
+        "a": 23,
+        "b": 30,
+        "c": 29,
+        "d": 13,
+        "m": 17
+      },
+      "prompt": "Compute (((23 - 30) * 29) % 17). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((11 - 30) * 16) % 17)",
+      "family": "difference_scale",
+      "id": "c7a311b3fb9495dfbe07",
+      "operands": {
+        "a": 11,
+        "b": 30,
+        "c": 16,
+        "d": 19,
+        "m": 17
+      },
+      "prompt": "Compute (((11 - 30) * 16) % 17). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((1 - 4) * 5) % 9)",
+      "family": "difference_scale",
+      "id": "b6839573ac182611915c",
+      "operands": {
+        "a": 1,
+        "b": 4,
+        "c": 5,
+        "d": 25,
+        "m": 9
+      },
+      "prompt": "Compute (((1 - 4) * 5) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((14 - 10) * 1) % 9)",
+      "family": "difference_scale",
+      "id": "9aae8279f8a1c2e3a60d",
+      "operands": {
+        "a": 14,
+        "b": 10,
+        "c": 1,
+        "d": 2,
+        "m": 9
+      },
+      "prompt": "Compute (((14 - 10) * 1) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((1 - 10) * 25) % 10)",
+      "family": "difference_scale",
+      "id": "f4215c1b9c963e7c4bbb",
+      "operands": {
+        "a": 1,
+        "b": 10,
+        "c": 25,
+        "d": 21,
+        "m": 10
+      },
+      "prompt": "Compute (((1 - 10) * 25) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((2 - 25) * 22) % 8)",
+      "family": "difference_scale",
+      "id": "77aff68ccb7ff85341c5",
+      "operands": {
+        "a": 2,
+        "b": 25,
+        "c": 22,
+        "d": 8,
+        "m": 8
+      },
+      "prompt": "Compute (((2 - 25) * 22) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((27 - 22) * 3) % 8)",
+      "family": "difference_scale",
+      "id": "cb81fc77223b42924228",
+      "operands": {
+        "a": 27,
+        "b": 22,
+        "c": 3,
+        "d": 6,
+        "m": 8
+      },
+      "prompt": "Compute (((27 - 22) * 3) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((29 - 5) * 11) % 8)",
+      "family": "difference_scale",
+      "id": "7d073ce02bcdc9d68bf0",
+      "operands": {
+        "a": 29,
+        "b": 5,
+        "c": 11,
+        "d": 2,
+        "m": 8
+      },
+      "prompt": "Compute (((29 - 5) * 11) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((6 - 1) * 29) % 8)",
+      "family": "difference_scale",
+      "id": "3850c7fcdf8a3c0b8195",
+      "operands": {
+        "a": 6,
+        "b": 1,
+        "c": 29,
+        "d": 30,
+        "m": 8
+      },
+      "prompt": "Compute (((6 - 1) * 29) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((10 - 25) * 18) % 17)",
+      "family": "difference_scale",
+      "id": "28adb83eaf92e902ce6b",
+      "operands": {
+        "a": 10,
+        "b": 25,
+        "c": 18,
+        "d": 23,
+        "m": 17
+      },
+      "prompt": "Compute (((10 - 25) * 18) % 17). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((5 - 13) * 21) % 9)",
+      "family": "difference_scale",
+      "id": "1d5606584a2645f0325f",
+      "operands": {
+        "a": 5,
+        "b": 13,
+        "c": 21,
+        "d": 24,
+        "m": 9
+      },
+      "prompt": "Compute (((5 - 13) * 21) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((25 - 10) * 20) % 8)",
+      "family": "difference_scale",
+      "id": "4fb2859403d09c28a6f0",
+      "operands": {
+        "a": 25,
+        "b": 10,
+        "c": 20,
+        "d": 7,
+        "m": 8
+      },
+      "prompt": "Compute (((25 - 10) * 20) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((25 - 30) * 23) % 10)",
+      "family": "difference_scale",
+      "id": "378d3e07bd07dc663842",
+      "operands": {
+        "a": 25,
+        "b": 30,
+        "c": 23,
+        "d": 15,
+        "m": 10
+      },
+      "prompt": "Compute (((25 - 30) * 23) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((28 - 26) * 3) % 10)",
+      "family": "difference_scale",
+      "id": "c72d769d37d7bad14648",
+      "operands": {
+        "a": 28,
+        "b": 26,
+        "c": 3,
+        "d": 9,
+        "m": 10
+      },
+      "prompt": "Compute (((28 - 26) * 3) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((20 - 25) * 2) % 17)",
+      "family": "difference_scale",
+      "id": "828796f2cb255bb6a964",
+      "operands": {
+        "a": 20,
+        "b": 25,
+        "c": 2,
+        "d": 17,
+        "m": 17
+      },
+      "prompt": "Compute (((20 - 25) * 2) % 17). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((13 - 28) * 3) % 15)",
+      "family": "difference_scale",
+      "id": "fe81ef66c6909231393c",
+      "operands": {
+        "a": 13,
+        "b": 28,
+        "c": 3,
+        "d": 29,
+        "m": 15
+      },
+      "prompt": "Compute (((13 - 28) * 3) % 15). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((28 - 3) * 4) % 11)",
+      "family": "difference_scale",
+      "id": "5306b3a4933c2411eeab",
+      "operands": {
+        "a": 28,
+        "b": 3,
+        "c": 4,
+        "d": 24,
+        "m": 11
+      },
+      "prompt": "Compute (((28 - 3) * 4) % 11). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((25 - 14) * 22) % 10)",
+      "family": "difference_scale",
+      "id": "91c7abca19fb938dccaa",
+      "operands": {
+        "a": 25,
+        "b": 14,
+        "c": 22,
+        "d": 14,
+        "m": 10
+      },
+      "prompt": "Compute (((25 - 14) * 22) % 10). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((26 - 18) * 15) % 9)",
+      "family": "difference_scale",
+      "id": "e05fb378ca48656be2d6",
+      "operands": {
+        "a": 26,
+        "b": 18,
+        "c": 15,
+        "d": 30,
+        "m": 9
+      },
+      "prompt": "Compute (((26 - 18) * 15) % 9). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((15 - 5) * 30) % 8)",
+      "family": "difference_scale",
+      "id": "a14b00f51df3001f9af4",
+      "operands": {
+        "a": 15,
+        "b": 5,
+        "c": 30,
+        "d": 27,
+        "m": 8
+      },
+      "prompt": "Compute (((15 - 5) * 30) % 8). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((23 - 22) * 17) % 12)",
+      "family": "difference_scale",
+      "id": "abed01366967d9f2f5ee",
+      "operands": {
+        "a": 23,
+        "b": 22,
+        "c": 17,
+        "d": 25,
+        "m": 12
+      },
+      "prompt": "Compute (((23 - 22) * 17) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((25 - 4) * 30) % 16)",
+      "family": "difference_scale",
+      "id": "991dcfca4ba5c810d219",
+      "operands": {
+        "a": 25,
+        "b": 4,
+        "c": 30,
+        "d": 17,
+        "m": 16
+      },
+      "prompt": "Compute (((25 - 4) * 30) % 16). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((16 - 21) * 1) % 12)",
+      "family": "difference_scale",
+      "id": "c1b52c059377b9e8e01c",
+      "operands": {
+        "a": 16,
+        "b": 21,
+        "c": 1,
+        "d": 13,
+        "m": 12
+      },
+      "prompt": "Compute (((16 - 21) * 1) % 12). The symbol % means the least non-negative remainder.",
+      "split": "train"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((26 + 15) * (29 + 5)) % 17)",
+      "family": "sum_product",
+      "id": "d0f3ac74a791a15a2d88",
+      "operands": {
+        "a": 26,
+        "b": 15,
+        "c": 29,
+        "d": 5,
+        "m": 17
+      },
+      "prompt": "Compute (((26 + 15) * (29 + 5)) % 17). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((3 + 13) * (14 + 17)) % 11)",
+      "family": "sum_product",
+      "id": "7802bc7aefd97900502c",
+      "operands": {
+        "a": 3,
+        "b": 13,
+        "c": 14,
+        "d": 17,
+        "m": 11
+      },
+      "prompt": "Compute (((3 + 13) * (14 + 17)) % 11). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((4 + 1) * (24 + 24)) % 14)",
+      "family": "sum_product",
+      "id": "4954c79441b4ec92bdc4",
+      "operands": {
+        "a": 4,
+        "b": 1,
+        "c": 24,
+        "d": 24,
+        "m": 14
+      },
+      "prompt": "Compute (((4 + 1) * (24 + 24)) % 14). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((20 + 15) * (3 + 26)) % 11)",
+      "family": "sum_product",
+      "id": "e5d24db1bbda0cf61792",
+      "operands": {
+        "a": 20,
+        "b": 15,
+        "c": 3,
+        "d": 26,
+        "m": 11
+      },
+      "prompt": "Compute (((20 + 15) * (3 + 26)) % 11). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((14 + 7) * (9 + 20)) % 11)",
+      "family": "sum_product",
+      "id": "c930ead82664defd34dc",
+      "operands": {
+        "a": 14,
+        "b": 7,
+        "c": 9,
+        "d": 20,
+        "m": 11
+      },
+      "prompt": "Compute (((14 + 7) * (9 + 20)) % 11). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((21 + 7) * (3 + 18)) % 11)",
+      "family": "sum_product",
+      "id": "138b795ca8116fe2f2a4",
+      "operands": {
+        "a": 21,
+        "b": 7,
+        "c": 3,
+        "d": 18,
+        "m": 11
+      },
+      "prompt": "Compute (((21 + 7) * (3 + 18)) % 11). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((9 + 19) * (26 + 1)) % 10)",
+      "family": "sum_product",
+      "id": "7b7674509dceb932e261",
+      "operands": {
+        "a": 9,
+        "b": 19,
+        "c": 26,
+        "d": 1,
+        "m": 10
+      },
+      "prompt": "Compute (((9 + 19) * (26 + 1)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((19 + 4) * (23 + 26)) % 16)",
+      "family": "sum_product",
+      "id": "8dc15d2a9532eb8159cc",
+      "operands": {
+        "a": 19,
+        "b": 4,
+        "c": 23,
+        "d": 26,
+        "m": 16
+      },
+      "prompt": "Compute (((19 + 4) * (23 + 26)) % 16). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((8 + 6) * (6 + 18)) % 12)",
+      "family": "sum_product",
+      "id": "9ced5b8df2148b9583c3",
+      "operands": {
+        "a": 8,
+        "b": 6,
+        "c": 6,
+        "d": 18,
+        "m": 12
+      },
+      "prompt": "Compute (((8 + 6) * (6 + 18)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((30 + 11) * (2 + 7)) % 8)",
+      "family": "sum_product",
+      "id": "df21fd81324f919bec13",
+      "operands": {
+        "a": 30,
+        "b": 11,
+        "c": 2,
+        "d": 7,
+        "m": 8
+      },
+      "prompt": "Compute (((30 + 11) * (2 + 7)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((4 + 28) * (1 + 30)) % 10)",
+      "family": "sum_product",
+      "id": "5a3716a4e4ff21f05044",
+      "operands": {
+        "a": 4,
+        "b": 28,
+        "c": 1,
+        "d": 30,
+        "m": 10
+      },
+      "prompt": "Compute (((4 + 28) * (1 + 30)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((15 + 21) * (9 + 24)) % 15)",
+      "family": "sum_product",
+      "id": "06f6e24f3b09cc2cf5c9",
+      "operands": {
+        "a": 15,
+        "b": 21,
+        "c": 9,
+        "d": 24,
+        "m": 15
+      },
+      "prompt": "Compute (((15 + 21) * (9 + 24)) % 15). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((28 + 9) * (3 + 21)) % 13)",
+      "family": "sum_product",
+      "id": "8821f944d83419591743",
+      "operands": {
+        "a": 28,
+        "b": 9,
+        "c": 3,
+        "d": 21,
+        "m": 13
+      },
+      "prompt": "Compute (((28 + 9) * (3 + 21)) % 13). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((9 + 18) * (7 + 19)) % 17)",
+      "family": "sum_product",
+      "id": "92922f57a749d63641bd",
+      "operands": {
+        "a": 9,
+        "b": 18,
+        "c": 7,
+        "d": 19,
+        "m": 17
+      },
+      "prompt": "Compute (((9 + 18) * (7 + 19)) % 17). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((12 + 18) * (10 + 9)) % 12)",
+      "family": "sum_product",
+      "id": "ca0ac32bedfe5557510a",
+      "operands": {
+        "a": 12,
+        "b": 18,
+        "c": 10,
+        "d": 9,
+        "m": 12
+      },
+      "prompt": "Compute (((12 + 18) * (10 + 9)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((17 + 8) * (28 + 3)) % 8)",
+      "family": "sum_product",
+      "id": "99163837a94f2fd12788",
+      "operands": {
+        "a": 17,
+        "b": 8,
+        "c": 28,
+        "d": 3,
+        "m": 8
+      },
+      "prompt": "Compute (((17 + 8) * (28 + 3)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((24 * 30) - (12 * 30)) % 10)",
+      "family": "product_difference",
+      "id": "11dcf4252b1335651371",
+      "operands": {
+        "a": 24,
+        "b": 30,
+        "c": 12,
+        "d": 30,
+        "m": 10
+      },
+      "prompt": "Compute (((24 * 30) - (12 * 30)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((12 * 20) - (11 * 13)) % 16)",
+      "family": "product_difference",
+      "id": "13aa10e2688403c29b37",
+      "operands": {
+        "a": 12,
+        "b": 20,
+        "c": 11,
+        "d": 13,
+        "m": 16
+      },
+      "prompt": "Compute (((12 * 20) - (11 * 13)) % 16). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((17 * 21) - (19 * 25)) % 8)",
+      "family": "product_difference",
+      "id": "e1b967b3d2db69fd9945",
+      "operands": {
+        "a": 17,
+        "b": 21,
+        "c": 19,
+        "d": 25,
+        "m": 8
+      },
+      "prompt": "Compute (((17 * 21) - (19 * 25)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((23 * 21) - (24 * 3)) % 8)",
+      "family": "product_difference",
+      "id": "f094c499b11b210b68e1",
+      "operands": {
+        "a": 23,
+        "b": 21,
+        "c": 24,
+        "d": 3,
+        "m": 8
+      },
+      "prompt": "Compute (((23 * 21) - (24 * 3)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((3 * 28) - (1 * 15)) % 13)",
+      "family": "product_difference",
+      "id": "2827e117b7b1ae2ce818",
+      "operands": {
+        "a": 3,
+        "b": 28,
+        "c": 1,
+        "d": 15,
+        "m": 13
+      },
+      "prompt": "Compute (((3 * 28) - (1 * 15)) % 13). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((26 * 25) - (11 * 12)) % 9)",
+      "family": "product_difference",
+      "id": "def7f32ced08881fdb8a",
+      "operands": {
+        "a": 26,
+        "b": 25,
+        "c": 11,
+        "d": 12,
+        "m": 9
+      },
+      "prompt": "Compute (((26 * 25) - (11 * 12)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((24 * 28) - (22 * 3)) % 12)",
+      "family": "product_difference",
+      "id": "227f0d140f960fd6e7f7",
+      "operands": {
+        "a": 24,
+        "b": 28,
+        "c": 22,
+        "d": 3,
+        "m": 12
+      },
+      "prompt": "Compute (((24 * 28) - (22 * 3)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((22 * 3) - (10 * 23)) % 9)",
+      "family": "product_difference",
+      "id": "6e1db5efbcf01d81f488",
+      "operands": {
+        "a": 22,
+        "b": 3,
+        "c": 10,
+        "d": 23,
+        "m": 9
+      },
+      "prompt": "Compute (((22 * 3) - (10 * 23)) % 9). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((11 * 8) - (24 * 5)) % 16)",
+      "family": "product_difference",
+      "id": "e0cffdf477d5dee2aa50",
+      "operands": {
+        "a": 11,
+        "b": 8,
+        "c": 24,
+        "d": 5,
+        "m": 16
+      },
+      "prompt": "Compute (((11 * 8) - (24 * 5)) % 16). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((13 * 29) - (8 * 18)) % 8)",
+      "family": "product_difference",
+      "id": "5b3cb3a528a9608a5231",
+      "operands": {
+        "a": 13,
+        "b": 29,
+        "c": 8,
+        "d": 18,
+        "m": 8
+      },
+      "prompt": "Compute (((13 * 29) - (8 * 18)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((24 * 19) - (13 * 18)) % 10)",
+      "family": "product_difference",
+      "id": "82a963463de9590a986f",
+      "operands": {
+        "a": 24,
+        "b": 19,
+        "c": 13,
+        "d": 18,
+        "m": 10
+      },
+      "prompt": "Compute (((24 * 19) - (13 * 18)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((29 * 19) - (20 * 29)) % 8)",
+      "family": "product_difference",
+      "id": "68ec912c12f2ea5fb623",
+      "operands": {
+        "a": 29,
+        "b": 19,
+        "c": 20,
+        "d": 29,
+        "m": 8
+      },
+      "prompt": "Compute (((29 * 19) - (20 * 29)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((24 * 17) - (20 * 25)) % 12)",
+      "family": "product_difference",
+      "id": "73c4146efbac0997f13b",
+      "operands": {
+        "a": 24,
+        "b": 17,
+        "c": 20,
+        "d": 25,
+        "m": 12
+      },
+      "prompt": "Compute (((24 * 17) - (20 * 25)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((7 * 15) - (18 * 18)) % 16)",
+      "family": "product_difference",
+      "id": "437162c731838a149a1d",
+      "operands": {
+        "a": 7,
+        "b": 15,
+        "c": 18,
+        "d": 18,
+        "m": 16
+      },
+      "prompt": "Compute (((7 * 15) - (18 * 18)) % 16). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((1 * 24) - (5 * 24)) % 17)",
+      "family": "product_difference",
+      "id": "2401cebe357c1c3601ff",
+      "operands": {
+        "a": 1,
+        "b": 24,
+        "c": 5,
+        "d": 24,
+        "m": 17
+      },
+      "prompt": "Compute (((1 * 24) - (5 * 24)) % 17). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((29 * 9) - (5 * 10)) % 12)",
+      "family": "product_difference",
+      "id": "b5ba10a982771dab31bb",
+      "operands": {
+        "a": 29,
+        "b": 9,
+        "c": 5,
+        "d": 10,
+        "m": 12
+      },
+      "prompt": "Compute (((29 * 9) - (5 * 10)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "valid"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "((((27 + 10) * 24) + 13) % 17)",
+      "family": "scaled_sum_shift",
+      "id": "c4a9fd731aefc8d64570",
+      "operands": {
+        "a": 27,
+        "b": 10,
+        "c": 24,
+        "d": 13,
+        "m": 17
+      },
+      "prompt": "Compute ((((27 + 10) * 24) + 13) % 17). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "((((17 + 26) * 6) + 19) % 12)",
+      "family": "scaled_sum_shift",
+      "id": "2b3481001e376b9b6f9c",
+      "operands": {
+        "a": 17,
+        "b": 26,
+        "c": 6,
+        "d": 19,
+        "m": 12
+      },
+      "prompt": "Compute ((((17 + 26) * 6) + 19) % 12). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "((((13 + 13) * 14) + 30) % 14)",
+      "family": "scaled_sum_shift",
+      "id": "3917516872587a932301",
+      "operands": {
+        "a": 13,
+        "b": 13,
+        "c": 14,
+        "d": 30,
+        "m": 14
+      },
+      "prompt": "Compute ((((13 + 13) * 14) + 30) % 14). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "((((6 + 13) * 6) + 25) % 17)",
+      "family": "scaled_sum_shift",
+      "id": "926316fc7458b4583ad0",
+      "operands": {
+        "a": 6,
+        "b": 13,
+        "c": 6,
+        "d": 25,
+        "m": 17
+      },
+      "prompt": "Compute ((((6 + 13) * 6) + 25) % 17). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "((((16 + 9) * 7) + 5) % 11)",
+      "family": "scaled_sum_shift",
+      "id": "efcd9fdebe6990081ee9",
+      "operands": {
+        "a": 16,
+        "b": 9,
+        "c": 7,
+        "d": 5,
+        "m": 11
+      },
+      "prompt": "Compute ((((16 + 9) * 7) + 5) % 11). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "((((24 + 5) * 25) + 24) % 8)",
+      "family": "scaled_sum_shift",
+      "id": "a4352ba59a414021d0bd",
+      "operands": {
+        "a": 24,
+        "b": 5,
+        "c": 25,
+        "d": 24,
+        "m": 8
+      },
+      "prompt": "Compute ((((24 + 5) * 25) + 24) % 8). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "((((3 + 25) * 3) + 10) % 11)",
+      "family": "scaled_sum_shift",
+      "id": "185648c8d6f6b8b75d3f",
+      "operands": {
+        "a": 3,
+        "b": 25,
+        "c": 3,
+        "d": 10,
+        "m": 11
+      },
+      "prompt": "Compute ((((3 + 25) * 3) + 10) % 11). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "((((20 + 7) * 21) + 16) % 16)",
+      "family": "scaled_sum_shift",
+      "id": "b95d7fb18cff1581ee51",
+      "operands": {
+        "a": 20,
+        "b": 7,
+        "c": 21,
+        "d": 16,
+        "m": 16
+      },
+      "prompt": "Compute ((((20 + 7) * 21) + 16) % 16). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "((((21 + 16) * 6) + 2) % 8)",
+      "family": "scaled_sum_shift",
+      "id": "2efbea13f0eddb677291",
+      "operands": {
+        "a": 21,
+        "b": 16,
+        "c": 6,
+        "d": 2,
+        "m": 8
+      },
+      "prompt": "Compute ((((21 + 16) * 6) + 2) % 8). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "((((22 + 7) * 16) + 10) % 11)",
+      "family": "scaled_sum_shift",
+      "id": "a12b0817d9cd3694fe96",
+      "operands": {
+        "a": 22,
+        "b": 7,
+        "c": 16,
+        "d": 10,
+        "m": 11
+      },
+      "prompt": "Compute ((((22 + 7) * 16) + 10) % 11). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "((((2 + 25) * 8) + 7) % 17)",
+      "family": "scaled_sum_shift",
+      "id": "c82991447ba8bb0c5f9e",
+      "operands": {
+        "a": 2,
+        "b": 25,
+        "c": 8,
+        "d": 7,
+        "m": 17
+      },
+      "prompt": "Compute ((((2 + 25) * 8) + 7) % 17). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "((((23 + 15) * 26) + 7) % 8)",
+      "family": "scaled_sum_shift",
+      "id": "60ad0bcda0479b897ed0",
+      "operands": {
+        "a": 23,
+        "b": 15,
+        "c": 26,
+        "d": 7,
+        "m": 8
+      },
+      "prompt": "Compute ((((23 + 15) * 26) + 7) % 8). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "((((25 + 6) * 9) + 29) % 16)",
+      "family": "scaled_sum_shift",
+      "id": "e14a00246dc42acb31f2",
+      "operands": {
+        "a": 25,
+        "b": 6,
+        "c": 9,
+        "d": 29,
+        "m": 16
+      },
+      "prompt": "Compute ((((25 + 6) * 9) + 29) % 16). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "((((16 + 21) * 23) + 22) % 14)",
+      "family": "scaled_sum_shift",
+      "id": "e739a82c00822d3ec2e1",
+      "operands": {
+        "a": 16,
+        "b": 21,
+        "c": 23,
+        "d": 22,
+        "m": 14
+      },
+      "prompt": "Compute ((((16 + 21) * 23) + 22) % 14). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "((((6 + 4) * 29) + 16) % 12)",
+      "family": "scaled_sum_shift",
+      "id": "fcf5bf2b6791d65a9dbc",
+      "operands": {
+        "a": 6,
+        "b": 4,
+        "c": 29,
+        "d": 16,
+        "m": 12
+      },
+      "prompt": "Compute ((((6 + 4) * 29) + 16) % 12). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "((((8 + 18) * 27) + 9) % 8)",
+      "family": "scaled_sum_shift",
+      "id": "4aa33c6ce081971f968c",
+      "operands": {
+        "a": 8,
+        "b": 18,
+        "c": 27,
+        "d": 9,
+        "m": 8
+      },
+      "prompt": "Compute ((((8 + 18) * 27) + 9) % 8). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((3 * 13) + (3 * 27)) % 10)",
+      "family": "sum_products",
+      "id": "c4d98ff052858f20735c",
+      "operands": {
+        "a": 3,
+        "b": 13,
+        "c": 3,
+        "d": 27,
+        "m": 10
+      },
+      "prompt": "Compute (((3 * 13) + (3 * 27)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((23 * 3) + (13 * 26)) % 14)",
+      "family": "sum_products",
+      "id": "1cf954bd2d1a57856b8d",
+      "operands": {
+        "a": 23,
+        "b": 3,
+        "c": 13,
+        "d": 26,
+        "m": 14
+      },
+      "prompt": "Compute (((23 * 3) + (13 * 26)) % 14). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((26 * 27) + (11 * 25)) % 13)",
+      "family": "sum_products",
+      "id": "5944c98efd938d181d05",
+      "operands": {
+        "a": 26,
+        "b": 27,
+        "c": 11,
+        "d": 25,
+        "m": 13
+      },
+      "prompt": "Compute (((26 * 27) + (11 * 25)) % 13). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((19 * 15) + (10 * 27)) % 12)",
+      "family": "sum_products",
+      "id": "f23425bfa1f8e90b1275",
+      "operands": {
+        "a": 19,
+        "b": 15,
+        "c": 10,
+        "d": 27,
+        "m": 12
+      },
+      "prompt": "Compute (((19 * 15) + (10 * 27)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((9 * 23) + (21 * 17)) % 8)",
+      "family": "sum_products",
+      "id": "9674b076be8285334a6a",
+      "operands": {
+        "a": 9,
+        "b": 23,
+        "c": 21,
+        "d": 17,
+        "m": 8
+      },
+      "prompt": "Compute (((9 * 23) + (21 * 17)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((10 * 17) + (25 * 7)) % 17)",
+      "family": "sum_products",
+      "id": "50b3bfbfcbf42c1ef72f",
+      "operands": {
+        "a": 10,
+        "b": 17,
+        "c": 25,
+        "d": 7,
+        "m": 17
+      },
+      "prompt": "Compute (((10 * 17) + (25 * 7)) % 17). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((23 * 22) + (19 * 26)) % 14)",
+      "family": "sum_products",
+      "id": "99be3ed1de4763cccf3f",
+      "operands": {
+        "a": 23,
+        "b": 22,
+        "c": 19,
+        "d": 26,
+        "m": 14
+      },
+      "prompt": "Compute (((23 * 22) + (19 * 26)) % 14). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((8 * 23) + (2 * 9)) % 15)",
+      "family": "sum_products",
+      "id": "dc673bdedea4d466441e",
+      "operands": {
+        "a": 8,
+        "b": 23,
+        "c": 2,
+        "d": 9,
+        "m": 15
+      },
+      "prompt": "Compute (((8 * 23) + (2 * 9)) % 15). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 0,
+      "completion": "<answer>0</answer>",
+      "expression": "(((12 * 28) + (15 * 12)) % 12)",
+      "family": "sum_products",
+      "id": "0ae8cd39ff62f0be52a5",
+      "operands": {
+        "a": 12,
+        "b": 28,
+        "c": 15,
+        "d": 12,
+        "m": 12
+      },
+      "prompt": "Compute (((12 * 28) + (15 * 12)) % 12). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 1,
+      "completion": "<answer>1</answer>",
+      "expression": "(((29 * 16) + (9 * 17)) % 8)",
+      "family": "sum_products",
+      "id": "3fef801ddfad9bd764c3",
+      "operands": {
+        "a": 29,
+        "b": 16,
+        "c": 9,
+        "d": 17,
+        "m": 8
+      },
+      "prompt": "Compute (((29 * 16) + (9 * 17)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 2,
+      "completion": "<answer>2</answer>",
+      "expression": "(((10 * 21) + (1 * 16)) % 14)",
+      "family": "sum_products",
+      "id": "891fefb1682ece670def",
+      "operands": {
+        "a": 10,
+        "b": 21,
+        "c": 1,
+        "d": 16,
+        "m": 14
+      },
+      "prompt": "Compute (((10 * 21) + (1 * 16)) % 14). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 3,
+      "completion": "<answer>3</answer>",
+      "expression": "(((22 * 3) + (27 * 15)) % 13)",
+      "family": "sum_products",
+      "id": "6fd7b90575f4684e5d0b",
+      "operands": {
+        "a": 22,
+        "b": 3,
+        "c": 27,
+        "d": 15,
+        "m": 13
+      },
+      "prompt": "Compute (((22 * 3) + (27 * 15)) % 13). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 4,
+      "completion": "<answer>4</answer>",
+      "expression": "(((4 * 27) + (16 * 27)) % 8)",
+      "family": "sum_products",
+      "id": "59e2ff18596dd4841ba9",
+      "operands": {
+        "a": 4,
+        "b": 27,
+        "c": 16,
+        "d": 27,
+        "m": 8
+      },
+      "prompt": "Compute (((4 * 27) + (16 * 27)) % 8). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 5,
+      "completion": "<answer>5</answer>",
+      "expression": "(((7 * 25) + (29 * 12)) % 14)",
+      "family": "sum_products",
+      "id": "15bb05ba97f6a3f3e9d1",
+      "operands": {
+        "a": 7,
+        "b": 25,
+        "c": 29,
+        "d": 12,
+        "m": 14
+      },
+      "prompt": "Compute (((7 * 25) + (29 * 12)) % 14). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 6,
+      "completion": "<answer>6</answer>",
+      "expression": "(((18 * 25) + (16 * 1)) % 10)",
+      "family": "sum_products",
+      "id": "9c89349631fde2f561b6",
+      "operands": {
+        "a": 18,
+        "b": 25,
+        "c": 16,
+        "d": 1,
+        "m": 10
+      },
+      "prompt": "Compute (((18 * 25) + (16 * 1)) % 10). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    },
+    {
+      "answer": 7,
+      "completion": "<answer>7</answer>",
+      "expression": "(((5 * 23) + (6 * 12)) % 15)",
+      "family": "sum_products",
+      "id": "42d084698ad59ebc50cd",
+      "operands": {
+        "a": 5,
+        "b": 23,
+        "c": 6,
+        "d": 12,
+        "m": 15
+      },
+      "prompt": "Compute (((5 * 23) + (6 * 12)) % 15). The symbol % means the least non-negative remainder.",
+      "split": "test"
+    }
+  ]
+}

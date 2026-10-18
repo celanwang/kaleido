@@ -1,0 +1,31 @@
+{
+  "base_weights_in_repository": false,
+  "budget_limits": "same generation ceilings and planned updates; actual generated/update tokens and time differ",
+  "evaluation": "independent regex parser + expanded polynomial oracle",
+  "grpo": {
+    "beta": 0.04,
+    "clip": 0.2,
+    "loss_type": "per-completion mean GRPO",
+    "old_policy": "fixed within each group update",
+    "reference": "selected SFT checkpoint",
+    "repetition_penalty": 1.0,
+    "std": "population +1e-4",
+    "temperature": 1.0,
+    "top_k": null,
+    "top_p": null
+  },
+  "kind": "formal_qwen",
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "gradient_clip_norm": 1.0,
+    "name": "AdamW",
+    "weight_decay": 0.0
+  },
+  "rejection": "same scheduled prompts/groups; fixed SFT sampling; unique accepted generated IDs; fresh optimizer",
+  "reward": "strict full response + AST label, nontruncated",
+  "selection": "validation strict accuracy, tie by completion NLL; test report only"
+}

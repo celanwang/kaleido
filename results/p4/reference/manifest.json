@@ -1,0 +1,57 @@
+{
+  "config": {
+    "alpha": 16.0,
+    "beta": 0.04,
+    "clip": 0.2,
+    "device": "mps",
+    "experiment_kind": "formal_qwen",
+    "group_size": 4,
+    "grpo_epochs": 2,
+    "heldout_per_family": 16,
+    "iterations": 24,
+    "max_new_tokens": 32,
+    "operand_max": 30,
+    "post_eval_interval": 4,
+    "post_lr": 5e-05,
+    "prompts_per_iteration": 2,
+    "rank": 8,
+    "seeds": [
+      42,
+      7,
+      2026
+    ],
+    "sft_batch_size": 4,
+    "sft_eval_interval": 16,
+    "sft_lr": 0.0002,
+    "sft_steps": 64,
+    "task_seed": 731,
+    "train_per_family": 32
+  },
+  "environment": {
+    "command": [
+      "/Users/wangchen/Developer/kaleido/src/kaleido/demos/post_training.py",
+      "--output",
+      "runs/p4-reference"
+    ],
+    "git_dirty": false,
+    "git_revision": "8c5bb9a2e7d54aebfd16edb4855f382bc1f75064",
+    "git_status": "",
+    "numpy": "2.5.4",
+    "packages": {
+      "huggingface-hub": "2.2.0",
+      "numpy": "2.5.4",
+      "safetensors": "0.8.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "torch": "2.14.1",
+      "transformers": "5.20.1"
+    },
+    "platform": "macOS-15.8-arm64-arm-64bit",
+    "python": "3.12.15 (main, Oct  3 2026, 00:54:33) [Clang 22.1.3 ]",
+    "source_sha256": "535f181f1070870fb7dedf12f9054cbb10f38e5ff4be2be422525565dfbf1e23"
+  },
+  "finished_at": "2026-10-18T17:02:33.671726+00:00",
+  "schema_version": 1,
+  "started_at": "2026-10-18T16:59:39.176845+00:00",
+  "status": "completed"
+}

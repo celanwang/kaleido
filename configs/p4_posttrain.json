@@ -1,0 +1,23 @@
+{
+  "seeds": [42, 7, 2026],
+  "device": "mps",
+  "rank": 8,
+  "alpha": 16.0,
+  "sft_steps": 64,
+  "sft_batch_size": 4,
+  "sft_lr": 0.0002,
+  "sft_eval_interval": 16,
+  "iterations": 24,
+  "prompts_per_iteration": 2,
+  "group_size": 4,
+  "grpo_epochs": 2,
+  "post_lr": 0.00005,
+  "post_eval_interval": 4,
+  "beta": 0.04,
+  "clip": 0.2,
+  "max_new_tokens": 32,
+  "task_seed": 731,
+  "train_per_family": 32,
+  "heldout_per_family": 16,
+  "operand_max": 30
+}

@@ -1,0 +1,18 @@
+{
+  "adapter_parameters": 540672,
+  "base_parameters": 494032768,
+  "completion_tokens": 32,
+  "device": "mps:0",
+  "last_gradient_norm": 5.842111110687256,
+  "median_warm_update_seconds": 0.07764795849652728,
+  "mps_current_allocated_bytes": 2022211584,
+  "mps_driver_allocated_bytes": 2998665216,
+  "native_greedy_match": true,
+  "prompt_width": 65,
+  "update_seconds": [
+    0.14657537500170292,
+    0.07774016699841013,
+    0.07755574999464443
+  ],
+  "warmup_steps": 1
+}

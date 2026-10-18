@@ -1,2 +1,6 @@
 # Preserve exact source snapshot bytes across clients with autocrlf enabled.
 data/p3/raw/*.txt -text
+# These are exact upstream bytes checked against pinned model provenance.
+results/p4/reference/base_config.json -text
+results/p4/reference/base_generation_config.json -text
+results/p4/reference/QWEN-LICENSE.txt -text

@@ -15,6 +15,12 @@ reference = [
 torch-reference = [
     "torch==2.14.1",
 ]
+posttrain = [
+    "huggingface-hub==2.2.0",
+    "safetensors==0.8.0",
+    "torch==2.14.1",
+    "transformers==5.20.1",
+]
 
 [build-system]
 requires = ["hatchling==1.30.0"]

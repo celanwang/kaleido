@@ -1,0 +1,47 @@
+{
+  "constant_training_majority": 0,
+  "evaluation": {
+    "test": {
+      "by_family": {
+        "scaled_sum_shift": {
+          "samples": 16,
+          "strict_accuracy": 0.125
+        },
+        "sum_products": {
+          "samples": 16,
+          "strict_accuracy": 0.125
+        }
+      },
+      "format_rate": 1.0,
+      "numerical_accuracy": 0.125,
+      "samples": 32,
+      "strict_accuracy": 0.125,
+      "truncation_rate": 0.0,
+      "wilson_95": [
+        0.04970053844474301,
+        0.2806864978482796
+      ]
+    },
+    "valid": {
+      "by_family": {
+        "product_difference": {
+          "samples": 16,
+          "strict_accuracy": 0.125
+        },
+        "sum_product": {
+          "samples": 16,
+          "strict_accuracy": 0.125
+        }
+      },
+      "format_rate": 1.0,
+      "numerical_accuracy": 0.125,
+      "samples": 32,
+      "strict_accuracy": 0.125,
+      "truncation_rate": 0.0,
+      "wilson_95": [
+        0.04970053844474301,
+        0.2806864978482796
+      ]
+    }
+  }
+}
