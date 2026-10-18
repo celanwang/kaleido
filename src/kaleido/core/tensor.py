@@ -4,6 +4,8 @@ from numbers import Real
 
 import numpy as np
 
+from kaleido.numerics import sigmoid
+
 
 def _unbroadcast(gradient, shape):
     while gradient.ndim > len(shape):
@@ -167,6 +169,13 @@ class Tensor:
 
     def relu(self):
         return self._result(np.maximum(self._data, 0), (self, lambda g: g * (self._data > 0)))
+
+    def softplus(self):
+        return self._result(np.logaddexp(0, self._data), (self, lambda g: g * sigmoid(self._data)))
+
+    def sigmoid(self):
+        data = sigmoid(self._data)
+        return self._result(data, (self, lambda g: g * data * (1 - data)))
 
     def backward(self, gradient=None):
         """Accumulate a vector-Jacobian product; non-scalars need an explicit seed."""

@@ -1,0 +1,32 @@
+{
+  "2026": {
+    "breast_cancer_scaler_max_abs_error": 0.0,
+    "diabetes_scaler_max_abs_error": 0.0,
+    "em_likelihood_max_abs_error": 1.6582472166071227e-05,
+    "kmeans_distance_max_abs_error": 2.220446049250313e-15,
+    "linear_prediction_max_abs_error": 0.0,
+    "logistic_gradient_max_abs": 6.600796298439349e-14,
+    "logistic_probability_max_abs_error": 1.6332714275479887e-07,
+    "pca_projection_max_abs_error": 0.0
+  },
+  "42": {
+    "breast_cancer_scaler_max_abs_error": 0.0,
+    "diabetes_scaler_max_abs_error": 0.0,
+    "em_likelihood_max_abs_error": 1.6748865744542485e-05,
+    "kmeans_distance_max_abs_error": 2.55351295663786e-15,
+    "linear_prediction_max_abs_error": 0.0,
+    "logistic_gradient_max_abs": 2.4207903693770905e-11,
+    "logistic_probability_max_abs_error": 6.214422115791152e-07,
+    "pca_projection_max_abs_error": 0.0
+  },
+  "7": {
+    "breast_cancer_scaler_max_abs_error": 0.0,
+    "diabetes_scaler_max_abs_error": 0.0,
+    "em_likelihood_max_abs_error": 1.8160356050955784e-05,
+    "kmeans_distance_max_abs_error": 1.4432899320127035e-15,
+    "linear_prediction_max_abs_error": 0.0,
+    "logistic_gradient_max_abs": 2.2942585331531262e-14,
+    "logistic_probability_max_abs_error": 8.386014471728487e-08,
+    "pca_projection_max_abs_error": 0.0
+  }
+}

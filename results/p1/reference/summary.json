@@ -1,0 +1,107 @@
+{
+  "dispersion": "sample standard deviation across overlapping seeded splits; not a confidence interval",
+  "methods": {
+    "em": {
+      "reference_test_mean_log_likelihood": {
+        "mean": -2.8608894629496473,
+        "split_std": 0.15063246806258965
+      },
+      "test_adjusted_rand": {
+        "mean": 0.6187123462318656,
+        "split_std": 0.07938251116073072
+      },
+      "test_mean_log_likelihood": {
+        "mean": -2.86088957516627,
+        "split_std": 0.1506322265764961
+      }
+    },
+    "kmeans": {
+      "reference_test_mean_squared_distance": {
+        "mean": 0.7909913468588226,
+        "split_std": 0.06315274318756531
+      },
+      "test_adjusted_rand": {
+        "mean": 0.5525349008082292,
+        "split_std": 0.0
+      },
+      "test_mean_squared_distance": {
+        "mean": 0.7909913468588226,
+        "split_std": 0.06315274318756564
+      }
+    },
+    "linear": {
+      "mean_baseline_test_mse": {
+        "mean": 6005.391804352782,
+        "split_std": 118.48643461834486
+      },
+      "reference_test_mse": {
+        "mean": 2977.3788482935856,
+        "split_std": 123.4698039944957
+      },
+      "test_mae": {
+        "mean": 43.028005860765575,
+        "split_std": 0.46315574371098484
+      },
+      "test_mse": {
+        "mean": 2977.3788482935856,
+        "split_std": 123.4698039944957
+      }
+    },
+    "logistic": {
+      "majority_baseline_test_accuracy": {
+        "mean": 0.6286549707602339,
+        "split_std": 0.005064476045522985
+      },
+      "reference_test_accuracy": {
+        "mean": 0.9824561403508771,
+        "split_std": 0.008771929824561375
+      },
+      "reference_test_nll": {
+        "mean": 0.07635399060797836,
+        "split_std": 0.010134150425828258
+      },
+      "test_accuracy": {
+        "mean": 0.9824561403508771,
+        "split_std": 0.008771929824561375
+      },
+      "test_nll": {
+        "mean": 0.07635397681538442,
+        "split_std": 0.010134170085889734
+      }
+    },
+    "pca": {
+      "explained_variance_ratio_sum": {
+        "mean": 0.9599235042024702,
+        "split_std": 0.0028314451928841827
+      },
+      "reference_test_reconstruction_mse": {
+        "mean": 0.042742277701993854,
+        "split_std": 0.007251657805593688
+      },
+      "test_reconstruction_mse": {
+        "mean": 0.04274227770199385,
+        "split_std": 0.0072516578055936915
+      }
+    },
+    "tree": {
+      "prediction_agreement": {
+        "mean": 1.0,
+        "split_std": 0.0
+      },
+      "reference_test_accuracy": {
+        "mean": 0.9333333333333335,
+        "split_std": 0.05773502691896257
+      },
+      "test_accuracy": {
+        "mean": 0.9333333333333335,
+        "split_std": 0.05773502691896257
+      }
+    }
+  },
+  "n_splits": 3,
+  "seeds": [
+    42,
+    7,
+    2026
+  ]
+}

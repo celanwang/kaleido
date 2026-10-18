@@ -3,9 +3,10 @@
 万花筒：以机器学习全域为结构，以可复现实验理解设计、取舍与失效边界。
 
 原始方向见 [DESIGN](DESIGN.md)，阶段与验收见 [ROADMAP](docs/ROADMAP.md)。
-当前实现 P0：本地实验协议、NumPy 张量自动微分、合成回归训练闭环。
-P1–P6 尚未实现。自研核心用于理解，后续规模训练使用成熟框架。
-P0 的 [验收报告与完整参考产物](results/p0/REPORT.md)已保存，86 项测试通过。
+当前已实现 P0 地基与 P1 代表性经典机器学习。P2–P6 尚未实现。
+自研核心用于理解，后续规模训练使用成熟框架。
+P0 的 [验收报告与完整参考产物](results/p0/REPORT.md)保留原始阶段证据。
+P1 的 [验收报告与完整参考产物](results/p1/REPORT.md)包含三组划分与六类算法对照；全仓 145 项测试通过。
 
 ## 运行
 
@@ -18,6 +19,17 @@ uv run --locked ruff check .
 uv run --locked ruff format --check .
 uv run --locked python -m kaleido.demos.linear_regression
 ```
+
+P1 的 sklearn 对照与离线真实数据 demo 使用可选依赖：
+
+```sh
+uv sync --locked --extra reference
+uv run --locked --extra reference pytest
+uv run --locked --extra reference python -m kaleido.demos.classical_ml
+```
+
+P1 读取 `configs/p1_classical.json`，默认三组固定划分；支持 `--config` 和 `--output`。
+所有数据均为 sklearn 内置文件，运行时无需下载。基础实现只依赖 NumPy，sklearn 用于参考与数据。
 
 默认读取 `configs/p0_linear.json`；可用 `--config <path>` 和 `--output <directory>` 指定。
 从仓库根目录运行。每次生成独立 `runs/p0-linear/<id>/`，不覆盖历史，运行产物默认不入 Git。
@@ -38,6 +50,15 @@ uv run --locked python -m kaleido.demos.linear_regression
 - `src/kaleido/demos/linear_regression.py`：[回归实验](docs/notes/linear-regression.md)，
   训练均值与 NumPy OLS 对照、尺度消融和标签漂移压力测试。
 - [最小数学地基](docs/notes/math-foundations.md)：矩阵求导、谱与步长、高斯似然、熵和交叉熵。
+- `src/kaleido/classical/`：统一估计器接口、[线性/逻辑回归](docs/notes/classical-linear.md)、
+  [CART 分类树](docs/notes/cart.md)、[PCA](docs/notes/pca.md)、[K-means 与 EM](docs/notes/clustering-em.md)。
+- `src/kaleido/demos/classical_ml.py`：[P1 实验协议](docs/notes/classical-experiments.md)，
+  Diabetes/Breast Cancer/Iris 留出集、验证选参、sklearn 对照与机制反例。
+
+监督模型 `fit(X,y)` 返回自身，提供 `predict(X)`；分类器另提供 `predict_proba(X)`。
+Scaler/PCA 使用 `fit/transform/inverse_transform`，聚类提供 `fit/predict`。
+目标 y 为一维，X 为有限二维实数。逻辑回归限二分类，树限 Gini 分类，EM 限对角协方差；
+没有样本权重、缺失值处理或完整 sklearn 兼容层。SVM、集成模型留为扩展。
 
 数值梯度验证、独立解析公式和固定划分用于判断正确性。回归为已知生成规律的合成实验，
 用于机制验证，不能推广为真实业务效果或大模型能力结论。core 不支持 GPU、批量 matmul、

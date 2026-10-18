@@ -7,6 +7,7 @@ import subprocess
 import sys
 import uuid
 from datetime import UTC, datetime
+from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 
 import numpy as np
@@ -52,6 +53,12 @@ def provenance(root: Path) -> dict:
             digest.update(str(path.relative_to(root)).encode() + b"\0")
             digest.update(path.read_bytes() + b"\0")
     status = git("status", "--porcelain")
+    packages = {}
+    for package in ("numpy", "scikit-learn", "scipy"):
+        try:
+            packages[package] = version(package)
+        except PackageNotFoundError:
+            packages[package] = None
     return {
         "git_revision": git("rev-parse", "HEAD"),
         "git_dirty": None if status is None else bool(status),
@@ -59,6 +66,7 @@ def provenance(root: Path) -> dict:
         "source_sha256": digest.hexdigest(),
         "python": sys.version,
         "numpy": np.__version__,
+        "packages": packages,
         "platform": platform.platform(),
         "command": sys.argv,
     }

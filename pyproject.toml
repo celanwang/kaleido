@@ -8,6 +8,11 @@ dependencies = [
     "numpy==2.5.4",
 ]
 
+[project.optional-dependencies]
+reference = [
+    "scikit-learn==1.9.1",
+]
+
 [build-system]
 requires = ["hatchling==1.30.0"]
 build-backend = "hatchling.build"

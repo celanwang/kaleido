@@ -1,0 +1,215 @@
+{
+  "2026": {
+    "em": {
+      "candidates": [
+        {
+          "components": 1,
+          "valid_mean_log_likelihood": -5.487118156430827
+        },
+        {
+          "components": 2,
+          "valid_mean_log_likelihood": -3.2017127946307555
+        },
+        {
+          "components": 3,
+          "valid_mean_log_likelihood": -2.824640122011074
+        },
+        {
+          "components": 4,
+          "valid_mean_log_likelihood": -2.67797706252104
+        }
+      ],
+      "selected_components": 4
+    },
+    "logistic": {
+      "candidates": [
+        {
+          "l2": 0.001,
+          "valid_nll": 0.1636304331990193
+        },
+        {
+          "l2": 0.01,
+          "valid_nll": 0.10886221946133136
+        },
+        {
+          "l2": 0.1,
+          "valid_nll": 0.14766148452092606
+        }
+      ],
+      "reference_C": 0.29325513196480935,
+      "selected_l2": 0.01
+    },
+    "tree": {
+      "candidates": [
+        {
+          "max_depth": 1,
+          "train_accuracy": 0.6666666666666666,
+          "valid_accuracy": 0.6666666666666666
+        },
+        {
+          "max_depth": 2,
+          "train_accuracy": 0.9777777777777777,
+          "valid_accuracy": 0.9
+        },
+        {
+          "max_depth": 3,
+          "train_accuracy": 0.9777777777777777,
+          "valid_accuracy": 0.9
+        },
+        {
+          "max_depth": 5,
+          "train_accuracy": 0.9777777777777777,
+          "valid_accuracy": 0.9
+        },
+        {
+          "max_depth": 8,
+          "train_accuracy": 0.9777777777777777,
+          "valid_accuracy": 0.9
+        }
+      ],
+      "selected_depth": 2
+    }
+  },
+  "42": {
+    "em": {
+      "candidates": [
+        {
+          "components": 1,
+          "valid_mean_log_likelihood": -5.351150664113642
+        },
+        {
+          "components": 2,
+          "valid_mean_log_likelihood": -3.011249992207952
+        },
+        {
+          "components": 3,
+          "valid_mean_log_likelihood": -2.68256431048831
+        },
+        {
+          "components": 4,
+          "valid_mean_log_likelihood": -2.616682432403848
+        }
+      ],
+      "selected_components": 4
+    },
+    "logistic": {
+      "candidates": [
+        {
+          "l2": 0.001,
+          "valid_nll": 0.03423873238668778
+        },
+        {
+          "l2": 0.01,
+          "valid_nll": 0.05607425439687369
+        },
+        {
+          "l2": 0.1,
+          "valid_nll": 0.11574067612507548
+        }
+      ],
+      "reference_C": 2.9325513196480935,
+      "selected_l2": 0.001
+    },
+    "tree": {
+      "candidates": [
+        {
+          "max_depth": 1,
+          "train_accuracy": 0.6666666666666666,
+          "valid_accuracy": 0.6666666666666666
+        },
+        {
+          "max_depth": 2,
+          "train_accuracy": 0.9666666666666667,
+          "valid_accuracy": 0.9333333333333333
+        },
+        {
+          "max_depth": 3,
+          "train_accuracy": 0.9777777777777777,
+          "valid_accuracy": 1.0
+        },
+        {
+          "max_depth": 5,
+          "train_accuracy": 0.9777777777777777,
+          "valid_accuracy": 1.0
+        },
+        {
+          "max_depth": 8,
+          "train_accuracy": 0.9777777777777777,
+          "valid_accuracy": 1.0
+        }
+      ],
+      "selected_depth": 3
+    }
+  },
+  "7": {
+    "em": {
+      "candidates": [
+        {
+          "components": 1,
+          "valid_mean_log_likelihood": -5.432640020225615
+        },
+        {
+          "components": 2,
+          "valid_mean_log_likelihood": -3.0067964147872135
+        },
+        {
+          "components": 3,
+          "valid_mean_log_likelihood": -2.7107993528959455
+        },
+        {
+          "components": 4,
+          "valid_mean_log_likelihood": -2.4644377315717283
+        }
+      ],
+      "selected_components": 4
+    },
+    "logistic": {
+      "candidates": [
+        {
+          "l2": 0.001,
+          "valid_nll": 0.06635339286838166
+        },
+        {
+          "l2": 0.01,
+          "valid_nll": 0.06416434582480687
+        },
+        {
+          "l2": 0.1,
+          "valid_nll": 0.13731091630207365
+        }
+      ],
+      "reference_C": 0.29325513196480935,
+      "selected_l2": 0.01
+    },
+    "tree": {
+      "candidates": [
+        {
+          "max_depth": 1,
+          "train_accuracy": 0.6666666666666666,
+          "valid_accuracy": 0.6666666666666666
+        },
+        {
+          "max_depth": 2,
+          "train_accuracy": 0.9888888888888889,
+          "valid_accuracy": 0.9
+        },
+        {
+          "max_depth": 3,
+          "train_accuracy": 0.9888888888888889,
+          "valid_accuracy": 0.9
+        },
+        {
+          "max_depth": 5,
+          "train_accuracy": 0.9888888888888889,
+          "valid_accuracy": 0.9
+        },
+        {
+          "max_depth": 8,
+          "train_accuracy": 0.9888888888888889,
+          "valid_accuracy": 0.9
+        }
+      ],
+      "selected_depth": 2
+    }
+  }
+}
