@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "books": [
+    {"id": "pg11", "title": "Alice's Adventures in Wonderland", "author": "Lewis Carroll", "chapters": 12, "url": "https://www.gutenberg.org/ebooks/11.txt.utf-8", "catalog": "https://www.gutenberg.org/ebooks/11", "sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e"},
+    {"id": "pg12", "title": "Through the Looking-Glass", "author": "Lewis Carroll", "chapters": 12, "url": "https://www.gutenberg.org/ebooks/12.txt.utf-8", "catalog": "https://www.gutenberg.org/ebooks/12", "sha256": "e40a38f5da841f9fb6acc557355c447b7c2ccb56a208caf5fcf2b05081f14d42"},
+    {"id": "pg55", "title": "The Wonderful Wizard of Oz", "author": "L. Frank Baum", "chapters": 24, "url": "https://www.gutenberg.org/ebooks/55.txt.utf-8", "catalog": "https://www.gutenberg.org/ebooks/55", "sha256": "969bffab7740d4d8a0bac332d78bd0152ad4a40a2efc52f06c74a9bb6120be75"}
+  ],
+  "retrieved_client_date": "2026-10-18",
+  "rights": "Source catalogs mark these works Public domain in the USA. Complete source headers and Project Gutenberg license are retained in raw files; this does not assert identical status in every jurisdiction.",
+  "terms_url": "https://www.gutenberg.org/policy/license.html"
+}
