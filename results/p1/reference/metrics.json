@@ -1,0 +1,107 @@
+{
+  "2026": {
+    "em": {
+      "reference_test_mean_log_likelihood": -2.8538170850151277,
+      "test_adjusted_rand": 0.7076497331488436,
+      "test_mean_log_likelihood": -2.8538167104426506
+    },
+    "kmeans": {
+      "reference_test_mean_squared_distance": 0.8619908989261387,
+      "test_adjusted_rand": 0.5525349008082292,
+      "test_mean_squared_distance": 0.8619908989261391
+    },
+    "linear": {
+      "mean_baseline_test_mse": 5952.890994676021,
+      "reference_test_mse": 2993.1863021037398,
+      "test_mae": 43.41618917894728,
+      "test_mse": 2993.1863021037398
+    },
+    "logistic": {
+      "majority_baseline_test_accuracy": 0.631578947368421,
+      "reference_test_accuracy": 0.9824561403508771,
+      "reference_test_nll": 0.07766994758240872,
+      "test_accuracy": 0.9824561403508771,
+      "test_nll": 0.07766994181679147
+    },
+    "pca": {
+      "explained_variance_ratio_sum": 0.9626351393055561,
+      "reference_test_reconstruction_mse": 0.047487010897454864,
+      "test_reconstruction_mse": 0.04748701089745485
+    },
+    "tree": {
+      "prediction_agreement": 1.0,
+      "reference_test_accuracy": 0.9666666666666667,
+      "test_accuracy": 0.9666666666666667
+    }
+  },
+  "42": {
+    "em": {
+      "reference_test_mean_log_likelihood": -3.014933547182872,
+      "test_adjusted_rand": 0.5550293616215193,
+      "test_mean_log_likelihood": -3.0149336439517636
+    },
+    "kmeans": {
+      "reference_test_mean_squared_distance": 0.7698987453154982,
+      "test_adjusted_rand": 0.5525349008082292,
+      "test_mean_squared_distance": 0.769898745315498
+    },
+    "linear": {
+      "mean_baseline_test_mse": 5922.226561653753,
+      "reference_test_mse": 2846.7665813374224,
+      "test_mae": 42.51532586769722,
+      "test_mse": 2846.7665813374224
+    },
+    "logistic": {
+      "majority_baseline_test_accuracy": 0.6228070175438597,
+      "reference_test_accuracy": 0.9912280701754386,
+      "reference_test_nll": 0.06562614629323593,
+      "test_accuracy": 0.9912280701754386,
+      "test_nll": 0.06562610948832631
+    },
+    "pca": {
+      "explained_variance_ratio_sum": 0.9601495710275775,
+      "reference_test_reconstruction_mse": 0.04634504048423042,
+      "test_reconstruction_mse": 0.04634504048423042
+    },
+    "tree": {
+      "prediction_agreement": 1.0,
+      "reference_test_accuracy": 0.9666666666666667,
+      "test_accuracy": 0.9666666666666667
+    }
+  },
+  "7": {
+    "em": {
+      "reference_test_mean_log_likelihood": -2.7139177566509427,
+      "test_adjusted_rand": 0.5934579439252337,
+      "test_mean_log_likelihood": -2.7139183711043953
+    },
+    "kmeans": {
+      "reference_test_mean_squared_distance": 0.7410843963348307,
+      "test_adjusted_rand": 0.5525349008082292,
+      "test_mean_squared_distance": 0.7410843963348306
+    },
+    "linear": {
+      "mean_baseline_test_mse": 6141.057856728573,
+      "reference_test_mse": 3092.183661439595,
+      "test_mae": 43.152502535652204,
+      "test_mse": 3092.183661439595
+    },
+    "logistic": {
+      "majority_baseline_test_accuracy": 0.631578947368421,
+      "reference_test_accuracy": 0.9736842105263158,
+      "reference_test_nll": 0.08576587794829044,
+      "test_accuracy": 0.9736842105263158,
+      "test_nll": 0.08576587914103546
+    },
+    "pca": {
+      "explained_variance_ratio_sum": 0.9569858022742767,
+      "reference_test_reconstruction_mse": 0.03439478172429628,
+      "test_reconstruction_mse": 0.03439478172429627
+    },
+    "tree": {
+      "prediction_agreement": 1.0,
+      "reference_test_accuracy": 0.8666666666666667,
+      "test_accuracy": 0.8666666666666667
+    }
+  }
+}
