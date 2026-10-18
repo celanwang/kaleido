@@ -1,0 +1,35 @@
+{
+  "config": {
+    "divergence_limit": 1000000000000.0,
+    "epochs": 300,
+    "feature_scales": [
+      1.0,
+      3.0,
+      10.0
+    ],
+    "learning_rate": 0.05,
+    "n_test": 96,
+    "n_train": 320,
+    "n_valid": 96,
+    "noise_std": 0.2,
+    "seed": 42
+  },
+  "environment": {
+    "command": [
+      "/Users/wangchen/Developer/kaleido/src/kaleido/demos/linear_regression.py",
+      "--output",
+      "runs/p0-reference"
+    ],
+    "git_dirty": false,
+    "git_revision": "22e2e47a46a63d142334936be219373ab1633ae7",
+    "git_status": "",
+    "numpy": "2.5.4",
+    "platform": "macOS-15.8-arm64-arm-64bit",
+    "python": "3.12.15 (main, Oct  3 2026, 00:54:33) [Clang 22.1.3 ]",
+    "source_sha256": "9100f543b5a7059829679af0c34040cd5a560f654a05fdee107fc2e07c1cbfcd"
+  },
+  "finished_at": "2026-10-18T12:22:24.930919+00:00",
+  "schema_version": 1,
+  "started_at": "2026-10-18T12:22:24.862562+00:00",
+  "status": "completed"
+}

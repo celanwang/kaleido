@@ -1,0 +1,20 @@
+{
+  "final_parameter_max_abs_error_vs_ols": 2.3803181647963356e-13,
+  "gradcheck_max_abs_error": 3.946231785789678e-09,
+  "label_shift_plus_5_test_mse": 25.235805725415805,
+  "mean_test_mse": 38.28284172736631,
+  "ols_test_mse": 0.043342803644989804,
+  "raw_scale_ablation": {
+    "last_train_mse": 2065575900439.5503,
+    "status": "diverged",
+    "stopped_epoch": 6
+  },
+  "selected_epoch": 57,
+  "stable_lr_upper_bound": {
+    "raw": 0.010875977467562005,
+    "standardized": 0.9527456420724605
+  },
+  "test_mse": 0.044550590984978045,
+  "train_mse": 0.04121585307013607,
+  "valid_mse": 0.042165118760532354
+}
