@@ -21,7 +21,7 @@ class Tensor:
 
     Parameters are updated by constructing new leaf tensors, so existing graphs
     always refer to the values used in their forward pass. No in-place operators,
-    GPU, batched matmul, indexing, or higher-order differentiation in P0.
+    GPU, batched matmul, or higher-order differentiation. P2 adds explicit indexing VJPs.
     """
 
     __array_priority__ = 1000

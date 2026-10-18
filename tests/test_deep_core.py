@@ -134,3 +134,13 @@ def test_multi_step_optimizers_match_torch_with_decay_and_missing_gradients(kind
 def test_optimizer_invalid_parameters(kwargs):
     with pytest.raises(ValueError):
         SGD([Parameter([1.0])], **kwargs)
+
+
+def test_optimizer_moment_overflow_preserves_state_and_parameters():
+    parameter = Parameter([1.0])
+    parameter.tensor.grad = np.array([1e200])
+    optimizer = Adam([parameter])
+    with pytest.raises(FloatingPointError):
+        optimizer.step()
+    assert optimizer.state == {}
+    np.testing.assert_array_equal(parameter.data, [1.0])

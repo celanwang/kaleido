@@ -116,6 +116,8 @@ class ActorCritic(Module):
 
 
 def evaluate(probabilities, *, seed, episodes=200, greedy=False):
+    if type(episodes) is not int or episodes < 1:
+        raise ValueError("episodes must be a positive integer")
     env, rng = LineWorld(), np.random.default_rng(seed)
     rewards, successes, steps = [], [], []
     for _ in range(episodes):
@@ -147,6 +149,8 @@ def evaluate(probabilities, *, seed, episodes=200, greedy=False):
 
 
 def train_q_learning(*, seed, episodes=600, gamma=0.99):
+    if type(episodes) is not int or episodes < 1 or not 0 <= gamma <= 1:
+        raise ValueError("Q-learning requires positive episode count and gamma in [0,1]")
     env, rng = LineWorld(), np.random.default_rng(seed)
     q = np.zeros((5, 2))
     history = []

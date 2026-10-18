@@ -1,0 +1,9 @@
+{
+  "seeds": [42, 7, 2026],
+  "epochs": 12,
+  "vae_epochs": 20,
+  "batch_size": 64,
+  "memory_updates": 150,
+  "rl_updates": 60,
+  "rl_episodes": 12
+}

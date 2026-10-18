@@ -34,9 +34,10 @@ class SGD:
             gradient = np.asarray(parameter.grad)
             if gradient.shape != parameter.data.shape or not np.isfinite(gradient).all():
                 raise ValueError("gradient must be finite and match parameter shape")
-            value, state = self._update(
-                index, parameter, gradient + self.weight_decay * parameter.data
-            )
+            with np.errstate(over="raise", invalid="raise", divide="raise"):
+                value, state = self._update(
+                    index, parameter, gradient + self.weight_decay * parameter.data
+                )
             if not np.isfinite(value).all():
                 raise FloatingPointError("optimizer update is not finite")
             updates.append((index, parameter, value, state))
