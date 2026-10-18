@@ -3,6 +3,7 @@
 import json
 import re
 from collections import Counter
+from numbers import Integral
 from pathlib import Path
 
 from kaleido.experiments import write_json
@@ -92,7 +93,11 @@ class ByteBPE:
     def decode(self, ids, *, errors="strict"):
         values = []
         for token in ids:
-            if type(token) is not int or not 0 <= token < len(self):
+            if (
+                isinstance(token, bool)
+                or not isinstance(token, Integral)
+                or not 0 <= token < len(self)
+            ):
                 raise ValueError("token ID out of range")
             values.append(self.pieces[token])
         return b"".join(values).decode("utf-8", errors=errors)

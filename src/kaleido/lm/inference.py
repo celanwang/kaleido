@@ -2,6 +2,7 @@
 
 import math
 import time
+from statistics import median
 
 import torch
 
@@ -79,6 +80,8 @@ def generate(
 
 @torch.inference_mode()
 def cache_equivalence(model, tokens, *, chunk_sizes=(3, 1, 4)):
+    if not chunk_sizes or any(type(size) is not int or size < 1 for size in chunk_sizes):
+        raise ValueError("chunks must have positive lengths")
     if model.training or tokens.shape[1] > model.config.context_length:
         raise ValueError("cache comparison requires eval mode and a fitting sequence")
     full, _ = model(tokens)
@@ -126,7 +129,7 @@ def benchmark_decode(model, prompt, *, new_tokens=32, repeats=5):
             last = ids
         result["cached" if cached else "naive"] = {
             "seconds": durations,
-            "median_seconds": sorted(durations)[len(durations) // 2],
+            "median_seconds": median(durations),
             "token_ids": last,
             "metadata": metadata,
         }
