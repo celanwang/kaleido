@@ -105,13 +105,16 @@ def make_tasks(*, seed=731, train_per_family=32, heldout_per_family=16, operand_
                 if attempts > count * 10000:
                     raise ValueError("not enough unique arithmetic tasks")
                 a, b, c, d = map(int, rng.integers(1, operand_max + 1, size=4))
-                m = int(rng.integers(3, 18))
+                m = int(rng.integers(8, 18))
                 tree = expression(family, a, b, c, d, m)
                 formula = render(tree)
+                answer = evaluate_ast(tree)
+                # Balance each family's labels before freezing any evaluation outputs.
+                if answer != accepted % 8:
+                    continue
                 if formula in seen:
                     continue
                 seen.add(formula)
-                answer = evaluate_ast(tree)
                 row = {
                     "id": hashlib.sha256(formula.encode()).hexdigest()[:20],
                     "split": split,

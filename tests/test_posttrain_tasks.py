@@ -1,3 +1,5 @@
+from collections import Counter
+
 import pytest
 
 from kaleido.posttrain.tasks import (
@@ -20,6 +22,9 @@ def test_structural_splits_frozen_data_and_independent_oracles():
         assert independent_oracle(row) == row["answer"]
         assert 0 <= row["answer"] < row["operands"]["m"]
     assert len(set.union(*(set(v) for v in FAMILIES.values()))) == 8
+    for split in FAMILIES:
+        counts = Counter(row["answer"] for row in tasks if row["split"] == split)
+        assert len(set(counts.values())) == 1 and set(counts) == set(range(8))
 
 
 def test_nonexecuting_strict_verifier_rejects_reward_hacks_and_truncation():
