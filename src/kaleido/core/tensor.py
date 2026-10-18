@@ -197,10 +197,15 @@ class Tensor:
         shifted = np.exp(self._data - maximum)
         total = shifted.sum(axis=axis, keepdims=True)
         data = maximum + np.log(total)
+        axes = (
+            tuple(range(len(self.shape)))
+            if axis is None
+            else (axis if isinstance(axis, tuple) else (axis,))
+        )
 
         def vjp(g):
-            if not keepdims:
-                g = np.expand_dims(g, axis=axis)
+            if not keepdims and axes:
+                g = np.expand_dims(g, axis=axes)
             return g * shifted / total
 
         return self._result(data if keepdims else np.squeeze(data, axis=axis), (self, vjp))

@@ -144,3 +144,9 @@ def test_optimizer_moment_overflow_preserves_state_and_parameters():
         optimizer.step()
     assert optimizer.state == {}
     np.testing.assert_array_equal(parameter.data, [1.0])
+
+
+@pytest.mark.parametrize("axis", [None, (0, 1), 1])
+def test_logsumexp_reduction_axes(axis):
+    value = np.array([[0.3, -0.7], [1.2, 0.1]])
+    assert gradcheck(lambda x: x.logsumexp(axis=axis).sum(), [value]) < 1e-7
