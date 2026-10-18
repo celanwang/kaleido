@@ -14,8 +14,9 @@ PCA 不默认标准化：协方差 PCA 与相关矩阵 PCA 是不同问题。缩
 
 ```python
 from kaleido.classical import PCA
-model = PCA(1).fit([[0., 1.], [1., 2.], [2., 3.]])
-print(model.transform([[3., 4.]]), model.explained_variance_ratio_)
+
+model = PCA(1).fit([[0.0, 1.0], [1.0, 2.0], [2.0, 3.0]])
+print(model.transform([[3.0, 4.0]]), model.explained_variance_ratio_)
 ```
 
 验证：`uv run --locked --extra reference pytest tests/test_pca.py`；

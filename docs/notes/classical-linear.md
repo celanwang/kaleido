@@ -26,7 +26,8 @@ StandardScaler 只在训练集拟合，常量列 scale=1；测试数据不能参
 
 ```python
 from kaleido.classical import LogisticRegression, StandardScaler
-x = StandardScaler().fit_transform([[0., 1.], [1., 0.], [2., 1.], [3., 0.]])
+
+x = StandardScaler().fit_transform([[0.0, 1.0], [1.0, 0.0], [2.0, 1.0], [3.0, 0.0]])
 model = LogisticRegression().fit(x, [0, 0, 1, 1])
 print(model.predict_proba(x), model.converged_)
 ```
