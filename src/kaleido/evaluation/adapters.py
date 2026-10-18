@@ -80,6 +80,7 @@ class QwenAdapter:
                         "completion_ids": ids,
                         "truncated": cut,
                         "prompt_tokens": len(prompt),
+                        "prompt_ids": prompt,
                         "generated_tokens": len(ids),
                     }
                 )
@@ -95,6 +96,7 @@ class DecoderLikelihoodAdapter:
     def evaluate(self, documents, *, split="test"):
         from kaleido.lm.tokenizer import ByteBPE
         from kaleido.lm.training import TokenCorpus, evaluate, load_weights
+        from kaleido.posttrain.model import file_sha256
 
         tokenizer = ByteBPE.load(self.tokenizer_path)
         corpus = TokenCorpus(documents, tokenizer)
@@ -117,6 +119,8 @@ class DecoderLikelihoodAdapter:
             "documents": rows,
             "token_losses": losses,
             "tokenizer_sha256": digest(json.loads(self.tokenizer_path.read_text())),
+            "weights_file_sha256": file_sha256(self.weights_path),
+            "metadata_file_sha256": file_sha256(self.weights_path.with_suffix(".json")),
             "weight_arrays": json.loads(self.weights_path.with_suffix(".json").read_text())[
                 "arrays"
             ],

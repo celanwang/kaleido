@@ -51,6 +51,7 @@ def test_numeric_equivalence_and_color_oracle_boundaries():
     color = Case("b", "s", "f", "q", "amber", scorer="context_color")
     assert score(color, "The stones are amber.")["correct"]
     assert not score(color, "amber or azure")["correct"]
+    assert not score(color, "The stones are not amber.")["correct"]
 
 
 def test_paired_tests_holm_and_reference_binomial():
