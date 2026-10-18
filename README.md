@@ -5,6 +5,7 @@
 原始方向见 [DESIGN](DESIGN.md)，阶段与验收见 [ROADMAP](docs/ROADMAP.md)。
 当前实现 P0：本地实验协议、NumPy 张量自动微分、合成回归训练闭环。
 P1–P6 尚未实现。自研核心用于理解，后续规模训练使用成熟框架。
+P0 的 [验收报告与完整参考产物](results/p0/REPORT.md)已保存，86 项测试通过。
 
 ## 运行
 

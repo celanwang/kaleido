@@ -1,0 +1,7 @@
+{
+  "ablation_updates": 6,
+  "device": "cpu",
+  "dtype": "float64",
+  "primary_updates": 300,
+  "wall_seconds": 0.04078845800177078
+}
