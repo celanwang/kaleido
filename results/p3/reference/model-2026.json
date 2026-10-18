@@ -1,0 +1,41 @@
+{
+  "arrays": {
+    "blocks.0.attention.output.bias": "e7b6ce51ba63d5cfd93740940b4002e68e154a2b81497808e618717b56cf94ed",
+    "blocks.0.attention.output.weight": "b74d28c49643b7cacb437cc5ba0b14aff23c97f913229e43104851a0e5b5bf7b",
+    "blocks.0.attention.qkv.bias": "88416964cb5963ef8779f2d0849586da35f2c92dd861e44504bf28066694a51c",
+    "blocks.0.attention.qkv.weight": "be0ab2d964817d2b977cdd90a2a19314e9b5b7ea9af5911b39f7c3948f5d281b",
+    "blocks.0.down.bias": "8cce5f1a8d3ef561d5c27d841d6844262fa6e7618e0050760d647bd07a3ff37f",
+    "blocks.0.down.weight": "f2912ffbf29f17900d7fc4c183f5552613288fdbd5d7315b5fd90a20d263389e",
+    "blocks.0.ln1.bias": "963ea3ea2762b4893800ecee051040c1c49ce7a70f113c7012b9b1b984a5bb10",
+    "blocks.0.ln1.weight": "f0e324f8008a47e863395bdb4aa32d2607f0aca0899c7950502f42e494786901",
+    "blocks.0.ln2.bias": "a8097fe90eabde8f697357ee1b17d40e84f2097bf8bfed5ec01999a1bd8e12a4",
+    "blocks.0.ln2.weight": "37b8a8f7c6d96067a4490dbd1e01f7a841e014ee6496a1be9a41f1908382ad8f",
+    "blocks.0.up.bias": "e26cbf06abf75f6fa9ebd30d77a747f3ec7f04bb4010e90c0c698da3ed8cd3a1",
+    "blocks.0.up.weight": "8c19998fe4339ce373fe0e681929384827299e5223807a01c3540fa5976753f0",
+    "blocks.1.attention.output.bias": "84f26e79cf211528370eb856d0801847ca5825bb07e118fc0fdc5852fe79caff",
+    "blocks.1.attention.output.weight": "3decafa7255fb6a43766e117bf3b0d4b98ff9b98b02f1fbf579c12b493881713",
+    "blocks.1.attention.qkv.bias": "06fb840fcf8942dd5645fdbcecc446ce1ed3d6aca50615ab426c9e0f1ad2617d",
+    "blocks.1.attention.qkv.weight": "3b880edc3b45a816008c4dbcaa2be482081e35a70f35c7d0cb1eeee2d3f6fd13",
+    "blocks.1.down.bias": "01f607fd33c3bf04ca2505952993c0cb16cb8db6cf43ba734d627c08eb6e912c",
+    "blocks.1.down.weight": "fd803c8e498502995429bffdab16184aa8c5ef79e1ef8467e0432033120d3a1b",
+    "blocks.1.ln1.bias": "4e66d18fac6d4945fe69f6372d5b788729c6c8450d99b32c72077f5c04bf4eb2",
+    "blocks.1.ln1.weight": "3ddb15eaa708ed8d82d341b99157a27d884204edcf3b2c9e6fa5c829b5946583",
+    "blocks.1.ln2.bias": "5ac048108953971b1514309ce781440e1aab3ec8dcb0ee0c669b83d75b890d08",
+    "blocks.1.ln2.weight": "9fd99e9a67da9da086f06b923034e5f58f6905fdeb07c8166c50b7f16deb1f79",
+    "blocks.1.up.bias": "57e8a2aa32fb699fba2267eb830e990b2a026b66e0e1eb2282fee21a00bf88c9",
+    "blocks.1.up.weight": "e0cb3c5634ce8b340ae5ef129feef823274f8dec0fae3c5c04a5fa344128bdc2",
+    "final_norm.bias": "b41eb92d6499f2d08a74e1d8d421e0b5d2c4730c0665824e7541c88ebbc27364",
+    "final_norm.weight": "52ee3bf8d2b5701ae1cd4445ac48465b1a087b32b31c801ef4418e74a0865ae1",
+    "position_embedding.weight": "3008c3c4099e099e1d7af14f9e0abcdd5cb65e826c8a64865f32f2d6b8f038ef",
+    "token_embedding.weight": "e52a22b7d5919d984ecb88f1f3b294b7122d80488b624a4f9de3c5d3ed163ca4"
+  },
+  "config": {
+    "context_length": 128,
+    "dropout": 0.0,
+    "heads": 4,
+    "layers": 2,
+    "vocab_size": 512,
+    "width": 128
+  },
+  "note": "inference weights only; optimizer/RNG training resume state is not included"
+}
