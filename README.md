@@ -3,14 +3,14 @@
 万花筒：以机器学习全域为结构，以可复现实验理解设计、取舍与失效边界。
 
 原始方向见 [DESIGN](DESIGN.md)，阶段与验收见 [ROADMAP](docs/ROADMAP.md)。
-当前已实现 P0–P5；P6 尚未实现。
+当前已实现 P0–P6 主线，v1.0.0 为待合并与发布审阅的候选；未实施的扩展见 [CHANGELOG](CHANGELOG.md)。
 自研核心用于理解，后续规模训练使用成熟框架。
 P0 的 [验收报告与完整参考产物](results/p0/REPORT.md)保留原始阶段证据。
 P1 的 [验收报告与完整参考产物](results/p1/REPORT.md)包含三组划分与六类算法对照。
 P2 的 [验收报告与完整参考产物](results/p2/REPORT.md)覆盖神经模型、生成与强化学习，阶段验收时185项测试通过。
 P3 的 [验收报告与训练权重](results/p3/REPORT.md)覆盖真实三种子预训练、逐token评测与cache实测，阶段验收时209项测试通过。
 P4 的 [验收报告与adapter](results/p4/REPORT.md)保存固定Qwen三种子SFT/GRPO/采样筛选对照；阶段验收时235项测试通过。
-P5 的 [评测报告与逐题证据](results/p5/REPORT.md)整合P3/P4、新结构题、公开子集和Judge校准；当前全仓258项测试通过。
+P5 的 [评测报告与逐题证据](results/p5/REPORT.md)整合P3/P4、新结构题、公开子集和Judge校准；阶段验收时258项测试通过。
 
 ## 运行
 
@@ -134,3 +134,22 @@ uv run --locked --all-extras python -m kaleido.demos.model_evaluation --fixture 
 本轮独立新题未证明稳定GRPO收益；Judge一致率仅50%，排名已关闭。
 颜色提示与解析约定修复前后的记录均保留；修复后的结果属于描述性验证。
 完整数据、限制和复现命令见 [P5报告](results/p5/REPORT.md) 与 [协议笔记](docs/notes/evaluation-protocol.md)。
+
+P6 统一入口、复现与导出：
+
+```sh
+uv run --locked --all-extras kaleido list
+uv run --locked --all-extras kaleido doctor
+uv run --locked --all-extras kaleido verify --deep
+uv run --locked --all-extras kaleido reproduce --profile smoke
+uv run --locked --all-extras kaleido reproduce --profile formal
+uv run --locked --all-extras kaleido export --weights results/p3/reference/model-42.npz --tokenizer results/p3/reference/tokenizer.json --output runs/decoder-42
+uv run --locked --all-extras kaleido predict --bundle runs/decoder-42
+```
+
+`predict` 从 stdin 读取 JSON-lines，例如 `{"prompt":"Alice was","max_new_tokens":12}`。
+P3 导出为 CPU 动态长度计算图，支持独立 wheel 安装后在仓库外推理；不需要训练模块、语料或 Qwen 缓存。
+完整研究复现仍需 checkout，源码外运行时用全局 `--root /path/to/kaleido` 指定。
+正式复跑保留配置、失败日志及与历史工件的差异；固定种子不被解释为 MPS 权重位级一致的保证。
+发布流程从 main 手动生成 draft release，审阅后才公开，不自动上传 PyPI。
+见 [复现指南](docs/REPRODUCING.md)、[P6验收报告](results/p6/REPORT.md) 和 [v1.0.0范围](docs/releases/v1.0.0.md)。

@@ -42,3 +42,16 @@ def test_data_digest_tracks_content_shape_and_dtype():
     assert array_digest(a) != array_digest(a + 1)
     with pytest.raises(TypeError):
         array_digest(np.array([object()]))
+
+
+def test_source_hash_v2_tracks_release_scripts_and_workflows(tmp_path):
+    from kaleido.experiments import provenance
+
+    (tmp_path / "scripts").mkdir()
+    file = tmp_path / "scripts/check_wheel.py"
+    file.write_text("version = 1")
+    first = provenance(tmp_path)
+    file.write_text("version = 2")
+    second = provenance(tmp_path)
+    assert first["source_hash_version"] == second["source_hash_version"] == 2
+    assert first["source_sha256"] != second["source_sha256"]

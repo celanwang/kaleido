@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "packages": {
+    "huggingface-hub": {
+      "expected": "2.2.0",
+      "installed": "2.2.0",
+      "matches": true
+    },
+    "numpy": {
+      "expected": "2.5.4",
+      "installed": "2.5.4",
+      "matches": true
+    },
+    "safetensors": {
+      "expected": "0.8.0",
+      "installed": "0.8.0",
+      "matches": true
+    },
+    "scikit-learn": {
+      "expected": "1.9.1",
+      "installed": "1.9.1",
+      "matches": true
+    },
+    "torch": {
+      "expected": "2.14.1",
+      "installed": "2.14.1",
+      "matches": true
+    },
+    "transformers": {
+      "expected": "5.20.1",
+      "installed": "5.20.1",
+      "matches": true
+    }
+  },
+  "python": "3.12.15 (main, Oct  3 2026, 00:54:33) [Clang 22.1.3 ]",
+  "python_matches": true,
+  "scope": "full-reproduction dependency pins; no model download or accelerator probe"
+}

@@ -44,8 +44,21 @@ def provenance(root: Path) -> dict:
 
     # Hash executable sources, configs, and dependency pins even before a commit exists.
     files = sorted(
-        [*root.glob("src/**/*.py"), *root.glob("configs/**/*.json")]
-        + [root / name for name in ("pyproject.toml", "uv.lock", ".python-version")]
+        [
+            *root.glob("src/**/*.py"),
+            *root.glob("configs/**/*.json"),
+            *root.glob("scripts/*.py"),
+            *root.glob(".github/workflows/*.yml"),
+        ]
+        + [
+            root / name
+            for name in (
+                "pyproject.toml",
+                "uv.lock",
+                ".python-version",
+                "artifacts/inventory-v1.json",
+            )
+        ]
     )
     digest = hashlib.sha256()
     for path in files:
@@ -72,6 +85,7 @@ def provenance(root: Path) -> dict:
         "git_dirty": None if status is None else bool(status),
         "git_status": status,
         "source_sha256": digest.hexdigest(),
+        "source_hash_version": 2,
         "python": sys.version,
         "numpy": np.__version__,
         "packages": packages,

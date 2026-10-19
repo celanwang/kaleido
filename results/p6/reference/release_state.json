@@ -1,0 +1,8 @@
+{
+  "draft_workflow_executed": false,
+  "github_release_published": false,
+  "project_version": "1.0.0",
+  "publication_policy": "main-only manual workflow; tests then draft creation, maintainer reviews before publishing",
+  "pypi_published": false,
+  "status": "candidate_pending_merge_and_manual_draft"
+}
