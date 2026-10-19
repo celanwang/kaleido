@@ -155,9 +155,15 @@ def reproduce(root, output, *, stages=tuple(RECIPES), profile="smoke", emit=None
                 "--output",
                 str(suite.path.resolve() / stage),
             ]
-            process = run_process(command, cwd=root, text=True, capture_output=True)
-            (suite.path / f"{stage}.stdout.log").write_text(process.stdout)
-            (suite.path / f"{stage}.stderr.log").write_text(process.stderr)
+            suite.record(
+                "steps.json", {"completed": records, "active_stage": stage, "failed_stage": None}
+            )
+            stdout_path = suite.path / f"{stage}.stdout.log"
+            with (
+                stdout_path.open("w") as stdout,
+                (suite.path / f"{stage}.stderr.log").open("w") as stderr,
+            ):
+                process = run_process(command, cwd=root, text=True, stdout=stdout, stderr=stderr)
             if process.returncode != 0:
                 suite.record(
                     "steps.json",
@@ -165,7 +171,7 @@ def reproduce(root, output, *, stages=tuple(RECIPES), profile="smoke", emit=None
                 )
                 raise RuntimeError(f"{stage} failed; evidence retained at {suite.path}")
             try:
-                value = json.loads(process.stdout.splitlines()[-1])
+                value = json.loads(stdout_path.read_text().splitlines()[-1])
                 if value.get("status") != "completed" or not Path(value["run"]).is_dir():
                     raise ValueError("child did not report a completed run")
             except (ValueError, KeyError, IndexError, TypeError) as error:

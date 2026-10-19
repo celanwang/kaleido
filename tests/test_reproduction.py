@@ -78,6 +78,8 @@ def test_reproduction_failure_retains_evidence_and_does_not_continue(tmp_path, m
 
     def fail(command, **kwargs):
         calls.append(command)
+        kwargs["stdout"].write("partial output")
+        kwargs["stderr"].write("failure")
         return SimpleNamespace(returncode=7, stdout="partial output", stderr="failure")
 
     monkeypatch.setattr("kaleido.repro.registry.run_process", fail)
@@ -100,3 +102,13 @@ def test_doctor_accepts_local_cpu_build_tags(monkeypatch):
     )
     # Only the Torch result is asserted: optional extras can be absent in base-only environments.
     assert registry.doctor(ROOT)["packages"]["torch"]["matches"]
+
+
+def test_replay_comparison_only_ignores_declared_timing_and_preserves_boolean_types():
+    import runpy
+
+    compare = runpy.run_path(str(ROOT / "scripts/summarize_reproduction.py"))["differences"]
+    assert not compare({"wall_seconds": 1, "nll": 2.0}, {"wall_seconds": 9, "nll": 2.000001})
+    assert compare({"selected_step": 20}, {"selected_step": 0})
+    assert compare({"ok": True}, {"ok": 1})
+    assert compare({"value": 1}, {})

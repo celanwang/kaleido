@@ -1,5 +1,7 @@
 name: checks
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   checks:
     runs-on: ubuntu-latest
@@ -9,12 +11,12 @@ jobs:
         with:
           version: "0.12.23"
       - run: uv sync --locked --all-extras --python 3.12
+      - run: uv run --locked --all-extras python -m kaleido doctor
+      - run: uv run --locked --all-extras python -m kaleido verify --deep
       - run: uv run --locked --all-extras ruff check .
       - run: uv run --locked --all-extras ruff format --check .
       - run: uv run --locked --all-extras pytest
-      - run: uv run --locked --all-extras python -m kaleido.demos.linear_regression
-      - run: uv run --locked --all-extras python -m kaleido.demos.classical_ml
-      - run: uv run --locked --all-extras python -m kaleido.demos.deep_learning
-      - run: uv run --locked --all-extras python -m kaleido.demos.language_model --config configs/p3_smoke.json
-      - run: uv run --locked --all-extras python -m kaleido.demos.post_training --fixture --config configs/p4_smoke.json
-      - run: uv run --locked --all-extras python -m kaleido.demos.model_evaluation --fixture --config configs/p5_smoke.json
+      - run: uv run --locked --all-extras python -m kaleido reproduce --profile smoke
+      - run: uv run --locked --all-extras python -m kaleido export --weights results/p3/reference/model-42.npz --tokenizer results/p3/reference/tokenizer.json --output runs/ci-decoder
+      - run: uv build
+      - run: uv run --locked --all-extras python scripts/check_wheel.py --wheel dist/kaleido-1.0.0-py3-none-any.whl --bundle runs/ci-decoder --report runs/wheel-check.json
