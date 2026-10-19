@@ -69,7 +69,7 @@ def doctor(root):
         packages[package] = {
             "expected": expected,
             "installed": actual,
-            "matches": actual == expected,
+            "matches": actual is not None and actual.split("+")[0] == expected,
         }
     python_ok = sys.version_info[:2] == (3, 12)
     return {

@@ -34,12 +34,37 @@ def main(argv=None):
     )
     replay.add_argument("--profile", choices=("formal", "smoke"), default="smoke")
     replay.add_argument("--output", type=Path, default=Path("runs/reproduction"))
+    export = commands.add_parser(
+        "export", help="export a trained P3 decoder as a verified CPU bundle"
+    )
+    export.add_argument("--weights", type=Path, required=True)
+    export.add_argument("--tokenizer", type=Path, required=True)
+    export.add_argument("--output", type=Path, required=True)
+    predict = commands.add_parser(
+        "predict", help="serve local JSON-lines without a repository checkout"
+    )
+    predict.add_argument("--bundle", type=Path, required=True)
     args = parser.parse_args(argv)
 
     def emit(value):
         print(json.dumps(value, ensure_ascii=False, allow_nan=False), flush=True)
 
     try:
+        if args.command == "predict":
+            import sys
+
+            import torch
+
+            from kaleido.deployment.runtime import Predictor, serve
+
+            torch.set_num_threads(1)
+            return serve(Predictor(args.bundle), sys.stdin.buffer, sys.stdout)
+        if args.command == "export":
+            from kaleido.deployment.export import export_decoder
+
+            path = export_decoder(args.weights, args.tokenizer, args.output, root=args.root)
+            emit({"status": "completed", "bundle": str(path)})
+            return 0
         from dataclasses import asdict
 
         from kaleido.repro.integrity import verify_index

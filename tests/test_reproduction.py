@@ -89,3 +89,14 @@ def test_reproduction_failure_retains_evidence_and_does_not_continue(tmp_path, m
     assert manifest["status"] == "failed"
     assert json.loads((run / "steps.json").read_text())["failed_stage"] == "p0"
     assert (run / "p0.stderr.log").read_text() == "failure"
+
+
+def test_doctor_accepts_local_cpu_build_tags(monkeypatch):
+    from kaleido.repro import registry
+
+    actual = registry.version
+    monkeypatch.setattr(
+        registry, "version", lambda name: "2.14.1+cpu" if name == "torch" else actual(name)
+    )
+    # Only the Torch result is asserted: optional extras can be absent in base-only environments.
+    assert registry.doctor(ROOT)["packages"]["torch"]["matches"]
