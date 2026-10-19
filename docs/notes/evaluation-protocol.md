@@ -7,7 +7,7 @@ P5 不训练或重选 P4 检查点。不同模型共享题目 ID、提示、原�
 
 数值题严格要求完整 `<answer>NUMBER</answer>` 且无截断；另外记录内容正确率、
 格式率和截断率，以区分答案与格式收益。Decimal 比较保留全部限定精度，不用浮点容差。
-上下文颜色检索仅接受单一颜色词或 `The stones are COLOR.`；单一颜色命中另作内容诊断。
+上下文颜色检索 v2 在提示中明确要求单一颜色词，评分仅接受该格式；单一颜色命中另作内容诊断。
 拒绝否定句等自由文本，避免把提及 gold 当作事实正确。这仍是窄域诊断，不等于一般事实性。
 
 新增结构算术用 AST 与独立展开式交叉验证，并对 P4 全部题目检查公式及 AST 结构隔离。
@@ -30,3 +30,9 @@ Judge 使用独立的规则 gold 校准/审计对，交换 A/B 顺序，记录�
 [MT-Bench Judge 偏差研究](https://arxiv.org/abs/2306.05685)、
 [bootstrap 定义](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html)、
 [精确 McNemar](https://www.statsmodels.org/stable/generated/statsmodels.stats.contingency_tables.mcnemar.html)。
+
+协议修复记录：v1 只要求 concise，却拒绝 `azure stones` 等合理短答，造成任意格式惩罚。
+该运行不用于质量排名，原始证据保存在 `results/p5/protocol-audit/context-v1.json`。
+v2 明确颜色词约定并收紧为精确颜色解析；题目、模型与训练设置不变，重新运行全部面板。
+修复发生在查看 v1 输出后，因此 v2 是描述性协议验证，不能宣称未经观察的确认性测试。
+数值题与 Judge 协议未根据成绩调整。

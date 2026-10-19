@@ -49,7 +49,9 @@ def test_numeric_equivalence_and_color_oracle_boundaries():
     assert not score(case, "<answer>-2.5</answer>", truncated=True)["correct"]
     assert canonical_number("1e9") is None and canonical_number("-0.0") == "0"
     color = Case("b", "s", "f", "q", "amber", scorer="context_color")
-    assert score(color, "The stones are amber.")["correct"]
+    assert score(color, "amber")["correct"]
+    assert not score(color, "The stones are amber.")["correct"]
+    assert score(color, "The stones are amber.")["content_correct"]
     assert not score(color, "amber or azure")["correct"]
     assert not score(color, "The stones are not amber.")["correct"]
 

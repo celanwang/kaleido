@@ -42,10 +42,7 @@ def score(case, response, *, truncated=False):
         if case.answer not in COLORS:
             raise ValueError("context case has invalid gold")
         found = set(re.findall(r"\b(?:" + "|".join(COLORS) + r")\b", response.casefold()))
-        color = re.fullmatch(
-            r"\s*(?:the stones are\s+)?(" + "|".join(COLORS) + r")[.!]?\s*",
-            response.casefold(),
-        )
+        color = re.fullmatch(r"\s*(" + "|".join(COLORS) + r")\s*", response.casefold())
         parsed = color.group(1) if color else None
         numerical = next(iter(found)) if len(found) == 1 else None
         expected = case.answer

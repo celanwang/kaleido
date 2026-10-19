@@ -168,12 +168,15 @@ def context_cases(*, count=12, prefix="context", seed=590):
         cases.append(
             Case(
                 id=f"{prefix}-{i:03d}",
-                suite="context_qa_v1",
+                suite="context_qa_v2",
                 family="color_retrieval",
                 prompt=f"{text}\nQuestion: What color are the stones in room {a}?",
                 answer=first,
                 scorer="context_color",
-                system="Answer concisely using only the supplied record.",
+                system=(
+                    "Return exactly one color word using only the supplied record. "
+                    "Do not include explanation or punctuation."
+                ),
                 difficulty="bounded_reference",
                 metadata={"context": text, "distractor": second},
             )
@@ -203,5 +206,6 @@ def build_suite(root, *, math_per_family=16, gsm_count=32, qa_count=12, seed=170
             "same primitive arithmetic still overlaps",
             "GSM8K pretrained overlap not measurable here",
             "reference-color matching is a narrow oracle, not full factuality",
+            "context v2 repairs observed v1 prompt/parser mismatch; descriptive only",
         ],
     }

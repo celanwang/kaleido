@@ -165,6 +165,9 @@ def _execute(config, output, *, root, fixture, emit):
                 "judge": JUDGE_PROTOCOL.to_dict(),
                 "checkpoint_selection": "unchanged published P4 validation-selected checkpoints",
                 "training_updates": 0,
+                "assessment_scope": (
+                    "descriptive frozen evaluation; context v2 is a documented protocol repair"
+                ),
                 "suite_macro_average_is_not_a_quality_ranking": True,
                 "comparisons": (
                     "SFT vs GRPO and rejection_sft in each suite and fixed seed; Holm per panel"

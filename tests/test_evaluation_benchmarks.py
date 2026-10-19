@@ -12,7 +12,7 @@ def test_new_structures_public_subset_are_frozen_before_inference():
     again, repeated = build_suite(ROOT)
     assert manifest == repeated and freeze_cases(cases) == freeze_cases(again)
     assert manifest["suites"] == {
-        "context_qa_v1": 12,
+        "context_qa_v2": 12,
         "gsm8k_fixed_integer_v1": 32,
         "novel_math_v1": 64,
     }
@@ -27,3 +27,15 @@ def test_new_structures_public_subset_are_frozen_before_inference():
     for case in questions:
         assert case.prompt == raw[case.metadata["source_row"]]["question"]
         assert "####" not in case.prompt
+
+
+def test_color_prompt_and_parser_share_an_explicit_one_word_contract():
+    from kaleido.evaluation.scoring import score
+
+    cases, _ = build_suite(ROOT)
+    for c in cases:
+        if c.suite == "context_qa_v2":
+            assert "exactly one color word" in c.system
+            assert score(c, c.answer)["correct"]
+            assert not score(c, c.answer + " stones")["correct"]
+            assert score(c, c.answer + " stones")["content_correct"]
