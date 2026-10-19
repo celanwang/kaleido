@@ -1,0 +1,88 @@
+{
+  "conditional_intervals": {
+    "p4_original_test:grpo": {
+      "delta_accuracy": 0.041666666666666664,
+      "fixed_seeds": 3,
+      "percentile_95": [
+        0.0,
+        0.09375
+      ],
+      "questions": 32,
+      "resamples": 4000,
+      "resampling_unit": "question; retain all fixed seeds; resample within family",
+      "rng_seed": 1701,
+      "scope": "conditional on fixed seeds/families; percentile interval, no wider guarantee"
+    },
+    "p4_original_test:rejection_sft": {
+      "delta_accuracy": 0.010416666666666666,
+      "fixed_seeds": 3,
+      "percentile_95": [
+        -0.0625,
+        0.10416666666666666
+      ],
+      "questions": 32,
+      "resamples": 4000,
+      "resampling_unit": "question; retain all fixed seeds; resample within family",
+      "rng_seed": 1701,
+      "scope": "conditional on fixed seeds/families; percentile interval, no wider guarantee"
+    }
+  },
+  "multiplicity": "Holm over all 6 suite/method/seed tests in this panel",
+  "tests": {
+    "p4_original_test:grpo:2026": {
+      "delta_accuracy": 0.125,
+      "discordant": 6,
+      "exact_two_sided_p": 0.21875,
+      "holm_p": 1.0,
+      "losses": 1,
+      "unit": "paired question within one seed",
+      "wins": 5
+    },
+    "p4_original_test:grpo:42": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "p4_original_test:grpo:7": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "p4_original_test:rejection_sft:2026": {
+      "delta_accuracy": 0.09375,
+      "discordant": 5,
+      "exact_two_sided_p": 0.375,
+      "holm_p": 1.0,
+      "losses": 1,
+      "unit": "paired question within one seed",
+      "wins": 4
+    },
+    "p4_original_test:rejection_sft:42": {
+      "delta_accuracy": -0.0625,
+      "discordant": 8,
+      "exact_two_sided_p": 0.7265625,
+      "holm_p": 1.0,
+      "losses": 5,
+      "unit": "paired question within one seed",
+      "wins": 3
+    },
+    "p4_original_test:rejection_sft:7": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    }
+  },
+  "warning": "dependent seeds/questions are not pooled into one McNemar test"
+}

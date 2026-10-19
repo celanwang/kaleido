@@ -1,0 +1,64 @@
+{
+  "all_judge_records_identical": true,
+  "all_numerical_records_identical": true,
+  "formal_run": "20261019T012709Z-a4bef608",
+  "formal_source_revision": "9e87760f5b63fdc18c28b16663b3610774ad0a6a",
+  "initial_run": "20261018T172925Z-fb9572b5",
+  "initial_source_revision": "d081511b5af58036a916a7d36828739e180a0ecc",
+  "judge_judgments": 64,
+  "models": {
+    "base": {
+      "after_sha256": "52c4a5d08acb075d807cff889dfd1d16aa6c9894c3c221b617091c3a24b0fa8a",
+      "before_sha256": "52c4a5d08acb075d807cff889dfd1d16aa6c9894c3c221b617091c3a24b0fa8a",
+      "records": 96
+    },
+    "grpo-2026": {
+      "after_sha256": "8ff22a6dc1554d0df883d81dc54fade90faa13563a7d8e7ad835d8f27f9d31bf",
+      "before_sha256": "8ff22a6dc1554d0df883d81dc54fade90faa13563a7d8e7ad835d8f27f9d31bf",
+      "records": 96
+    },
+    "grpo-42": {
+      "after_sha256": "e472791a22993025c5654cd6ef7027e6159a1f197bb4a3050ad926714c854639",
+      "before_sha256": "e472791a22993025c5654cd6ef7027e6159a1f197bb4a3050ad926714c854639",
+      "records": 96
+    },
+    "grpo-7": {
+      "after_sha256": "0f8019d6d49124129439ac4112194b67e2311820ab48eba0d8078c97ceb203de",
+      "before_sha256": "0f8019d6d49124129439ac4112194b67e2311820ab48eba0d8078c97ceb203de",
+      "records": 96
+    },
+    "rejection_sft-2026": {
+      "after_sha256": "3d9fd13add3405d0f6dcc13344b6d806d57bfc27f933ffbd2b6ee2fa10835f02",
+      "before_sha256": "3d9fd13add3405d0f6dcc13344b6d806d57bfc27f933ffbd2b6ee2fa10835f02",
+      "records": 96
+    },
+    "rejection_sft-42": {
+      "after_sha256": "fe6cb61ec730e635e2260952aa50abb5ab329f3dfce0bcb7f052d1d489590f95",
+      "before_sha256": "fe6cb61ec730e635e2260952aa50abb5ab329f3dfce0bcb7f052d1d489590f95",
+      "records": 96
+    },
+    "rejection_sft-7": {
+      "after_sha256": "04c4f6baad6d430d596afa50c5804597a92c087df9ec6cfd59090753301195ec",
+      "before_sha256": "04c4f6baad6d430d596afa50c5804597a92c087df9ec6cfd59090753301195ec",
+      "records": 96
+    },
+    "sft-2026": {
+      "after_sha256": "f65fea0ffe897fd6cd545c617f200e6cbee2cb22e599e638257330cafb24e750",
+      "before_sha256": "f65fea0ffe897fd6cd545c617f200e6cbee2cb22e599e638257330cafb24e750",
+      "records": 96
+    },
+    "sft-42": {
+      "after_sha256": "9f4f66c765dc4e1daf15ef4f58ad6b432a1330b84895431fbde376b5eb555ed4",
+      "before_sha256": "9f4f66c765dc4e1daf15ef4f58ad6b432a1330b84895431fbde376b5eb555ed4",
+      "records": 96
+    },
+    "sft-7": {
+      "after_sha256": "6fa9a9435b866ff2e12c99453768daf9189e80a51d3d6f6acc8b72edb48c25c2",
+      "before_sha256": "6fa9a9435b866ff2e12c99453768daf9189e80a51d3d6f6acc8b72edb48c25c2",
+      "records": 96
+    }
+  },
+  "scope": "two real MPS runs; exact traces for unchanged numerical and Judge protocols; color v2 intentionally differs",
+  "source_sha256_verified_before_archiving": "b2b0a89cfc47ee355507e7279ec3d76b9e1b8cdefc683f5346ca5ad01896fa6b",
+  "unchanged_numerical_records": 960
+}

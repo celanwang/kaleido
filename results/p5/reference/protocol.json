@@ -1,0 +1,20 @@
+{
+  "assessment_scope": "descriptive frozen evaluation; context v2 is a documented protocol repair",
+  "bootstrap": "question within family; all fixed seeds retained, not independent observations",
+  "checkpoint_selection": "unchanged published P4 validation-selected checkpoints",
+  "comparisons": "SFT vs GRPO and rejection_sft in each suite and fixed seed; Holm per panel",
+  "generation": {
+    "batch_size": 8,
+    "max_new_tokens": 64,
+    "seed": 1701,
+    "temperature": 0.0
+  },
+  "judge": {
+    "batch_size": 8,
+    "max_new_tokens": 8,
+    "seed": 1701,
+    "temperature": 0.0
+  },
+  "suite_macro_average_is_not_a_quality_ranking": true,
+  "training_updates": 0
+}

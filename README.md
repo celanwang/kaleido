@@ -3,13 +3,14 @@
 万花筒：以机器学习全域为结构，以可复现实验理解设计、取舍与失效边界。
 
 原始方向见 [DESIGN](DESIGN.md)，阶段与验收见 [ROADMAP](docs/ROADMAP.md)。
-当前已实现 P0–P4；P5–P6尚未实现。
+当前已实现 P0–P5；P6 尚未实现。
 自研核心用于理解，后续规模训练使用成熟框架。
 P0 的 [验收报告与完整参考产物](results/p0/REPORT.md)保留原始阶段证据。
 P1 的 [验收报告与完整参考产物](results/p1/REPORT.md)包含三组划分与六类算法对照。
 P2 的 [验收报告与完整参考产物](results/p2/REPORT.md)覆盖神经模型、生成与强化学习，阶段验收时185项测试通过。
 P3 的 [验收报告与训练权重](results/p3/REPORT.md)覆盖真实三种子预训练、逐token评测与cache实测，阶段验收时209项测试通过。
-P4 的 [验收报告与adapter](results/p4/REPORT.md)保存固定Qwen三种子SFT/GRPO/采样筛选对照；当前全仓235项测试通过。
+P4 的 [验收报告与adapter](results/p4/REPORT.md)保存固定Qwen三种子SFT/GRPO/采样筛选对照；阶段验收时235项测试通过。
+P5 的 [评测报告与逐题证据](results/p5/REPORT.md)整合P3/P4、新结构题、公开子集和Judge校准；当前全仓258项测试通过。
 
 ## 运行
 
@@ -118,3 +119,18 @@ Scaler/PCA 使用 `fit/transform/inverse_transform`，聚类提供 `fit/predict`
 或高阶导数；参数通过创建新叶子张量更新，避免修改旧计算图的前向值。
 P2 只支持单序列单头注意力、stride=1/valid 卷积、tanh RNN 和选定 VAE；
 GAN/扩散、LSTM/GRU 等作为扩展，自研框架在当前学习案例后冻结，P3 使用成熟框架承担训练。
+
+P5 统一评测与离线接线检查：
+
+```sh
+uv run --locked --all-extras python -m kaleido.demos.model_evaluation
+uv run --locked --all-extras python -m kaleido.demos.model_evaluation --fixture --config configs/p5_smoke.json
+```
+
+正式评测加载 P3 三个预训练权重及 P4 九个冻结 adapter，保留同一固定 Qwen 基座、原生模板，
+不训练或重选检查点。新题包括64道结构隔离算术、固定32题GSM8K直接回答子集及12道颜色检索。
+题目级配对 bootstrap 保留全部固定种子；按题族/难度报告格式、内容与截断。
+本地 Judge 经过已知gold校准和顺序交换，未达门槛时自动关闭模型排名。
+本轮独立新题未证明稳定GRPO收益；Judge一致率仅50%，排名已关闭。
+颜色提示与解析约定修复前后的记录均保留；修复后的结果属于描述性验证。
+完整数据、限制和复现命令见 [P5报告](results/p5/REPORT.md) 与 [协议笔记](docs/notes/evaluation-protocol.md)。

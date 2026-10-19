@@ -1,0 +1,248 @@
+{
+  "conditional_intervals": {
+    "context_qa_v2:grpo": {
+      "delta_accuracy": 0.0,
+      "fixed_seeds": 3,
+      "percentile_95": [
+        0.0,
+        0.0
+      ],
+      "questions": 12,
+      "resamples": 4000,
+      "resampling_unit": "question; retain all fixed seeds; resample within family",
+      "rng_seed": 1701,
+      "scope": "conditional on fixed seeds/families; percentile interval, no wider guarantee"
+    },
+    "context_qa_v2:rejection_sft": {
+      "delta_accuracy": -0.027777777777777776,
+      "fixed_seeds": 3,
+      "percentile_95": [
+        -0.08333333333333333,
+        0.0
+      ],
+      "questions": 12,
+      "resamples": 4000,
+      "resampling_unit": "question; retain all fixed seeds; resample within family",
+      "rng_seed": 1701,
+      "scope": "conditional on fixed seeds/families; percentile interval, no wider guarantee"
+    },
+    "gsm8k_fixed_integer_v1:grpo": {
+      "delta_accuracy": 0.010416666666666666,
+      "fixed_seeds": 3,
+      "percentile_95": [
+        -0.020833333333333332,
+        0.041666666666666664
+      ],
+      "questions": 32,
+      "resamples": 4000,
+      "resampling_unit": "question; retain all fixed seeds; resample within family",
+      "rng_seed": 1701,
+      "scope": "conditional on fixed seeds/families; percentile interval, no wider guarantee"
+    },
+    "gsm8k_fixed_integer_v1:rejection_sft": {
+      "delta_accuracy": 0.010416666666666666,
+      "fixed_seeds": 3,
+      "percentile_95": [
+        -0.020833333333333332,
+        0.041666666666666664
+      ],
+      "questions": 32,
+      "resamples": 4000,
+      "resampling_unit": "question; retain all fixed seeds; resample within family",
+      "rng_seed": 1701,
+      "scope": "conditional on fixed seeds/families; percentile interval, no wider guarantee"
+    },
+    "novel_math_v1:grpo": {
+      "delta_accuracy": 0.0,
+      "fixed_seeds": 3,
+      "percentile_95": [
+        -0.020833333333333332,
+        0.020833333333333332
+      ],
+      "questions": 64,
+      "resamples": 4000,
+      "resampling_unit": "question; retain all fixed seeds; resample within family",
+      "rng_seed": 1701,
+      "scope": "conditional on fixed seeds/families; percentile interval, no wider guarantee"
+    },
+    "novel_math_v1:rejection_sft": {
+      "delta_accuracy": 0.005208333333333333,
+      "fixed_seeds": 3,
+      "percentile_95": [
+        -0.031249999999999997,
+        0.03658854166666714
+      ],
+      "questions": 64,
+      "resamples": 4000,
+      "resampling_unit": "question; retain all fixed seeds; resample within family",
+      "rng_seed": 1701,
+      "scope": "conditional on fixed seeds/families; percentile interval, no wider guarantee"
+    }
+  },
+  "multiplicity": "Holm over all 18 suite/method/seed tests in this panel",
+  "tests": {
+    "context_qa_v2:grpo:2026": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "context_qa_v2:grpo:42": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "context_qa_v2:grpo:7": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "context_qa_v2:rejection_sft:2026": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "context_qa_v2:rejection_sft:42": {
+      "delta_accuracy": -0.08333333333333337,
+      "discordant": 1,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 1,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "context_qa_v2:rejection_sft:7": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "gsm8k_fixed_integer_v1:grpo:2026": {
+      "delta_accuracy": 0.03125,
+      "discordant": 3,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 1,
+      "unit": "paired question within one seed",
+      "wins": 2
+    },
+    "gsm8k_fixed_integer_v1:grpo:42": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "gsm8k_fixed_integer_v1:grpo:7": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "gsm8k_fixed_integer_v1:rejection_sft:2026": {
+      "delta_accuracy": 0.03125,
+      "discordant": 3,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 1,
+      "unit": "paired question within one seed",
+      "wins": 2
+    },
+    "gsm8k_fixed_integer_v1:rejection_sft:42": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "gsm8k_fixed_integer_v1:rejection_sft:7": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "novel_math_v1:grpo:2026": {
+      "delta_accuracy": 0.0,
+      "discordant": 4,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 2,
+      "unit": "paired question within one seed",
+      "wins": 2
+    },
+    "novel_math_v1:grpo:42": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "novel_math_v1:grpo:7": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    },
+    "novel_math_v1:rejection_sft:2026": {
+      "delta_accuracy": 0.0,
+      "discordant": 6,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 3,
+      "unit": "paired question within one seed",
+      "wins": 3
+    },
+    "novel_math_v1:rejection_sft:42": {
+      "delta_accuracy": 0.015625,
+      "discordant": 7,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 3,
+      "unit": "paired question within one seed",
+      "wins": 4
+    },
+    "novel_math_v1:rejection_sft:7": {
+      "delta_accuracy": 0.0,
+      "discordant": 0,
+      "exact_two_sided_p": 1.0,
+      "holm_p": 1.0,
+      "losses": 0,
+      "unit": "paired question within one seed",
+      "wins": 0
+    }
+  },
+  "warning": "dependent seeds/questions are not pooled into one McNemar test"
+}

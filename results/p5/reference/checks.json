@@ -1,0 +1,13 @@
+{
+  "checkpoint_reloaded_before_every_generation": true,
+  "fixture": false,
+  "judge_enabled": false,
+  "no_training": true,
+  "p3_original_split": [
+    "pg11-chapter-03",
+    "pg12-chapter-01",
+    "pg55-chapter-18",
+    "pg55-chapter-23"
+  ],
+  "p4_scoring_reproduced": true
+}
