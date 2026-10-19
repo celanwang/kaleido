@@ -1,0 +1,41 @@
+{
+  "arrays": {
+    "blocks.0.attention.output.bias": "138117d22966597ddbf90ce22ac6f35d7c537354a0acee7e1fb710a9e1cb1fa9",
+    "blocks.0.attention.output.weight": "bceda224964c70d1a7e4b3a6cf932f16cb006fae23f1205c539f083f66be7863",
+    "blocks.0.attention.qkv.bias": "1c9b38896c893231838c052549db6517334703b03d51702a845b6249ecf36678",
+    "blocks.0.attention.qkv.weight": "fc27e76e594fd6f07955354757f9476b9ec6916a8309cd94da6c118d0971fc96",
+    "blocks.0.down.bias": "ac4c1b88b315b26be79aeedfe1bc1d70a8ea97a37bb42dbbb155cab4b83e4650",
+    "blocks.0.down.weight": "0faf57e758d0cf16881231882374df148a87230d9cbe832427535a40a9c267b0",
+    "blocks.0.ln1.bias": "2f565ed0aab66028ab21b63714cd45561c49bf811cba71717beffe1db49e80bb",
+    "blocks.0.ln1.weight": "5f7f276da2ab22dd31046bd4f7fa04ce0959ed857a4f1e81c59e94b014970f82",
+    "blocks.0.ln2.bias": "95403cf7bd949750df0f2fc13e67cbbf7aa3d97b374ed82dbbe008e23cdb8c41",
+    "blocks.0.ln2.weight": "ce0a8bbadc8a766e010c9c1099dad05dd4e85ae2bb47888cf5e4ea7746a02dfb",
+    "blocks.0.up.bias": "fcabd3671305a8252c67aefa63edec8793b60fbe93dcfeb7229a93dd0154b181",
+    "blocks.0.up.weight": "6ce8d394c9fb658d9832599f83f069e765dc4e7081adfc66dff5270b728f875b",
+    "blocks.1.attention.output.bias": "a02c962a0742140aa60365e5a3ac2fad752d97359071abe534a251a462dc0fff",
+    "blocks.1.attention.output.weight": "d330bd60e9345a52f15807c61eba4103a217a6ddd0bbfd4d8544673f6b77c21c",
+    "blocks.1.attention.qkv.bias": "aba5e038c444fff4a76dc220c2fc4f70aa434a7abf9d5066f67dba7e7615b302",
+    "blocks.1.attention.qkv.weight": "6fb46a753d1c6f0e8bf96ca9499090e7a4e67b77bd2642e61c6b4cb980fb2c09",
+    "blocks.1.down.bias": "4b1c8472ddaa5f97b9384b876b2e21a7e02a1a1987e8263447b85e85f8311266",
+    "blocks.1.down.weight": "ad2ee660544f42839aa94cf8ca133b5d4b86264987eab7736f848ed6a0511312",
+    "blocks.1.ln1.bias": "1f84b666a7e8a0a29e7daa0b05fb4f6f683a8822621c3bedf4ef4144dbb41ed4",
+    "blocks.1.ln1.weight": "9f2aa1b5f8730c5874109ebb0ddc104783cb3996cbd6db2ec200073e38d7651d",
+    "blocks.1.ln2.bias": "0c6996ad321246b5f2cd3476dbceae09229e042982c935d4bf7b3c6631265e82",
+    "blocks.1.ln2.weight": "f01283ae65b70e4effde1f5ba1f3fc6b4ecf4bd5f46dd6dad329184133f87e3e",
+    "blocks.1.up.bias": "4a4b178b96a46106b5a6ce3ca773c72c26fa4567aceca8e3c846d10de52aa0ed",
+    "blocks.1.up.weight": "941d1b385b590b597041ab7826736d4271c30e39e55f171f3d7cc140f6c220de",
+    "final_norm.bias": "5016bef452939fccb7f35b8b2eb164817c3f068edf45fce91259601ed248d8d6",
+    "final_norm.weight": "c29ff8fb67ac5c0557626a2c8a9bc32655042c931b28eff83fdfe470322c836b",
+    "position_embedding.weight": "3ca65e4457f5a3255d1c0ae7be8f632cd25f7fceb4a7a48559ef0bead06d314c",
+    "token_embedding.weight": "fa199fb1e8bbb462dad936b7bd2994faab7aee325b90570499cb8315b931e6f2"
+  },
+  "config": {
+    "context_length": 128,
+    "dropout": 0.0,
+    "heads": 4,
+    "layers": 2,
+    "vocab_size": 512,
+    "width": 128
+  },
+  "note": "inference weights only; optimizer/RNG training resume state is not included"
+}

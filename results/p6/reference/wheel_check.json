@@ -1,0 +1,109 @@
+{
+  "checker_script": {
+    "bytes": 6454,
+    "sha256": "a478e423b51a3a3ccd8c11ec67eb3b09a30397c2f7155388eeba95a31ff08dcf"
+  },
+  "exact_token_replay": true,
+  "installation": {
+    "hf_packages_required": false,
+    "module": "/private/var/folders/b8/qhx6fc396qq1z83dhr69xqdw0000gn/T/kaleido-wheel-8qit7nmv/venv/lib/python3.12/site-packages/kaleido/__init__.py",
+    "source_on_sys_path": false,
+    "version": "1.0.0"
+  },
+  "installation_method": "uv sync --locked --offline --no-install-project into explicit fresh venv",
+  "isolated_python": true,
+  "no_training_imports": true,
+  "offline_install": true,
+  "outside_checkout": true,
+  "requests": [
+    {
+      "completion": " to to the girst of",
+      "completion_ids": [
+        32,
+        269,
+        32,
+        269,
+        32,
+        259,
+        32,
+        103,
+        338,
+        291,
+        32,
+        284
+      ],
+      "decoding": "greedy_cropped_window",
+      "device": "cpu",
+      "generated_tokens": 12,
+      "initial_cropped_tokens": 0,
+      "prompt_tokens": 3,
+      "request_id": 1,
+      "status": "completed",
+      "stopped_on_eos": false
+    },
+    {
+      "completion": " and the Wicked and ",
+      "completion_ids": [
+        32,
+        268,
+        32,
+        259,
+        32,
+        87,
+        105,
+        99,
+        337,
+        32,
+        268,
+        32
+      ],
+      "decoding": "greedy_cropped_window",
+      "device": "cpu",
+      "generated_tokens": 12,
+      "initial_cropped_tokens": 0,
+      "prompt_tokens": 7,
+      "request_id": 2,
+      "status": "completed",
+      "stopped_on_eos": false
+    },
+    {
+      "completion": "the Whe Whe was a ",
+      "completion_ids": [
+        259,
+        32,
+        87,
+        257,
+        32,
+        87,
+        257,
+        32,
+        301,
+        32,
+        97,
+        32
+      ],
+      "decoding": "greedy_cropped_window",
+      "device": "cpu",
+      "generated_tokens": 12,
+      "initial_cropped_tokens": 92,
+      "prompt_tokens": 220,
+      "request_id": 3,
+      "status": "completed",
+      "stopped_on_eos": false
+    }
+  ],
+  "runtime_lockfile": {
+    "bytes": 75021,
+    "sha256": "846afcad912ebdb0cfef93019d61303b6f9f1aac27073ee1ddaf8ae0dbb303a5"
+  },
+  "runtime_requirements": {
+    "bytes": 4414,
+    "sha256": "c14cbe5ec372f5fba3b11de807623d21774d5327a174442152df7fc081e648e0"
+  },
+  "scope": "fresh venv with locked cached runtime, non-editable wheel; no checkout or HF needed for inference",
+  "status": "completed",
+  "wheel": {
+    "bytes": 109187,
+    "sha256": "6018c77002f00a42ac56ed5f27555013f964a5d2810949ea14cc4e2334e41a7b"
+  }
+}

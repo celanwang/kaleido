@@ -1,0 +1,36 @@
+{
+  "generation_cases": 3,
+  "logits": [
+    {
+      "greedy_agreement": true,
+      "length": 1,
+      "max_abs_logit_error": 0.0
+    },
+    {
+      "greedy_agreement": true,
+      "length": 2,
+      "max_abs_logit_error": 0.0
+    },
+    {
+      "greedy_agreement": true,
+      "length": 7,
+      "max_abs_logit_error": 0.0
+    },
+    {
+      "greedy_agreement": true,
+      "length": 127,
+      "max_abs_logit_error": 0.0
+    },
+    {
+      "greedy_agreement": true,
+      "length": 128,
+      "max_abs_logit_error": 0.0
+    }
+  ],
+  "passed": true,
+  "scope": "CPU float32 dynamic full-forward export; not cache, quantization or a speedup claim",
+  "tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  }
+}

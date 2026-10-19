@@ -1,0 +1,85 @@
+{
+  "hash_field_differences": 84,
+  "interpretation": "one observed MPS rerun, no bitwise training guarantee; largest weight differences localize to key-bias entries; no specific kernel cause established",
+  "other_task_metric_differences": [],
+  "p3": {
+    "2026": {
+      "delta_test_nll": -3.157954480137448e-07,
+      "initialization_sha256_equal": true,
+      "max_abs_excluding_key_bias": 1.8894905224442482e-05,
+      "max_abs_weight_error": 0.000976022332906723,
+      "original_test_nll": 2.8025229932188527,
+      "replayed_test_nll": 2.8025226774234047,
+      "top_parameters": [
+        {
+          "flat_index": 138,
+          "max_abs": 0.000976022332906723,
+          "parameter": "blocks.0.attention.qkv.bias"
+        },
+        {
+          "flat_index": 222,
+          "max_abs": 0.00016878198948688805,
+          "parameter": "blocks.1.attention.qkv.bias"
+        },
+        {
+          "flat_index": 25807,
+          "max_abs": 1.8894905224442482e-05,
+          "parameter": "blocks.1.attention.qkv.weight"
+        }
+      ]
+    },
+    "42": {
+      "delta_test_nll": -7.429610704434708e-09,
+      "initialization_sha256_equal": true,
+      "max_abs_excluding_key_bias": 1.3262033462524414e-06,
+      "max_abs_weight_error": 0.0007300086435861886,
+      "original_test_nll": 2.776067243632084,
+      "replayed_test_nll": 2.7760672362024734,
+      "top_parameters": [
+        {
+          "flat_index": 182,
+          "max_abs": 0.0007300086435861886,
+          "parameter": "blocks.0.attention.qkv.bias"
+        },
+        {
+          "flat_index": 187,
+          "max_abs": 0.0001602027623448521,
+          "parameter": "blocks.1.attention.qkv.bias"
+        },
+        {
+          "flat_index": 32771,
+          "max_abs": 1.3262033462524414e-06,
+          "parameter": "token_embedding.weight"
+        }
+      ]
+    },
+    "7": {
+      "delta_test_nll": 2.5542554293878084e-08,
+      "initialization_sha256_equal": true,
+      "max_abs_excluding_key_bias": 1.9669532775878906e-06,
+      "max_abs_weight_error": 0.001188195077702403,
+      "original_test_nll": 2.77370865681248,
+      "replayed_test_nll": 2.7737086823550343,
+      "top_parameters": [
+        {
+          "flat_index": 207,
+          "max_abs": 0.001188195077702403,
+          "parameter": "blocks.0.attention.qkv.bias"
+        },
+        {
+          "flat_index": 194,
+          "max_abs": 0.00016148369468282908,
+          "parameter": "blocks.1.attention.qkv.bias"
+        },
+        {
+          "flat_index": 6993,
+          "max_abs": 1.9669532775878906e-06,
+          "parameter": "token_embedding.weight"
+        }
+      ]
+    }
+  },
+  "p3_generations_identical": true,
+  "performance_field_differences": 6,
+  "raw_comparison_remains_false": true
+}
