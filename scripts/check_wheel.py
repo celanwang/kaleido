@@ -40,23 +40,18 @@ def check(wheel, bundle):
             ["uv", "venv", "--python", sys.executable, str(environment)],
         ]
         python = environment / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
+        # Follow locked artifact URLs directly; requirements resolution additionally needs
+        # index metadata that can be absent from an otherwise warm CI package cache.
         sync = [
             "uv",
-            "pip",
             "sync",
-            "--python",
-            str(python),
+            "--locked",
             "--offline",
-            "--require-hashes",
-            str(requirements),
+            "--no-dev",
+            "--extra",
+            "torch-reference",
+            "--no-install-project",
         ]
-        if sys.platform == "linux":
-            sync += [
-                "--extra-index-url",
-                "https://download.pytorch.org/whl/cpu",
-                "--index-strategy",
-                "unsafe-best-match",
-            ]
         commands += [
             sync,
             [
@@ -71,19 +66,30 @@ def check(wheel, bundle):
             ],
         ]
         for command in commands:
-            result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True)
+            result = subprocess.run(
+                command,
+                cwd=ROOT,
+                text=True,
+                capture_output=True,
+                env={
+                    **{k: v for k, v in os.environ.items() if k != "VIRTUAL_ENV"},
+                    "UV_PROJECT_ENVIRONMENT": str(environment),
+                },
+            )
             if result.returncode:
                 raise RuntimeError(f"{command[:3]} failed:\n{result.stdout}\n{result.stderr}")
         # Isolated mode ignores PYTHONPATH/CWD; assert that this is an ordinary wheel installation.
         probe = """
-import importlib.metadata, json, sys
+import importlib.metadata, importlib.util, json, sys
 from pathlib import Path
 import kaleido
 root=Path(sys.argv[1]).resolve()
 module=Path(kaleido.__file__).resolve()
 assert module.is_relative_to(Path(sys.argv[2]).resolve())
 assert not any(Path(p).resolve().is_relative_to(root) for p in sys.path if p)
-print(json.dumps({"module":str(module),"version":importlib.metadata.version("kaleido"),"source_on_sys_path":False}))
+assert importlib.util.find_spec("transformers") is None
+assert importlib.util.find_spec("huggingface_hub") is None
+print(json.dumps({"hf_packages_required":False,"module":str(module),"version":importlib.metadata.version("kaleido"),"source_on_sys_path":False}))
 """
         result = subprocess.run(
             [str(python), "-I", "-c", probe, str(ROOT), str(environment)],
@@ -93,6 +99,13 @@ print(json.dumps({"module":str(module),"version":importlib.metadata.version("kal
             check=True,
         )
         installation = json.loads(result.stdout)
+        import tomllib
+
+        expected_version = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"][
+            "version"
+        ]
+        if installation["version"] != expected_version:
+            raise ValueError("wheel metadata differs from the checked-out release version")
         runtime = """
 import sys
 from kaleido.cli import main
@@ -123,6 +136,10 @@ raise SystemExit(status)
             "wheel": file_info(wheel),
             "installation": installation,
             "runtime_requirements": file_info(requirements),
+            "runtime_lockfile": file_info(ROOT / "uv.lock"),
+            "installation_method": (
+                "uv sync --locked --offline --no-install-project into explicit fresh venv"
+            ),
             "offline_install": True,
             "no_training_imports": True,
             "outside_checkout": True,
