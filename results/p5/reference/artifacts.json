@@ -1,0 +1,79 @@
+{
+  "base_weights_in_repository": false,
+  "dependency_artifacts": [
+    "results/p3/reference",
+    "results/p4/reference",
+    "data/p3",
+    "data/p5"
+  ],
+  "files": {
+    "analysis.json": {
+      "bytes": 2966,
+      "sha256": "783a41868a3a49219cb3db88bdd11dc2a7a2ebcadadd9034790db44b0eceb9d0"
+    },
+    "benchmarks.json": {
+      "bytes": 81108,
+      "sha256": "91f56fe2ef41624aa860cf17fdc5e06a0f587ffb54879facd2acff5371d409dd"
+    },
+    "checks.json": {
+      "bytes": 281,
+      "sha256": "5fdcea3936ee2214cd769c98e55ce46542fe7d8e03554c2563106aa1412bab96"
+    },
+    "comparisons.json": {
+      "bytes": 7123,
+      "sha256": "63938514c4e677a4882993eafd51743fe6537c0a88342eb36af91e2d913d8661"
+    },
+    "cost.json": {
+      "bytes": 152,
+      "sha256": "24a6381a1afbba56795519869807754f68a6c8fba22814aa4598f367ecf35357"
+    },
+    "evaluations.json": {
+      "bytes": 2317110,
+      "sha256": "0be5cadb12eaf4e93c038a1ecdaf13fee91c507ff7d10a3ea9e8c2925bead614"
+    },
+    "failure_examples.json": {
+      "bytes": 26978,
+      "sha256": "62fe2e2d318959034d55f765108535268fb9d193d02810eb2d0b6a7ae55eef44"
+    },
+    "judge_calibration.json": {
+      "bytes": 211669,
+      "sha256": "87538ba91055bdac0944a6391fd1d166684b5374b73ba354f1fae6e17c590c47"
+    },
+    "judge_panel.json": {
+      "bytes": 84,
+      "sha256": "73f803d57b2ca6ca953295325d5de9d23c186dfa9f63ad0291db348ed91b4878"
+    },
+    "manifest.json": {
+      "bytes": 1120,
+      "sha256": "8bb99ee6a6fe8a9a4513e914ffa4c260da8a89f81ad888f0f735669d8efcce12"
+    },
+    "model_source.json": {
+      "bytes": 1210,
+      "sha256": "7e4903b2082769fe9bd6763c22eb784acff670c129c7127c42b85a2b315fd23a"
+    },
+    "p3_likelihood.json": {
+      "bytes": 16530,
+      "sha256": "a06a8b0b6caedbe8f9d2cb18b23224cd4286bb91edd96de408d8807962dac8be"
+    },
+    "p3_token_losses.npz": {
+      "bytes": 295875,
+      "sha256": "f088262fe5587145f5047f28f89cf4453d8d2b50e091f0dd5d26dc75a4ab2b58"
+    },
+    "p4_archive.json": {
+      "bytes": 229565,
+      "sha256": "afc56c3dd4a4333f779fbd773965324cc42e3f223d20a388ecf36f64bcbdbbd7"
+    },
+    "p4_comparisons.json": {
+      "bytes": 2507,
+      "sha256": "4f818cd708eff2f660fdec60db95bda431a541e3ac84bec2246e53489e292aca"
+    },
+    "protocol.json": {
+      "bytes": 675,
+      "sha256": "35e94838c7b7246cc645963a5d41af41794fc6a184939204a4d59751598731d5"
+    },
+    "replay.json": {
+      "bytes": 2911,
+      "sha256": "7de1c484a563545ab2917bc8ef76bf154a83f5696bda56a1b214c3b76373abf9"
+    }
+  }
+}

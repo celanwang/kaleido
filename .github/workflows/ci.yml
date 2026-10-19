@@ -17,3 +17,4 @@ jobs:
       - run: uv run --locked --all-extras python -m kaleido.demos.deep_learning
       - run: uv run --locked --all-extras python -m kaleido.demos.language_model --config configs/p3_smoke.json
       - run: uv run --locked --all-extras python -m kaleido.demos.post_training --fixture --config configs/p4_smoke.json
+      - run: uv run --locked --all-extras python -m kaleido.demos.model_evaluation --fixture --config configs/p5_smoke.json

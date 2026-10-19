@@ -1,0 +1,11 @@
+{
+  "seeds": [42],
+  "device": "cpu",
+  "math_per_family": 2,
+  "gsm_count": 2,
+  "qa_count": 2,
+  "max_new_tokens": 4,
+  "batch_size": 4,
+  "judge_pairs": 4,
+  "resamples": 100
+}

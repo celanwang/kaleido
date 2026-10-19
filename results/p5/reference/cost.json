@@ -1,0 +1,7 @@
+{
+  "device": "mps",
+  "judge_generated_tokens": 128,
+  "live_generated_tokens": 10680,
+  "live_prompt_tokens": 78670,
+  "wall_seconds": 51.374442125
+}

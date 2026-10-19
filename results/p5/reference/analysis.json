@@ -1,0 +1,121 @@
+{
+  "means_over_fixed_seeds": {
+    "grpo": {
+      "context_qa_v2": {
+        "accuracy": 0.888888888888889,
+        "content_accuracy": 1.0,
+        "format_rate": 0.888888888888889,
+        "shared_questions": 12,
+        "successes_by_seed": [
+          10,
+          10,
+          12
+        ],
+        "truncation_rate": 0.0
+      },
+      "gsm8k_fixed_integer_v1": {
+        "accuracy": 0.03125,
+        "content_accuracy": 0.03125,
+        "format_rate": 0.3854166666666667,
+        "shared_questions": 32,
+        "successes_by_seed": [
+          0,
+          1,
+          2
+        ],
+        "truncation_rate": 0.15625
+      },
+      "novel_math_v1": {
+        "accuracy": 0.14583333333333334,
+        "content_accuracy": 0.14583333333333334,
+        "format_rate": 1.0,
+        "shared_questions": 64,
+        "successes_by_seed": [
+          9,
+          8,
+          11
+        ],
+        "truncation_rate": 0.0
+      }
+    },
+    "rejection_sft": {
+      "context_qa_v2": {
+        "accuracy": 0.8611111111111112,
+        "content_accuracy": 1.0,
+        "format_rate": 0.8611111111111112,
+        "shared_questions": 12,
+        "successes_by_seed": [
+          9,
+          10,
+          12
+        ],
+        "truncation_rate": 0.0
+      },
+      "gsm8k_fixed_integer_v1": {
+        "accuracy": 0.03125,
+        "content_accuracy": 0.03125,
+        "format_rate": 0.4375,
+        "shared_questions": 32,
+        "successes_by_seed": [
+          0,
+          1,
+          2
+        ],
+        "truncation_rate": 0.13541666666666666
+      },
+      "novel_math_v1": {
+        "accuracy": 0.15104166666666666,
+        "content_accuracy": 0.15104166666666666,
+        "format_rate": 1.0,
+        "shared_questions": 64,
+        "successes_by_seed": [
+          10,
+          8,
+          11
+        ],
+        "truncation_rate": 0.0
+      }
+    },
+    "sft": {
+      "context_qa_v2": {
+        "accuracy": 0.888888888888889,
+        "content_accuracy": 1.0,
+        "format_rate": 0.888888888888889,
+        "shared_questions": 12,
+        "successes_by_seed": [
+          10,
+          10,
+          12
+        ],
+        "truncation_rate": 0.0
+      },
+      "gsm8k_fixed_integer_v1": {
+        "accuracy": 0.020833333333333332,
+        "content_accuracy": 0.03125,
+        "format_rate": 0.3645833333333333,
+        "shared_questions": 32,
+        "successes_by_seed": [
+          0,
+          1,
+          1
+        ],
+        "truncation_rate": 0.13541666666666666
+      },
+      "novel_math_v1": {
+        "accuracy": 0.14583333333333334,
+        "content_accuracy": 0.14583333333333334,
+        "format_rate": 1.0,
+        "shared_questions": 64,
+        "successes_by_seed": [
+          9,
+          8,
+          11
+        ],
+        "truncation_rate": 0.0
+      }
+    }
+  },
+  "no_suite_macro_quality_ranking": true,
+  "novel_math_constant_answer_baseline": 0.125,
+  "shared_questions_not_independent_seed_times_question_observations": true
+}

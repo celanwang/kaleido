@@ -4,3 +4,4 @@ data/p3/raw/*.txt -text
 results/p4/reference/base_config.json -text
 results/p4/reference/base_generation_config.json -text
 results/p4/reference/QWEN-LICENSE.txt -text
+data/p5/raw/* -text

@@ -1,0 +1,11 @@
+{
+  "seeds": [42, 7, 2026],
+  "device": "mps",
+  "math_per_family": 16,
+  "gsm_count": 32,
+  "qa_count": 12,
+  "max_new_tokens": 64,
+  "batch_size": 8,
+  "judge_pairs": 16,
+  "resamples": 4000
+}
