@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -11,6 +12,8 @@ from torch.nn import functional as F
 
 from kaleido.experiments import array_digest, write_json
 from kaleido.posttrain.tasks import SYSTEM
+from kaleido.repro.integrity import local_path
+from kaleido.serialization import load_object
 
 
 def file_sha256(path):
@@ -106,18 +109,57 @@ def read_adapter(path):
     return state, info
 
 
+def _pinned_files(spec):
+    expected = spec.get("files_sha256")
+    required = {
+        "config.json",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "LICENSE",
+        "merges.txt",
+        "vocab.json",
+    }
+    if not isinstance(expected, dict) or set(expected) != required:
+        raise ValueError("model spec must pin all native tokenizer/config/license file hashes")
+    if spec.get("weights_file") != "model.safetensors":
+        raise ValueError("this model spec requires one model.safetensors checkpoint")
+    files = {spec["weights_file"]: spec.get("weights_sha256"), **expected}
+    if any(
+        not isinstance(v, str) or re.fullmatch(r"[0-9a-f]{64}", v) is None for v in files.values()
+    ):
+        raise ValueError("model spec requires canonical SHA256 checksums")
+    return files
+
+
+def validate_snapshot(directory, spec):
+    files = _pinned_files(spec)
+    for name, checksum in files.items():
+        path = local_path(directory, name)
+        if not path.is_file() or file_sha256(path) != checksum:
+            raise ValueError(f"pinned model file checksum mismatch: {name}")
+    return files
+
+
 def load_pinned(spec_path, *, device="mps", download=True):
     from huggingface_hub import snapshot_download
     from huggingface_hub.errors import LocalEntryNotFoundError
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
-    spec = json.loads(Path(spec_path).read_text())
-    if spec.get("trust_remote_code") is not False or len(spec["revision"]) != 40:
+    spec = load_object(spec_path)
+    if (
+        spec.get("trust_remote_code") is not False
+        or not isinstance(spec.get("revision"), str)
+        or re.fullmatch(r"[0-9a-f]{40}", spec["revision"]) is None
+    ):
         raise ValueError("model must use a fixed commit and no remote code")
+    expected_files = _pinned_files(spec)
+    if not isinstance(spec.get("repo_id"), str) or not spec["repo_id"]:
+        raise ValueError("model spec requires a repository ID")
     options = {
         "repo_id": spec["repo_id"],
         "revision": spec["revision"],
-        "allow_patterns": ["*.json", "*.txt", "*.safetensors", "LICENSE"],
+        "allow_patterns": list(expected_files),
     }
     try:
         directory = Path(snapshot_download(**options, local_files_only=True))
@@ -125,20 +167,12 @@ def load_pinned(spec_path, *, device="mps", download=True):
         if not download:
             raise
         directory = None
-    required = (
-        spec["weights_file"],
-        "config.json",
-        "generation_config.json",
-        "tokenizer.json",
-        "tokenizer_config.json",
-        "LICENSE",
-    )
+    required = tuple(expected_files)
     if directory is None or any(not (directory / name).is_file() for name in required):
         if not download:
             raise FileNotFoundError("pinned snapshot is incomplete in local cache")
         directory = Path(snapshot_download(**options, local_files_only=False))
-    if file_sha256(directory / spec["weights_file"]) != spec["weights_sha256"]:
-        raise ValueError("pinned base weight checksum mismatch")
+    validate_snapshot(directory, spec)
     tokenizer = AutoTokenizer.from_pretrained(
         directory, local_files_only=True, trust_remote_code=False, padding_side="left"
     )

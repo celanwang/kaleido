@@ -1,10 +1,12 @@
 """Portable byte/array inventories with explicit roots and no implicit trust bootstrap."""
 
 import hashlib
-import json
+import re
+import zipfile
 from pathlib import Path, PurePosixPath
 
 from kaleido.experiments import array_digest
+from kaleido.serialization import load_object
 
 
 def file_info(path):
@@ -19,14 +21,7 @@ def local_path(root, name):
     if not isinstance(name, str):
         raise ValueError("inventory paths must be text")
     pure = PurePosixPath(name)
-    if (
-        not isinstance(name, str)
-        or not name
-        or pure.is_absolute()
-        or ".." in pure.parts
-        or "\\" in name
-        or str(pure) != name
-    ):
+    if not name or pure.is_absolute() or ".." in pure.parts or "\\" in name or str(pure) != name:
         raise ValueError("inventory paths must be canonical relative POSIX paths")
     root = Path(root).resolve()
     path = root / name
@@ -37,7 +32,9 @@ def local_path(root, name):
 
 def verify_index(root, index, *, deep=False):
     if (
-        index.get("schema_version") != 1
+        not isinstance(index, dict)
+        or type(index.get("schema_version")) is not int
+        or index["schema_version"] != 1
         or not isinstance(index.get("files"), dict)
         or not index["files"]
     ):
@@ -48,11 +45,12 @@ def verify_index(root, index, *, deep=False):
     for name, expected in sorted(index["files"].items()):
         path = local_path(root, name)
         if (
-            set(expected) != {"sha256", "bytes"}
+            not isinstance(expected, dict)
+            or set(expected) != {"sha256", "bytes"}
             or type(expected["bytes"]) is not int
             or expected["bytes"] < 0
             or not isinstance(expected["sha256"], str)
-            or len(expected["sha256"]) != 64
+            or re.fullmatch(r"[0-9a-f]{64}", expected["sha256"]) is None
         ):
             raise ValueError("invalid inventory file identity")
         if not path.is_file():
@@ -66,15 +64,22 @@ def verify_index(root, index, *, deep=False):
         if deep and path.suffix == ".npz" and path.with_suffix(".json").is_file():
             import numpy as np
 
-            info = json.loads(path.with_suffix(".json").read_text())
-            digests = info.get("arrays", info.get("array_digests"))
-            if digests is not None:
-                with np.load(path, allow_pickle=False) as state:
-                    if set(state) != set(digests) or any(
-                        array_digest(state[k]) != digests[k] for k in state
-                    ):
-                        errors.append({"path": name, "error": "array_digest_mismatch"})
-                    arrays += len(state)
+            try:
+                info = load_object(path.with_suffix(".json"))
+                digests = info.get("arrays", info.get("array_digests"))
+                if digests is not None:
+                    if not isinstance(digests, dict):
+                        raise ValueError("array digests must be a mapping")
+                    with np.load(path, allow_pickle=False) as state:
+                        if set(state) != set(digests) or any(
+                            array_digest(state[k]) != digests[k] for k in state
+                        ):
+                            errors.append({"path": name, "error": "array_digest_mismatch"})
+                        arrays += len(state)
+            except (OSError, ValueError, TypeError, zipfile.BadZipFile) as error:
+                errors.append(
+                    {"path": name, "error": "invalid_array_artifact", "detail": str(error)}
+                )
     return {
         "ok": not errors,
         "expected_files": len(index["files"]),
@@ -86,3 +91,32 @@ def verify_index(root, index, *, deep=False):
             "not external authenticity or scientific correctness"
         ),
     }
+
+
+REVIEWED_DIRECTORIES = ("configs", "data", *(f"results/p{i}" for i in range(7)))
+REVIEWED_PINS = (".python-version", "pyproject.toml", "uv.lock")
+
+
+def reviewed_files(root):
+    root = Path(root)
+    files = {name for name in REVIEWED_PINS if (root / name).is_file()}
+    files.update(
+        str(p.relative_to(root))
+        for d in REVIEWED_DIRECTORIES
+        for p in (root / d).rglob("*")
+        if p.is_file()
+    )
+    return sorted(files)
+
+
+def verify_repository(root, *, deep=False):
+    root = Path(root)
+    index = load_object(root / "artifacts/inventory-v1.json")
+    result = verify_index(root, index, deep=deep)
+    missing_entries = sorted(set(reviewed_files(root)) - set(index["files"]))
+    result["errors"].extend(
+        {"path": p, "error": "unindexed_reviewed_file"} for p in missing_entries
+    )
+    result["ok"] = not result["errors"]
+    result["coverage"] = "configs, data, P0-P6 evidence and dependency pins"
+    return result

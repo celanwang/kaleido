@@ -1,10 +1,12 @@
 """Load a verified export and serve bounded greedy JSON-lines requests locally."""
 
 import json
+import math
 from pathlib import Path
 
 from kaleido.lm.tokenizer import EOS, ByteBPE
 from kaleido.repro.integrity import verify_index
+from kaleido.serialization import load_object
 
 MAX_LINE_BYTES = 65536
 MAX_PROMPT_BYTES = 16384
@@ -16,7 +18,7 @@ class Predictor:
         import torch
 
         directory = Path(directory)
-        manifest = json.loads((directory / "manifest.json").read_text())
+        manifest = load_object(directory / "manifest.json")
         if (
             manifest.get("schema_version") != 1
             or manifest.get("kind") != "kaleido_decoder_export"
@@ -33,6 +35,8 @@ class Predictor:
             "files",
         }:
             raise ValueError("bundle manifest fields differ from the declared format")
+        if not isinstance(manifest["files"], dict):
+            raise ValueError("bundle files must be a mapping")
         expected = {"model.pt2", "tokenizer.json", "validation.json", "examples.json"}
         if set(manifest["files"]) != expected or {
             p.name for p in directory.iterdir()
@@ -42,20 +46,71 @@ class Predictor:
         if not result["ok"]:
             raise ValueError(f"bundle integrity failed: {result['errors']}")
         runtime = manifest["runtime"]
+        if not isinstance(runtime, dict) or set(runtime) != {
+            "torch",
+            "device",
+            "batch_size",
+            "decoding",
+        }:
+            raise ValueError("invalid bundle runtime fields")
         if (
-            runtime["torch"] != torch.__version__.split("+")[0]
+            type(runtime["batch_size"]) is not int
+            or runtime["torch"] != torch.__version__.split("+")[0]
             or runtime["device"] != "cpu"
             or runtime["batch_size"] != 1
             or runtime["decoding"] != "greedy_cropped_window"
         ):
             raise ValueError("bundle runtime does not match this supported CPU/PyTorch protocol")
-        self.context_length = manifest["model_config"]["context_length"]
-        if type(self.context_length) is not int or not 2 <= self.context_length <= 4096:
-            raise ValueError("invalid exported context length")
+        config = manifest["model_config"]
+        if not isinstance(config, dict) or set(config) != {
+            "vocab_size",
+            "context_length",
+            "width",
+            "layers",
+            "heads",
+            "dropout",
+        }:
+            raise ValueError("invalid model configuration fields")
+        if (
+            any(
+                type(config[k]) is not int or config[k] < 1
+                for k in ("vocab_size", "context_length", "width", "layers", "heads")
+            )
+            or not 8 <= config["context_length"] <= 4096
+            or config["width"] % config["heads"]
+            or type(config["dropout"]) not in (int, float)
+            or not math.isfinite(config["dropout"])
+            or not 0 <= config["dropout"] < 1
+        ):
+            raise ValueError("invalid exported model dimensions")
+        self.context_length = config["context_length"]
+        validation = load_object(directory / "validation.json")
+        examples = load_object(directory / "examples.json")
+        if (
+            validation.get("passed") is not True
+            or type(validation.get("generation_cases")) is not int
+            or validation["generation_cases"] < 1
+            or not isinstance(examples.get("cases"), list)
+            or len(examples["cases"]) != validation["generation_cases"]
+        ):
+            raise ValueError("bundle has no completed generation validation")
         self.tokenizer = ByteBPE.load(directory / "tokenizer.json")
         if manifest["model_config"]["vocab_size"] != len(self.tokenizer):
             raise ValueError("tokenizer vocabulary differs from the exported graph")
-        self.model = torch.export.load(directory / "model.pt2").module()
+        exported = torch.export.load(directory / "model.pt2")
+        state = exported.state_dict
+        dimensions = {
+            "model.token_embedding.weight": (len(self.tokenizer), config["width"]),
+            "model.position_embedding.weight": (self.context_length, config["width"]),
+        }
+        if any(k not in state or tuple(state[k].shape) != shape for k, shape in dimensions.items()):
+            raise ValueError("manifest dimensions disagree with the exported embeddings")
+        if any(
+            not isinstance(v, torch.Tensor) or v.device.type != "cpu" or v.dtype != torch.float32
+            for v in state.values()
+        ):
+            raise ValueError("bundle must contain CPU float32 parameters")
+        self.model = exported.module()
         self.manifest = manifest
 
     def logits(self, ids):

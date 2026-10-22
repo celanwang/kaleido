@@ -67,7 +67,7 @@ def main(argv=None):
             return 0
         from dataclasses import asdict
 
-        from kaleido.repro.integrity import verify_index
+        from kaleido.repro.integrity import verify_repository
         from kaleido.repro.registry import RECIPES, doctor, repository, reproduce, run_recipe
 
         if args.command == "list":
@@ -78,9 +78,7 @@ def main(argv=None):
             return 0 if result["ok"] else 1
         elif args.command == "verify":
             root = repository(args.root)
-            result = verify_index(
-                root, json.loads((root / "artifacts/inventory-v1.json").read_text()), deep=args.deep
-            )
+            result = verify_repository(root, deep=args.deep)
             emit(result)
             return 0 if result["ok"] else 1
         elif args.command == "run":

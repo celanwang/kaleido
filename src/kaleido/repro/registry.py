@@ -1,15 +1,16 @@
 """Explicit recipe dispatch; separate smoke wiring from formal experimental evidence."""
 
+import hashlib
 import importlib
-import json
 import sys
 from dataclasses import asdict, dataclass
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 from subprocess import run as run_process
 
-from kaleido.experiments import Run
+from kaleido.experiments import Run, write_json
 from kaleido.repro.integrity import file_info
+from kaleido.serialization import json_object, load_object
 
 
 @dataclass(frozen=True)
@@ -103,7 +104,11 @@ def run_recipe(stage, root, output, *, profile="formal", config_path=None, emit=
     )
     selected = selected.resolve()
     module = importlib.import_module("kaleido.demos." + recipe.module)
-    config = module.Config(**json.loads(selected.read_text()))
+    raw = selected.read_bytes()
+    supplied = json_object(raw, label="recipe configuration")
+    config = module.Config(**supplied)
+    identity = {"bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest()}
+    effective = asdict(config)
     kwargs = {"root": root}
     if stage == "p3":
         kwargs["corpus_dir"] = root / "data/p3"
@@ -113,20 +118,28 @@ def run_recipe(stage, root, output, *, profile="formal", config_path=None, emit=
         kwargs["spec_path"] = root / "configs/p4_model.json"
     result = module.execute(config, Path(output), **kwargs)
     path = result[0] if isinstance(result, tuple) else result
-    manifest = json.loads((path / "manifest.json").read_text())
-    return {
+    path = Path(path).resolve()
+    if not path.is_relative_to(Path(output).resolve()) or path == Path(output).resolve():
+        raise ValueError("recipe returned a run outside its requested output directory")
+    manifest = load_object(path / "manifest.json")
+    receipt = {
         "stage": stage,
         "profile": profile,
         "run": str(path.resolve()),
         "status": manifest["status"],
-        "effective_config": asdict(config),
+        "effective_config": effective,
         "config_file": str(selected),
-        "config_identity": file_info(selected),
+        "config_identity": identity,
+        "config_changed_during_run": not selected.is_file() or file_info(selected) != identity,
+        "canonical_config": raw == (root / "configs" / getattr(recipe, profile)).read_bytes(),
         "fixture": profile == "smoke" and stage in ("p4", "p5"),
         "note": "P5 re-evaluates published P3/P4 artifacts, not newly produced sibling runs"
         if stage == "p5"
         else None,
     }
+    (path / "configuration.json").write_bytes(raw)
+    write_json(path / "receipt.json", receipt)
+    return receipt
 
 
 def reproduce(root, output, *, stages=tuple(RECIPES), profile="smoke", emit=None):
@@ -155,6 +168,7 @@ def reproduce(root, output, *, stages=tuple(RECIPES), profile="smoke", emit=None
                 "--output",
                 str(suite.path.resolve() / stage),
             ]
+            planned_config = file_info(root / "configs" / getattr(RECIPES[stage], profile))
             suite.record(
                 "steps.json", {"completed": records, "active_stage": stage, "failed_stage": None}
             )
@@ -171,10 +185,32 @@ def reproduce(root, output, *, stages=tuple(RECIPES), profile="smoke", emit=None
                 )
                 raise RuntimeError(f"{stage} failed; evidence retained at {suite.path}")
             try:
-                value = json.loads(stdout_path.read_text().splitlines()[-1])
-                if value.get("status") != "completed" or not Path(value["run"]).is_dir():
-                    raise ValueError("child did not report a completed run")
-            except (ValueError, KeyError, IndexError, TypeError) as error:
+                value = json_object(stdout_path.read_text().splitlines()[-1], label="child receipt")
+                child = Path(value["run"]).resolve()
+                parent = (suite.path / stage).resolve()
+                if not child.is_relative_to(parent) or child == parent:
+                    raise ValueError("child run escapes its assigned stage directory")
+                saved = load_object(child / "receipt.json")
+                child_manifest = load_object(child / "manifest.json")
+                if (
+                    value != saved
+                    or value.get("status") != "completed"
+                    or child_manifest.get("status") != "completed"
+                    or value.get("stage") != stage
+                    or value.get("profile") != profile
+                    or value.get("config_identity") != planned_config
+                    or file_info(child / "configuration.json") != planned_config
+                    or type(value.get("fixture")) is not bool
+                    or value.get("fixture") != (profile == "smoke" and stage in ("p4", "p5"))
+                    or any(
+                        child_manifest["config"].get(k) != v
+                        for k, v in value["effective_config"].items()
+                    )
+                ):
+                    raise ValueError(
+                        "child receipt, manifest or configuration disagrees with planned execution"
+                    )
+            except (OSError, ValueError, KeyError, IndexError, TypeError) as error:
                 suite.record(
                     "steps.json",
                     {
