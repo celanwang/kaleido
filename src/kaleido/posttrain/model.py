@@ -12,7 +12,6 @@ from torch.nn import functional as F
 
 from kaleido.experiments import array_digest, write_json
 from kaleido.posttrain.tasks import SYSTEM
-from kaleido.repro.integrity import local_path
 from kaleido.serialization import load_object
 
 
@@ -135,7 +134,9 @@ def _pinned_files(spec):
 def validate_snapshot(directory, spec):
     files = _pinned_files(spec)
     for name, checksum in files.items():
-        path = local_path(directory, name)
+        # Hugging Face snapshots legitimately link into a sibling blob cache.
+        # Names are the fixed allowlist above; verify resolved bytes before deserialization.
+        path = Path(directory) / name
         if not path.is_file() or file_sha256(path) != checksum:
             raise ValueError(f"pinned model file checksum mismatch: {name}")
     return files

@@ -114,3 +114,35 @@ def test_snapshot_pins_tokenizer_and_configs_as_well_as_weights(tmp_path):
     (tmp_path / "tokenizer.json").write_text("changed tokenizer with unchanged base weights")
     with pytest.raises(ValueError, match="tokenizer.json"):
         validate_snapshot(tmp_path, spec)
+
+
+def test_pinned_hf_snapshot_allows_blob_symlinks_but_still_checks_target_bytes(tmp_path):
+    pytest.importorskip("torch")
+    from kaleido.posttrain.model import validate_snapshot
+
+    blob = tmp_path / "blobs" / "content"
+    blob.parent.mkdir()
+    blob.write_bytes(b"official fixed bytes")
+    snapshot = tmp_path / "snapshot"
+    snapshot.mkdir()
+    names = [
+        "config.json",
+        "generation_config.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "LICENSE",
+        "merges.txt",
+        "vocab.json",
+    ]
+    for name in ["model.safetensors", *names]:
+        (snapshot / name).symlink_to(blob)
+    checksum = file_info(blob)["sha256"]
+    spec = {
+        "weights_file": "model.safetensors",
+        "weights_sha256": checksum,
+        "files_sha256": {n: checksum for n in names},
+    }
+    assert len(validate_snapshot(snapshot, spec)) == 8
+    blob.write_bytes(b"corrupted cached blob")
+    with pytest.raises(ValueError, match="checksum"):
+        validate_snapshot(snapshot, spec)
