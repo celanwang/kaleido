@@ -1,0 +1,74 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 894,
+      "sha256": "ada78681b149958929e57e73f2e7ff562fc6282f629761f31116a1170c9960ac"
+    },
+    "decoder-42/examples.json": {
+      "bytes": 1336,
+      "sha256": "3790b3fb84bf0736d6885489072251905af41b87f0e24a2e6883a854cf773fea"
+    },
+    "decoder-42/manifest.json": {
+      "bytes": 2278,
+      "sha256": "d3ffbc8cdf988090b3873fa41dba05481ed496125ca59cc973dcc11a75513a8f"
+    },
+    "decoder-42/model.pt2": {
+      "bytes": 2124033,
+      "sha256": "9207c4e586218117c1e92ab493ee2d6e95ae19712cf3258ba6c7826208b2ca51"
+    },
+    "decoder-42/tokenizer.json": {
+      "bytes": 8727,
+      "sha256": "3e9f9c771dc80787db140ab4f8e675210ebb9e344ad26c08f992f8a916ec8996"
+    },
+    "decoder-42/validation.json": {
+      "bytes": 710,
+      "sha256": "fafa3c88d3da40bbbe4e425d7ecc5788fc2782cb2127710b27e7a767ea79bcdc"
+    },
+    "install.py": {
+      "bytes": 7068,
+      "sha256": "a062d5f1a921a8205876f62a1601c3461694311aa496f97a2c301f9a9d6cdbb2"
+    },
+    "kaleido-1.0.0-py3-none-any.whl": {
+      "bytes": 116569,
+      "sha256": "10889b3bcc135e665b5737a7ec618809134c750574eb3fbc330701ab1d955698"
+    },
+    "pylock.cpu.toml": {
+      "bytes": 16305,
+      "sha256": "abdcaa5e7791b1db5757e9a164ed8e2affcffba2f5a75b9494993b5b692c6fbf"
+    }
+  },
+  "kind": "kaleido_cpu_delivery",
+  "producer": {
+    "command": [
+      "/Users/wangchen/Developer/kaleido/.venv/bin/kaleido",
+      "package",
+      "--wheel",
+      "dist/kaleido-1.0.0-py3-none-any.whl",
+      "--bundle",
+      "results/p6/reference/bundle",
+      "--output",
+      "runs/kaleido-final-delivery"
+    ],
+    "git_dirty": false,
+    "git_revision": "254064a91864af10d866371a8d9693f10d7879d2",
+    "git_status": "",
+    "numpy": "2.5.4",
+    "packages": {
+      "huggingface-hub": "2.2.0",
+      "numpy": "2.5.4",
+      "safetensors": "0.8.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "torch": "2.14.1",
+      "transformers": "5.20.1"
+    },
+    "platform": "macOS-15.8-arm64-arm-64bit",
+    "python": "3.12.15 (main, Oct  3 2026, 00:54:33) [Clang 22.1.3 ]",
+    "source_hash_version": 2,
+    "source_sha256": "fa40126f827f1098c868bdeffe594f551de818c17e41e17b8a1118b575d89265"
+  },
+  "schema_version": 1,
+  "uv_version": "0.12.23",
+  "version": "1.0.0",
+  "wheel": "kaleido-1.0.0-py3-none-any.whl"
+}

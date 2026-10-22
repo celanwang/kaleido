@@ -1,0 +1,27 @@
+{
+  "base_interpreter": "/Users/wangchen/.local/share/uv/python/cpython-3.12.15-macos-aarch64-none/bin/python3.12",
+  "checker": {
+    "bytes": 2061,
+    "sha256": "86ac4c6b7da6e4e1ff0f5837d0fe4104cb28fe8b9e7f8d69bd8a331bd04d04e4"
+  },
+  "delivery_manifest": {
+    "bytes": 2333,
+    "sha256": "1595880d0d4b89bfe10ab790416102f5f6274cb1adeafbd69e75f982f9aac61c"
+  },
+  "exact_token_replay": true,
+  "installation": {
+    "module": "/private/var/folders/b8/qhx6fc396qq1z83dhr69xqdw0000gn/T/kaleido-consumer-l85_jyyg/venv/lib/python3.12/site-packages/kaleido/__init__.py",
+    "version": "1.0.0"
+  },
+  "manifest": {
+    "bytes": 2333,
+    "sha256": "1595880d0d4b89bfe10ab790416102f5f6274cb1adeafbd69e75f982f9aac61c"
+  },
+  "method": "copied kit; base Python -I; fresh venv; pylock artifact URLs; offline",
+  "no_hf_packages": true,
+  "no_training_imports": true,
+  "offline": true,
+  "outside_checkout": true,
+  "requests": 3,
+  "status": "completed"
+}

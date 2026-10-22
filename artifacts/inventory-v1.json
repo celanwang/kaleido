@@ -84,6 +84,58 @@
       "bytes": 1086,
       "sha256": "f3747b885e8f1943b982e0988a111c9b7adfd0490975f4eb1dd2813fc92c95ff"
     },
+    "results/final/REPORT.md": {
+      "bytes": 5024,
+      "sha256": "2d1477bc8b098e523e4e9003889ae6c78d0519f143345ee22023860055551e66"
+    },
+    "results/final/reference/acceptance.json": {
+      "bytes": 11836,
+      "sha256": "d66e32bb640bcc44287ea87fe84a10745b4c695ca79cf62d28ae6a9d7e313006"
+    },
+    "results/final/reference/consumer-check.json": {
+      "bytes": 951,
+      "sha256": "a4ca3984f0866c9ef6fd5697a17aa20e9492d80425d5d25a0c0c5a8ba6e08601"
+    },
+    "results/final/reference/delivery/README.md": {
+      "bytes": 894,
+      "sha256": "ada78681b149958929e57e73f2e7ff562fc6282f629761f31116a1170c9960ac"
+    },
+    "results/final/reference/delivery/decoder-42/examples.json": {
+      "bytes": 1336,
+      "sha256": "3790b3fb84bf0736d6885489072251905af41b87f0e24a2e6883a854cf773fea"
+    },
+    "results/final/reference/delivery/decoder-42/manifest.json": {
+      "bytes": 2278,
+      "sha256": "d3ffbc8cdf988090b3873fa41dba05481ed496125ca59cc973dcc11a75513a8f"
+    },
+    "results/final/reference/delivery/decoder-42/model.pt2": {
+      "bytes": 2124033,
+      "sha256": "9207c4e586218117c1e92ab493ee2d6e95ae19712cf3258ba6c7826208b2ca51"
+    },
+    "results/final/reference/delivery/decoder-42/tokenizer.json": {
+      "bytes": 8727,
+      "sha256": "3e9f9c771dc80787db140ab4f8e675210ebb9e344ad26c08f992f8a916ec8996"
+    },
+    "results/final/reference/delivery/decoder-42/validation.json": {
+      "bytes": 710,
+      "sha256": "fafa3c88d3da40bbbe4e425d7ecc5788fc2782cb2127710b27e7a767ea79bcdc"
+    },
+    "results/final/reference/delivery/install.py": {
+      "bytes": 7068,
+      "sha256": "a062d5f1a921a8205876f62a1601c3461694311aa496f97a2c301f9a9d6cdbb2"
+    },
+    "results/final/reference/delivery/kaleido-1.0.0-py3-none-any.whl": {
+      "bytes": 116569,
+      "sha256": "10889b3bcc135e665b5737a7ec618809134c750574eb3fbc330701ab1d955698"
+    },
+    "results/final/reference/delivery/manifest.json": {
+      "bytes": 2333,
+      "sha256": "1595880d0d4b89bfe10ab790416102f5f6274cb1adeafbd69e75f982f9aac61c"
+    },
+    "results/final/reference/delivery/pylock.cpu.toml": {
+      "bytes": 16305,
+      "sha256": "abdcaa5e7791b1db5757e9a164ed8e2affcffba2f5a75b9494993b5b692c6fbf"
+    },
     "results/p0/REPORT.md": {
       "bytes": 4562,
       "sha256": "20a2bdb1ddacaf6544d9bc517c059e345ab5e2cda96a76daa3177699282c7327"
