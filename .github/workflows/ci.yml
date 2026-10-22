@@ -20,3 +20,16 @@ jobs:
       - run: uv run --locked --all-extras python -m kaleido export --weights results/p3/reference/model-42.npz --tokenizer results/p3/reference/tokenizer.json --output runs/ci-decoder
       - run: uv build
       - run: uv run --locked --all-extras python scripts/check_wheel.py --wheel dist/kaleido-1.0.0-py3-none-any.whl --bundle runs/ci-decoder --report runs/wheel-check.json
+      - run: uv run --locked --all-extras kaleido package --wheel dist/kaleido-1.0.0-py3-none-any.whl --bundle runs/ci-decoder --output runs/kaleido-cpu-delivery
+      - run: uv run --locked --all-extras python scripts/check_delivery.py --delivery runs/kaleido-cpu-delivery --report runs/delivery-check.json
+      - name: Archive reviewable delivery
+        run: |
+          python -c "import shutil; shutil.make_archive('runs/kaleido-cpu-delivery', 'zip', 'runs', 'kaleido-cpu-delivery')"
+          (cd runs && sha256sum kaleido-cpu-delivery.zip > DELIVERY-SHA256SUMS)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kaleido-cpu-delivery
+          path: |
+            runs/kaleido-cpu-delivery.zip
+            runs/delivery-check.json
+            runs/DELIVERY-SHA256SUMS

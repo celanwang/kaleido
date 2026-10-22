@@ -113,3 +113,36 @@ assert "kaleido.posttrain.model" not in sys.modules
     )
     assert process.returncode == 0, process.stdout + process.stderr
     assert json.loads(process.stdout)["status"] == "completed"
+
+
+@pytest.mark.parametrize("field,value", [("runtime", []), ("model_config", []), ("files", [])])
+def test_bundle_schema_errors_are_reported_as_value_errors(bundle, tmp_path, field, value):
+    copy = tmp_path / "schema"
+    shutil.copytree(bundle, copy)
+    manifest = json.loads((copy / "manifest.json").read_text())
+    manifest[field] = value
+    (copy / "manifest.json").write_text(json.dumps(manifest))
+    with pytest.raises(ValueError):
+        Predictor(copy)
+
+
+def test_manifest_cannot_claim_a_context_larger_than_the_actual_graph(bundle, tmp_path):
+    copy = tmp_path / "dimensions"
+    shutil.copytree(bundle, copy)
+    manifest = json.loads((copy / "manifest.json").read_text())
+    manifest["model_config"]["context_length"] = 256
+    (copy / "manifest.json").write_text(json.dumps(manifest))
+    with pytest.raises(ValueError, match="embedding"):
+        Predictor(copy)
+
+
+def test_cli_returns_a_structured_error_for_a_non_object_manifest(tmp_path):
+    (tmp_path / "manifest.json").write_text("[]")
+    process = subprocess.run(
+        [sys.executable, "-m", "kaleido", "predict", "--bundle", str(tmp_path)],
+        text=True,
+        capture_output=True,
+    )
+    assert process.returncode == 1
+    assert json.loads(process.stdout)["status"] == "failed"
+    assert "Traceback" not in process.stderr

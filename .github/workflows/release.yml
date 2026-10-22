@@ -46,9 +46,13 @@ jobs:
       - run: uv run --locked --all-extras python -m kaleido export --weights results/p3/reference/model-42.npz --tokenizer results/p3/reference/tokenizer.json --output runs/decoder-42
       - run: uv build
       - run: uv run --locked --all-extras python scripts/check_wheel.py --wheel dist/kaleido-1.0.0-py3-none-any.whl --bundle runs/decoder-42 --report runs/wheel-check.json
+      - run: uv run --locked --all-extras kaleido package --wheel dist/kaleido-1.0.0-py3-none-any.whl --bundle runs/decoder-42 --output runs/kaleido-cpu-delivery
+      - run: uv run --locked --all-extras python scripts/check_delivery.py --delivery runs/kaleido-cpu-delivery --report runs/delivery-check.json
       - name: Package assets and create an unpublished draft
         run: |
           cp runs/wheel-check.json dist/wheel-check.json
+          cp runs/delivery-check.json dist/delivery-check.json
+          python -c "import shutil; shutil.make_archive('dist/kaleido-cpu-delivery', 'zip', 'runs', 'kaleido-cpu-delivery')"
           (cd runs && zip -qr ../dist/decoder-42.zip decoder-42)
-          (cd dist && sha256sum *.whl *.tar.gz *.zip wheel-check.json > SHA256SUMS)
-          gh release create "$RELEASE_TAG" dist/*.whl dist/*.tar.gz dist/*.zip dist/wheel-check.json dist/SHA256SUMS --draft --target "$GITHUB_SHA" --title "$RELEASE_TAG" --notes-file "docs/releases/$RELEASE_TAG.md"
+          (cd dist && sha256sum *.whl *.tar.gz *.zip wheel-check.json delivery-check.json > SHA256SUMS)
+          gh release create "$RELEASE_TAG" dist/*.whl dist/*.tar.gz dist/*.zip dist/wheel-check.json dist/delivery-check.json dist/SHA256SUMS --draft --target "$GITHUB_SHA" --title "$RELEASE_TAG" --notes-file "docs/releases/$RELEASE_TAG.md"

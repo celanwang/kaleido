@@ -44,6 +44,10 @@ def main(argv=None):
         "predict", help="serve local JSON-lines without a repository checkout"
     )
     predict.add_argument("--bundle", type=Path, required=True)
+    delivery = commands.add_parser("package", help="build a standalone CPU delivery kit")
+    delivery.add_argument("--wheel", type=Path, required=True)
+    delivery.add_argument("--bundle", type=Path, required=True)
+    delivery.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
 
     def emit(value):
@@ -59,6 +63,12 @@ def main(argv=None):
 
             torch.set_num_threads(1)
             return serve(Predictor(args.bundle), sys.stdin.buffer, sys.stdout)
+        if args.command == "package":
+            from kaleido.deployment.package import package_delivery
+
+            path = package_delivery(args.wheel, args.bundle, args.output, root=args.root)
+            emit({"status": "completed", "delivery": str(path)})
+            return 0
         if args.command == "export":
             from kaleido.deployment.export import export_decoder
 
@@ -67,7 +77,7 @@ def main(argv=None):
             return 0
         from dataclasses import asdict
 
-        from kaleido.repro.integrity import verify_index
+        from kaleido.repro.integrity import verify_repository
         from kaleido.repro.registry import RECIPES, doctor, repository, reproduce, run_recipe
 
         if args.command == "list":
@@ -78,9 +88,7 @@ def main(argv=None):
             return 0 if result["ok"] else 1
         elif args.command == "verify":
             root = repository(args.root)
-            result = verify_index(
-                root, json.loads((root / "artifacts/inventory-v1.json").read_text()), deep=args.deep
-            )
+            result = verify_repository(root, deep=args.deep)
             emit(result)
             return 0 if result["ok"] else 1
         elif args.command == "run":

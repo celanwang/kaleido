@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "completion": " to to the girst of",
+      "completion_ids": [
+        32,
+        269,
+        32,
+        269,
+        32,
+        259,
+        32,
+        103,
+        338,
+        291,
+        32,
+        284
+      ],
+      "request": {
+        "max_new_tokens": 12,
+        "prompt": "Alice was"
+      }
+    },
+    {
+      "completion": " and the Wicked and ",
+      "completion_ids": [
+        32,
+        268,
+        32,
+        259,
+        32,
+        87,
+        105,
+        99,
+        337,
+        32,
+        268,
+        32
+      ],
+      "request": {
+        "max_new_tokens": 12,
+        "prompt": "The little girl"
+      }
+    },
+    {
+      "completion": "the Whe Whe was a ",
+      "completion_ids": [
+        259,
+        32,
+        87,
+        257,
+        32,
+        87,
+        257,
+        32,
+        301,
+        32,
+        97,
+        32
+      ],
+      "request": {
+        "max_new_tokens": 12,
+        "prompt": "Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time Once upon a time "
+      }
+    }
+  ]
+}

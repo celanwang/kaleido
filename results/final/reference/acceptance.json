@@ -1,0 +1,401 @@
+{
+  "initial_native_cache_issue": "Fixed HF snapshot/blob symlink compatibility without weakening content hashes; failed attempt retained in runs/final-p5.",
+  "judge_enabled": false,
+  "p5_cost": {
+    "device": "mps",
+    "judge_generated_tokens": 128,
+    "live_generated_tokens": 10680,
+    "live_prompt_tokens": 78670,
+    "wall_seconds": 52.89358699999866
+  },
+  "p5_manifest": {
+    "config": {
+      "batch_size": 8,
+      "device": "mps",
+      "fixture": false,
+      "gsm_count": 32,
+      "judge_pairs": 16,
+      "math_per_family": 16,
+      "max_new_tokens": 64,
+      "qa_count": 12,
+      "resamples": 4000,
+      "seeds": [
+        42,
+        7,
+        2026
+      ]
+    },
+    "environment": {
+      "command": [
+        "/Users/wangchen/Developer/kaleido/.venv/bin/kaleido",
+        "run",
+        "p5",
+        "--profile",
+        "formal",
+        "--output",
+        "runs/final-p5-retry"
+      ],
+      "git_dirty": false,
+      "git_revision": "254064a91864af10d866371a8d9693f10d7879d2",
+      "git_status": "",
+      "numpy": "2.5.4",
+      "packages": {
+        "huggingface-hub": "2.2.0",
+        "numpy": "2.5.4",
+        "safetensors": "0.8.0",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "torch": "2.14.1",
+        "transformers": "5.20.1"
+      },
+      "platform": "macOS-15.8-arm64-arm-64bit",
+      "python": "3.12.15 (main, Oct  3 2026, 00:54:33) [Clang 22.1.3 ]",
+      "source_hash_version": 2,
+      "source_sha256": "fa40126f827f1098c868bdeffe594f551de818c17e41e17b8a1118b575d89265"
+    },
+    "finished_at": "2026-10-22T16:30:41.852425+00:00",
+    "schema_version": 1,
+    "started_at": "2026-10-22T16:29:48.958726+00:00",
+    "status": "completed"
+  },
+  "p5_receipt": {
+    "canonical_config": true,
+    "config_changed_during_run": false,
+    "config_file": "/Users/wangchen/Developer/kaleido/configs/p5_evaluation.json",
+    "config_identity": {
+      "bytes": 195,
+      "sha256": "a33f236cc82d58560630029a7becec27d2cf60f1559d706ae7480eb9235c5a77"
+    },
+    "effective_config": {
+      "batch_size": 8,
+      "device": "mps",
+      "gsm_count": 32,
+      "judge_pairs": 16,
+      "math_per_family": 16,
+      "max_new_tokens": 64,
+      "qa_count": 12,
+      "resamples": 4000,
+      "seeds": [
+        42,
+        7,
+        2026
+      ]
+    },
+    "fixture": false,
+    "note": "P5 re-evaluates published P3/P4 artifacts, not newly produced sibling runs",
+    "profile": "formal",
+    "run": "/Users/wangchen/Developer/kaleido/runs/final-p5-retry/20261022T162948Z-deea0307",
+    "stage": "p5",
+    "status": "completed"
+  },
+  "p5_records": {
+    "base": {
+      "identical": true,
+      "records": 108,
+      "sha256": "640bfbe574ae5120c9b55e8ce67cfec39dfd27bd5c5708e66ee8439b4420adfa"
+    },
+    "grpo-2026": {
+      "identical": true,
+      "records": 108,
+      "sha256": "3e9eb5a4b5de9c122805672dc60f2bc0327833da7345413a26aa928139db540e"
+    },
+    "grpo-42": {
+      "identical": true,
+      "records": 108,
+      "sha256": "dadc53e6ea2f105ca3bf9d1871ff42d9c2a1e698123aeb90597da2994e7db58d"
+    },
+    "grpo-7": {
+      "identical": true,
+      "records": 108,
+      "sha256": "b2b7efdd2d5eeb30d02773d75b6b99b40b5777b4b07182c7892f987be68088b4"
+    },
+    "rejection_sft-2026": {
+      "identical": true,
+      "records": 108,
+      "sha256": "c38031b3e7bd039e85b6b9bd4ae7d5e051587e72061fdacb3904dd29a435b9e2"
+    },
+    "rejection_sft-42": {
+      "identical": true,
+      "records": 108,
+      "sha256": "ca700c43656e8c95bd0a26806bc70fa7f5e54f56df3f1f98bcac29c971ea7aee"
+    },
+    "rejection_sft-7": {
+      "identical": true,
+      "records": 108,
+      "sha256": "2591b3285b4712f69e14f2d0e08c5b2915395407ddcc5f9cf1e37efff4f47679"
+    },
+    "sft-2026": {
+      "identical": true,
+      "records": 108,
+      "sha256": "652107aeabcc7e151d54e449fc0d8f8a1ebc615dfba84d78a9b7715cdc6a063f"
+    },
+    "sft-42": {
+      "identical": true,
+      "records": 108,
+      "sha256": "414808775dd5ce68d8473fa8faebe1ea445acdb5b27f0a2c70668f2426cde630"
+    },
+    "sft-7": {
+      "identical": true,
+      "records": 108,
+      "sha256": "5252f3d9d288078be5419c632247ad7a42e55ac448d67abd67de16fb91074cc8"
+    }
+  },
+  "public_release_created": false,
+  "smoke_manifest": {
+    "config": {
+      "profile": "smoke",
+      "stages": [
+        "p0",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5"
+      ]
+    },
+    "environment": {
+      "command": [
+        "/Users/wangchen/Developer/kaleido/.venv/bin/kaleido",
+        "reproduce",
+        "--profile",
+        "smoke",
+        "--output",
+        "runs/final-smoke"
+      ],
+      "git_dirty": false,
+      "git_revision": "65aee2d9acbee687acd7d6e002f2e5db80b9eb1f",
+      "git_status": "",
+      "numpy": "2.5.4",
+      "packages": {
+        "huggingface-hub": "2.2.0",
+        "numpy": "2.5.4",
+        "safetensors": "0.8.0",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "torch": "2.14.1",
+        "transformers": "5.20.1"
+      },
+      "platform": "macOS-15.8-arm64-arm-64bit",
+      "python": "3.12.15 (main, Oct  3 2026, 00:54:33) [Clang 22.1.3 ]",
+      "source_hash_version": 2,
+      "source_sha256": "8e2331c533f7036d3aa46ce2298a44c45b911e2b1299ab8b2ca7de0c5fbc520a"
+    },
+    "finished_at": "2026-10-22T16:29:06.445981+00:00",
+    "schema_version": 1,
+    "started_at": "2026-10-22T16:28:52.895960+00:00",
+    "status": "completed"
+  },
+  "smoke_steps": {
+    "completed": [
+      {
+        "canonical_config": true,
+        "config_changed_during_run": false,
+        "config_file": "/Users/wangchen/Developer/kaleido/configs/p0_linear.json",
+        "config_identity": {
+          "bytes": 207,
+          "sha256": "bd0fcd91ba2c1cae2659b785313319fb7eb45fbf0402f0093de66913b3bfbba3"
+        },
+        "effective_config": {
+          "divergence_limit": 1000000000000.0,
+          "epochs": 300,
+          "feature_scales": [
+            1.0,
+            3.0,
+            10.0
+          ],
+          "learning_rate": 0.05,
+          "n_test": 96,
+          "n_train": 320,
+          "n_valid": 96,
+          "noise_std": 0.2,
+          "seed": 42
+        },
+        "fixture": false,
+        "note": null,
+        "profile": "smoke",
+        "run": "/Users/wangchen/Developer/kaleido/runs/final-smoke/20261022T162852Z-9d774eba/p0/20261022T162852Z-faa59ac9",
+        "stage": "p0",
+        "status": "completed"
+      },
+      {
+        "canonical_config": true,
+        "config_changed_during_run": false,
+        "config_file": "/Users/wangchen/Developer/kaleido/configs/p1_classical.json",
+        "config_identity": {
+          "bytes": 293,
+          "sha256": "5b7127d7e7d6dcaad98251e3e43448cf24a4290302a322db9dd3ee9356d6d368"
+        },
+        "effective_config": {
+          "failure_seed": 123,
+          "l2_candidates": [
+            0.001,
+            0.01,
+            0.1
+          ],
+          "max_iter": 1000,
+          "mixture_components": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "n_clusters": 3,
+          "n_init": 5,
+          "pca_components": 2,
+          "seeds": [
+            42,
+            7,
+            2026
+          ],
+          "tol": 1e-10,
+          "tree_depths": [
+            1,
+            2,
+            3,
+            5,
+            8
+          ],
+          "tree_min_samples_leaf": 2
+        },
+        "fixture": false,
+        "note": null,
+        "profile": "smoke",
+        "run": "/Users/wangchen/Developer/kaleido/runs/final-smoke/20261022T162852Z-9d774eba/p1/20261022T162853Z-32dd47c4",
+        "stage": "p1",
+        "status": "completed"
+      },
+      {
+        "canonical_config": true,
+        "config_changed_during_run": false,
+        "config_file": "/Users/wangchen/Developer/kaleido/configs/p2_deep.json",
+        "config_identity": {
+          "bytes": 151,
+          "sha256": "afa6cfd2b43f64b0a982ba35980912731f4cb77211d633f034cb6fce909f57a3"
+        },
+        "effective_config": {
+          "batch_size": 64,
+          "epochs": 12,
+          "memory_updates": 150,
+          "rl_episodes": 12,
+          "rl_updates": 60,
+          "seeds": [
+            42,
+            7,
+            2026
+          ],
+          "vae_epochs": 20
+        },
+        "fixture": false,
+        "note": null,
+        "profile": "smoke",
+        "run": "/Users/wangchen/Developer/kaleido/runs/final-smoke/20261022T162852Z-9d774eba/p2/20261022T162854Z-dc7a4d71",
+        "stage": "p2",
+        "status": "completed"
+      },
+      {
+        "canonical_config": true,
+        "config_changed_during_run": false,
+        "config_file": "/Users/wangchen/Developer/kaleido/configs/p3_smoke.json",
+        "config_identity": {
+          "bytes": 324,
+          "sha256": "59221be97c7c2e6f64f1d07a5506b1c66b3a40a2977bbdf44e8e9a3e0e4176ac"
+        },
+        "effective_config": {
+          "batch_size": 4,
+          "benchmark_repeats": 1,
+          "context_length": 32,
+          "device": "cpu",
+          "eval_interval": 4,
+          "generation_tokens": 4,
+          "heads": 4,
+          "layers": 1,
+          "learning_rate": 0.001,
+          "probe_repeats": 1,
+          "seeds": [
+            42
+          ],
+          "split_seed": 17,
+          "steps": 4,
+          "vocab_size": 280,
+          "warmup_steps": 1,
+          "width": 32
+        },
+        "fixture": false,
+        "note": null,
+        "profile": "smoke",
+        "run": "/Users/wangchen/Developer/kaleido/runs/final-smoke/20261022T162852Z-9d774eba/p3/20261022T162859Z-1bafcdd6",
+        "stage": "p3",
+        "status": "completed"
+      },
+      {
+        "canonical_config": true,
+        "config_changed_during_run": false,
+        "config_file": "/Users/wangchen/Developer/kaleido/configs/p4_smoke.json",
+        "config_identity": {
+          "bytes": 435,
+          "sha256": "494ed21c9cbbbeca47ac4d3ab85387a6d775cc9dbeece87be563778058e5ed4c"
+        },
+        "effective_config": {
+          "alpha": 4.0,
+          "beta": 0.04,
+          "clip": 0.2,
+          "device": "cpu",
+          "group_size": 2,
+          "grpo_epochs": 1,
+          "heldout_per_family": 1,
+          "iterations": 2,
+          "max_new_tokens": 4,
+          "operand_max": 30,
+          "post_eval_interval": 1,
+          "post_lr": 0.001,
+          "prompts_per_iteration": 1,
+          "rank": 2,
+          "seeds": [
+            3
+          ],
+          "sft_batch_size": 2,
+          "sft_eval_interval": 2,
+          "sft_lr": 0.001,
+          "sft_steps": 2,
+          "task_seed": 731,
+          "train_per_family": 2
+        },
+        "fixture": true,
+        "note": null,
+        "profile": "smoke",
+        "run": "/Users/wangchen/Developer/kaleido/runs/final-smoke/20261022T162852Z-9d774eba/p4/20261022T162901Z-af8ae26a",
+        "stage": "p4",
+        "status": "completed"
+      },
+      {
+        "canonical_config": true,
+        "config_changed_during_run": false,
+        "config_file": "/Users/wangchen/Developer/kaleido/configs/p5_smoke.json",
+        "config_identity": {
+          "bytes": 180,
+          "sha256": "43ac6d204f45766abd94511c2e1741e404ac732bda7a49c1fafeefec2667dd6f"
+        },
+        "effective_config": {
+          "batch_size": 4,
+          "device": "cpu",
+          "gsm_count": 2,
+          "judge_pairs": 4,
+          "math_per_family": 2,
+          "max_new_tokens": 4,
+          "qa_count": 2,
+          "resamples": 100,
+          "seeds": [
+            42
+          ]
+        },
+        "fixture": true,
+        "note": "P5 re-evaluates published P3/P4 artifacts, not newly produced sibling runs",
+        "profile": "smoke",
+        "run": "/Users/wangchen/Developer/kaleido/runs/final-smoke/20261022T162852Z-9d774eba/p5/20261022T162904Z-0d10467f",
+        "stage": "p5",
+        "status": "completed"
+      }
+    ],
+    "failed_stage": null
+  }
+}
