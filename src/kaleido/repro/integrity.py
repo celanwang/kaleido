@@ -93,7 +93,7 @@ def verify_index(root, index, *, deep=False):
     }
 
 
-REVIEWED_DIRECTORIES = ("configs", "data", *(f"results/p{i}" for i in range(7)))
+REVIEWED_DIRECTORIES = ("configs", "data", *(f"results/p{i}" for i in range(7)), "results/final")
 REVIEWED_PINS = (".python-version", "pyproject.toml", "uv.lock")
 
 
@@ -118,5 +118,5 @@ def verify_repository(root, *, deep=False):
         {"path": p, "error": "unindexed_reviewed_file"} for p in missing_entries
     )
     result["ok"] = not result["errors"]
-    result["coverage"] = "configs, data, P0-P6 evidence and dependency pins"
+    result["coverage"] = "configs, data, P0-P6/final delivery evidence and dependency pins"
     return result

@@ -3,7 +3,7 @@
 万花筒：以机器学习全域为结构，以可复现实验理解设计、取舍与失效边界。
 
 原始方向见 [DESIGN](DESIGN.md)，阶段与验收见 [ROADMAP](docs/ROADMAP.md)。
-当前已实现 P0–P6 主线，v1.0.0 为待合并与发布审阅的候选；未实施的扩展见 [CHANGELOG](CHANGELOG.md)。
+当前已实现 P0–P6 主线，P6 已合并，v1.0.0 正在完成最终交付审阅；未实施的扩展见 [CHANGELOG](CHANGELOG.md)。
 自研核心用于理解，后续规模训练使用成熟框架。
 P0 的 [验收报告与完整参考产物](results/p0/REPORT.md)保留原始阶段证据。
 P1 的 [验收报告与完整参考产物](results/p1/REPORT.md)包含三组划分与六类算法对照。
@@ -153,3 +153,14 @@ P3 导出为 CPU 动态长度计算图，支持独立 wheel 安装后在仓库�
 正式复跑保留配置、失败日志及与历史工件的差异；固定种子不被解释为 MPS 权重位级一致的保证。
 发布流程从 main 手动生成 draft release，审阅后才公开，不自动上传 PyPI。
 见 [复现指南](docs/REPRODUCING.md)、[P6验收报告](results/p6/REPORT.md) 和 [v1.0.0范围](docs/releases/v1.0.0.md)。
+
+最终交付套件把普通 wheel、冻结模型、锁定运行时和标准库安装脚本一并打包，可在没有源码的目录安装：
+
+```sh
+python3.12 install.py --verify-only
+python3.12 install.py --env /absolute/path/to/new-venv
+```
+
+从 CI 的 `kaleido-cpu-delivery` 附件下载 ZIP 并解压后，在套件目录执行以上命令。
+离线安装可添加 `--offline --cache-dir /path/to/prepared/uv/cache`。
+完整入口与验收见 [最终交付报告](results/final/REPORT.md)。公开 Release 仍需 main 的手动 draft 流程。

@@ -10,7 +10,7 @@ uv run --locked --all-extras pytest
 ```
 
 `doctor` 检查直接依赖版本（允许同版本 `+cpu` 构建标签）；传递依赖由 uv.lock 锁定。
-`verify` 不下载、不重建清单，对照 `artifacts/inventory-v1.json` 校验数据、配置和 P0–P5 历史工件。
+`verify` 不下载、不重建清单，对照 `artifacts/inventory-v1.json` 校验数据、配置和 P0–P6 及最终交付工件。
 摘要错误或缺文件应先调查，不应直接执行封存脚本来消除错误。
 
 ## 分层运行
@@ -74,3 +74,22 @@ Decoder bundle、验证报告及 SHA256SUMS；只创建 draft，不自动公开�
 
 导出格式仅验证锁定的 PyTorch 2.14.1，跨版本/跨框架/加速器部署未作承诺。
 未实施的算法与推理扩展见 CHANGELOG；GRPO 未证明稳定迁移收益、Judge 校准失败的结论继续保留。
+
+## 下载后安装，不需要 checkout
+
+CI 的 `kaleido-cpu-delivery` 附件提供 ZIP、外部 SHA256SUMS 和独立安装验证报告。
+解压后进入套件目录，Python3.12 执行 `install.py --verify-only`，再执行
+`install.py --env /absolute/path/to/new-venv`（先确保 uv0.12.23 已安装）。
+安装器下载 pylock 声明的精确运行时，已有环境拒绝覆盖；推理命令为
+`/absolute/path/to/new-venv/bin/kaleido predict --bundle /absolute/path/to/decoder-42`。
+已准备缓存时可加 `--offline --cache-dir /cache/path`，冷缓存需要网络获取依赖，套件不内嵌依赖 wheel。
+
+生产套件与检查命令：
+
+```sh
+uv run --locked --all-extras kaleido package --wheel dist/kaleido-1.0.0-py3-none-any.whl --bundle runs/decoder-42 --output runs/kaleido-cpu-delivery
+uv run --locked --all-extras python scripts/check_delivery.py --delivery runs/kaleido-cpu-delivery --report runs/delivery-check.json
+```
+
+单阶段运行也会保存原始 configuration.json 和持久 receipt.json。
+总校验覆盖 P6 归档及最终套件，发现新增未入清单的证据文件也会失败。

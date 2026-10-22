@@ -13,7 +13,7 @@ write_json(
         "schema_version": 1,
         "scope": (
             "P0-P6 reviewed evidence, source data/configs and dependency pins; "
-            "excludes later audit outputs"
+            "includes final delivery evidence"
         ),
         "files": {str(p.relative_to(ROOT)): file_info(p) for p in sorted(set(files))},
     },
