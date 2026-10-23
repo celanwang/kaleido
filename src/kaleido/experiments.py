@@ -48,7 +48,6 @@ def provenance(root: Path) -> dict:
             *root.glob("src/**/*.py"),
             *root.glob("configs/**/*.json"),
             *root.glob("scripts/*.py"),
-            *root.glob(".github/workflows/*.yml"),
         ]
         + [
             root / name

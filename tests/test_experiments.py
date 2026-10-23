@@ -44,7 +44,7 @@ def test_data_digest_tracks_content_shape_and_dtype():
         array_digest(np.array([object()]))
 
 
-def test_source_hash_v2_tracks_release_scripts_and_workflows(tmp_path):
+def test_source_hash_v2_tracks_release_scripts(tmp_path):
     from kaleido.experiments import provenance
 
     (tmp_path / "scripts").mkdir()

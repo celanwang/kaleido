@@ -1,4 +1,4 @@
-"""Explicit random tiny Qwen fixture for offline CI, never formal P4 evidence."""
+"""Explicit random tiny Qwen fixture for offline checks, never formal P4 evidence."""
 
 import hashlib
 

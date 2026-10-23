@@ -151,7 +151,7 @@ uv run --locked --all-extras kaleido predict --bundle runs/decoder-42
 P3 导出为 CPU 动态长度计算图，支持独立 wheel 安装后在仓库外推理；不需要训练模块、语料或 Qwen 缓存。
 完整研究复现仍需 checkout，源码外运行时用全局 `--root /path/to/kaleido` 指定。
 正式复跑保留配置、失败日志及与历史工件的差异；固定种子不被解释为 MPS 权重位级一致的保证。
-发布流程从 main 手动生成 draft release，审阅后才公开，不自动上传 PyPI。
+检查、打包与发布均由维护者在本地手动执行，不自动上传 PyPI。
 见 [复现指南](docs/REPRODUCING.md)、[P6验收报告](results/p6/REPORT.md) 和 [v1.0.0范围](docs/releases/v1.0.0.md)。
 
 最终交付套件把普通 wheel、冻结模型、锁定运行时和标准库安装脚本一并打包，可在没有源码的目录安装：
@@ -161,6 +161,6 @@ python3.12 install.py --verify-only
 python3.12 install.py --env /absolute/path/to/new-venv
 ```
 
-从 CI 的 `kaleido-cpu-delivery` 附件下载 ZIP 并解压后，在套件目录执行以上命令。
+可直接使用 `results/final/reference/delivery/` 中的套件，或通过 `kaleido package` 在本地生成套件后执行以上命令。
 离线安装可添加 `--offline --cache-dir /path/to/prepared/uv/cache`。
-完整入口与验收见 [最终交付报告](results/final/REPORT.md)。公开 Release 仍需 main 的手动 draft 流程。
+完整入口与验收见 [最终交付报告](results/final/REPORT.md)。公开 Release 由维护者手动创建与审阅。

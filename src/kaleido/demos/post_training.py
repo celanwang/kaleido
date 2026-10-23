@@ -1,4 +1,4 @@
-"""P4 formal pinned-Qwen SFT/GRPO/rejection experiment; explicit fixture-only CI mode."""
+"""P4 formal pinned-Qwen SFT/GRPO/rejection experiment; explicit fixture-only offline checks."""
 
 import argparse
 import gzip

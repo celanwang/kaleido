@@ -41,7 +41,7 @@ def check(wheel, bundle):
         ]
         python = environment / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
         # Follow locked artifact URLs directly; requirements resolution additionally needs
-        # index metadata that can be absent from an otherwise warm CI package cache.
+        # index metadata that can be absent from an otherwise warm package cache.
         sync = [
             "uv",
             "sync",

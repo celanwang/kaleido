@@ -23,6 +23,6 @@ P5 始终评测发布的冻结 P3/P4 工件，不自动改用本轮同级目录�
 参考：[uv 项目与构建](https://docs.astral.sh/uv/guides/projects/)、
 [锁定与同步](https://docs.astral.sh/uv/concepts/projects/sync/)。
 
-P6 起 source_hash_version=2，将 scripts、workflow 和审查过的输入清单纳入执行源摘要，
+P6 起 source_hash_version=2，将 scripts 和审查过的输入清单纳入执行源摘要，
 旧阶段缺省为原 v1 范围，不改写旧记录。子进程 stdout/stderr 直接写文件，异常中断前已落盘日志可保留；
 SIGKILL 等不能执行清理的情况可能留下 running manifest，应视为未完成，不应视为成功或可恢复的检查点。
