@@ -1,4 +1,4 @@
-"""Audit P5 evidence offline; CI never downloads the official base weights."""
+"""Audit P5 evidence offline; no official base weight download is needed."""
 
 import gzip
 import hashlib

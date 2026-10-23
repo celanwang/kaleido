@@ -67,18 +67,18 @@ uv run --locked --all-extras python scripts/check_wheel.py --wheel dist/kaleido-
 
 ## 发布状态与边界
 
-v1.0.0 是当前发布候选。功能 PR 合并后，可在 main 手动运行 `prepare release draft`，
-输入与 pyproject 一致的新 tag。流程重新测试、smoke、导出和独立 wheel 推理，生成 wheel、sdist、
-Decoder bundle、验证报告及 SHA256SUMS；只创建 draft，不自动公开或上传 PyPI，也不覆盖既有 tag。
-正式训练与历史结论以各阶段报告为准，CI smoke 不能代替正式训练证据。
+v1.0.0 是当前发布候选。检查、导出、独立安装验证与打包均通过本地命令完成。
+需要发布时，由维护者手动创建 GitHub draft release 并上传本地工件，审阅后再公开；
+不自动公开、不自动上传 PyPI，也不覆盖既有 tag。正式训练与历史结论以各阶段报告为准，
+smoke 不能代替正式训练证据。
 
 导出格式仅验证锁定的 PyTorch 2.14.1，跨版本/跨框架/加速器部署未作承诺。
 未实施的算法与推理扩展见 CHANGELOG；GRPO 未证明稳定迁移收益、Judge 校准失败的结论继续保留。
 
 ## 下载后安装，不需要 checkout
 
-CI 的 `kaleido-cpu-delivery` 附件提供 ZIP、外部 SHA256SUMS 和独立安装验证报告。
-解压后进入套件目录，Python3.12 执行 `install.py --verify-only`，再执行
+使用仓库中的 `results/final/reference/delivery/` 或本地生成的交付套件。
+进入套件目录后，Python3.12 执行 `install.py --verify-only`，再执行
 `install.py --env /absolute/path/to/new-venv`（先确保 uv0.12.23 已安装）。
 安装器下载 pylock 声明的精确运行时，已有环境拒绝覆盖；推理命令为
 `/absolute/path/to/new-venv/bin/kaleido predict --bundle /absolute/path/to/decoder-42`。

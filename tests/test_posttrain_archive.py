@@ -1,4 +1,4 @@
-"""Audit real P4 outcomes offline; do not download the 0.5B base in CI."""
+"""Audit real P4 outcomes offline; do not download the 0.5B base."""
 
 import gzip
 import hashlib

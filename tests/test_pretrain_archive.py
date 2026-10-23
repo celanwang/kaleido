@@ -1,4 +1,4 @@
-"""Verify the actual frozen pretraining artifact, without retraining in CI."""
+"""Verify the actual frozen pretraining artifact, without retraining."""
 
 import json
 from pathlib import Path
